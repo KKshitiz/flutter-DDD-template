@@ -19,9 +19,11 @@ dependencies:
   flutter_bloc: ^7.0.1
   flutter_svg: ^0.22.0
   fluttertoast: ^8.0.7
-  freezed: ^0.14.2
+  freezed_annotation: ^0.14.2
+  get_it: ^7.1.3
   google_fonts: ^2.1.0
   injectable: ^1.4.1
+  url_launcher: ^6.0.6
 
 dev_dependencies:
   flutter_test:
@@ -29,6 +31,8 @@ dev_dependencies:
   integration_test:
     sdk: flutter
   auto_route_generator: ^2.1.0
+  json_serializable: ^4.1.3
+  freezed: ^0.14.2
   injectable_generator: ^1.4.1
   lint: ^1.5.3
 
