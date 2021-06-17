@@ -4,7 +4,7 @@ import 'package:flutter_template/presentation/core/widgets/logo_widget.dart';
 class SplashPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: AppLogo(),
     );
   }

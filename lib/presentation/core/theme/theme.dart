@@ -92,5 +92,5 @@ const kGradientBackgroundDecoration = BoxDecoration(
 );
 
 List<BoxShadow> kBoxShadow = [
-  BoxShadow(blurRadius: 6, color: Colors.grey, spreadRadius: 6.0)
+  const BoxShadow(blurRadius: 6, color: Colors.grey, spreadRadius: 6.0)
 ];

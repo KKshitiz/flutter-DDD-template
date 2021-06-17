@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/routes/router.gr.dart';
+import 'package:flutter_template/presentation/core/theme/theme.dart';
+import 'package:flutter_template/presentation/routes/router.gr.dart';
 
 class AppWidget extends StatelessWidget {
   AppWidget({Key? key}) : super(key: key);
@@ -11,15 +12,7 @@ class AppWidget extends StatelessWidget {
       routeInformationParser: _appRouter.defaultRouteParser(),
       title: "App-Name-Here",
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.light().copyWith(
-        primaryColor: Colors.green[800],
-        accentColor: Colors.blueAccent,
-        inputDecorationTheme: InputDecorationTheme(
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8),
-          ),
-        ),
-      ),
+      theme: appTheme,
     );
   }
 }
