@@ -1,3 +1,3 @@
 class Fonts {
-  static const String helvetica = 'Helvetica';
+  static const String roboto = 'Roboto';
 }

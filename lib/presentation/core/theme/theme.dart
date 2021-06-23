@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template/presentation/core/theme/fonts.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 final ThemeData appTheme = ThemeData(
   primaryColor: const Color(0xffE6001F),
   brightness: Brightness.light,
-  textTheme: GoogleFonts.poppinsTextTheme(),
   // colorScheme: ColorScheme(
   //   primary: Colors.white,
   //   primaryVariant: Colors.black54,
@@ -61,8 +59,7 @@ final ThemeData appTheme = ThemeData(
   primaryIconTheme: const IconThemeData(
     color: Colors.black,
   ),
-
-  fontFamily: Fonts.helvetica,
+  fontFamily: Fonts.roboto,
   appBarTheme: const AppBarTheme(
     color: Colors.white,
     elevation: 0,
