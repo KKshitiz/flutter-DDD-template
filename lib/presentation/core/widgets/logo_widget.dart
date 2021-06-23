@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
 class AppLogo extends StatelessWidget {
-  final double? width;
-  final double? height;
-  const AppLogo({this.width, this.height});
+  final double? size;
+  const AppLogo({this.size});
   @override
   Widget build(BuildContext context) {
-    return const FlutterLogo();
+    return FlutterLogo(
+      size: size,
+    );
   }
 }
 
