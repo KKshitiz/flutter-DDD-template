@@ -12,11 +12,12 @@ dependencies:
   flutter:
     sdk: flutter
   auto_route: ^2.2.0
-  build_runner: ^2.0.4
+  build_runner: ^2.0.5
   cached_network_image: ^3.0.0
   cupertino_icons: ^1.0.3
   dartz: ^0.10.0-nullsafety.2
   flutter_bloc: ^7.0.1
+  flutter_secure_storage: ^4.2.0
   flutter_svg: ^0.22.0
   fluttertoast: ^8.0.7
   freezed_annotation: ^0.14.2

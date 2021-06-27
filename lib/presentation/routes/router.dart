@@ -9,9 +9,14 @@ import 'package:flutter_template/presentation/core/pages/splash_page.dart';
     ///[Core]
     AutoRoute(page: SplashPage, initial: true),
 
+    ///[Onboarding]
+    ///
+
     ///[Authentication]
     AutoRoute(page: SignInPage),
     AutoRoute(page: SignUpPage),
+
+
   ],
 )
 class $AppRouter {}
