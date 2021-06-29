@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template/presentation/core/theme/theme.dart';
+import 'package:flutter_template/presentation/core/utils/constants.dart';
 import 'package:flutter_template/presentation/routes/router.gr.dart';
 
 class AppWidget extends StatelessWidget {
@@ -10,7 +11,7 @@ class AppWidget extends StatelessWidget {
     return MaterialApp.router(
       routerDelegate: _appRouter.delegate(),
       routeInformationParser: _appRouter.defaultRouteParser(),
-      title: "App-Name-Here",
+      title: AppConstants.appName,
       debugShowCheckedModeBanner: false,
       theme: appTheme,
     );
