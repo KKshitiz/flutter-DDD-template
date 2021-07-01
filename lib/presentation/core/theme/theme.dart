@@ -1,76 +1,98 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_template/presentation/core/theme/colors.dart';
 import 'package:flutter_template/presentation/core/theme/fonts.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-final ThemeData appTheme = ThemeData(
-  primaryColor: const Color(0xffE6001F),
-  brightness: Brightness.light,
-  // colorScheme: ColorScheme(
-  //   primary: Colors.white,
-  //   primaryVariant: Colors.black54,
-  //   secondary: Colors.deepOrangeAccent,
-  //   secondaryVariant: Colors.deepOrangeAccent[100],
-  //   onSecondary: Colors.black,
-  //   onPrimary: Colors.white,
-  //   brightness: Brightness.light,
-  //   onBackground: Colors.black,
-  //   onError: Colors.black,
-  //   error: Colors.white,
-  //   surface: Colors.grey[200],
-  //   onSurface: Colors.grey[300],
-  //   background: Colors.white,
-  // ),
+mixin AppTheme {
+  static ThemeData get dark => ThemeData.dark().copyWith();
+  static ThemeData get light => ThemeData.light().copyWith(
+        primaryColor: const Color(0xFF2A59C3),
+        brightness: Brightness.dark,
+        textTheme: GoogleFonts.poppinsTextTheme(),
+        backgroundColor: Colors.white,
+        scaffoldBackgroundColor: Colors.white,
+        primaryTextTheme: const TextTheme(
+          headline1: TextStyle(
+            color: Colors.black,
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+          ),
+          headline2: TextStyle(
+            color: Colors.white,
+            fontSize: 26,
+            fontWeight: FontWeight.bold,
+          ),
+          headline3: TextStyle(
+            color: Colors.black,
+            fontSize: 24,
+            fontWeight: FontWeight.w500,
+          ),
+          headline4: TextStyle(
+            color: Colors.black,
+            fontSize: 22,
+            fontWeight: FontWeight.w500,
+          ),
+          headline5: TextStyle(
+            color: Colors.black,
+            fontSize: 20,
+            fontWeight: FontWeight.w500,
+          ),
+          headline6: TextStyle(
+            color: Colors.black,
+            fontSize: 18,
+            fontWeight: FontWeight.w500,
+          ),
+          bodyText1: TextStyle(
+            color: Colors.black,
+            fontWeight: FontWeight.w700,
+            // fontSize: 35,
+          ),
+          bodyText2: TextStyle(
+            color: Colors.black,
+          ),
+          caption: TextStyle(
+            color: Colors.black,
+          ),
+          button: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.w700,
+            fontSize: 14,
+          ),
+        ),
+        primaryIconTheme: const IconThemeData(
+          color: Colors.white,
+        ),
 
-  backgroundColor: Colors.white,
-  scaffoldBackgroundColor: Colors.white,
-  primaryTextTheme: const TextTheme(
-    headline1: TextStyle(
-      color: Colors.black,
-      fontSize: 28,
-      fontWeight: FontWeight.bold,
-    ),
-    headline2: TextStyle(
-      color: Colors.white,
-      fontSize: 24,
-      fontWeight: FontWeight.bold,
-    ),
-    headline3: TextStyle(
-      color: Colors.black,
-      fontSize: 20,
-      fontWeight: FontWeight.w500,
-    ),
-    headline6: TextStyle(
-      color: Colors.black,
-    ),
-    bodyText1: TextStyle(
-      color: Colors.black,
-    ),
-    bodyText2: TextStyle(
-      color: Colors.black,
-    ),
-    caption: TextStyle(
-      color: Colors.black,
-    ),
-    button: TextStyle(
-      color: Colors.white,
-      fontWeight: FontWeight.w700,
-      fontSize: 14,
-    ),
-  ),
-  primaryIconTheme: const IconThemeData(
-    color: Colors.black,
-  ),
-  fontFamily: Fonts.roboto,
-  appBarTheme: const AppBarTheme(
-    color: Colors.white,
-    elevation: 0,
-    // brightness: Brightness.light,
-    centerTitle: true,
-  ),
-  materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-  visualDensity: VisualDensity.adaptivePlatformDensity,
-  dialogTheme: DialogTheme(
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16))),
-);
+        appBarTheme: const AppBarTheme(
+          color: Kolors.primary,
+          elevation: 0,
+          // brightness: Brightness.light,
+          centerTitle: true,
+        ),
+        materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+        inputDecorationTheme: InputDecorationTheme(
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10),
+          ),
+        ),
+        textButtonTheme: TextButtonThemeData(
+          style: TextButton.styleFrom(
+            textStyle: const TextStyle(
+              color: Kolors.white,
+              fontSize: 20,
+              fontWeight: FontWeight.w700,
+            ),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(100),
+            ),
+          ),
+        ),
+        dialogTheme: DialogTheme(
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(16))),
+      );
+}
 
 const kGradientColors = [
   Color(0xFF5575F7),
