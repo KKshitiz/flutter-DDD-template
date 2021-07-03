@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_template/app_localizations.dart';
 import 'package:flutter_template/application/settings/settings_bloc.dart';
 import 'package:flutter_template/domain/core/constants.dart';
 import 'package:flutter_template/injection.dart';
@@ -31,6 +33,22 @@ class AppWidget extends StatelessWidget {
               themeMode: state.appThemeMode,
               theme: AppTheme.light,
               darkTheme: AppTheme.dark,
+              supportedLocales: AppConstants.supportedLocales,
+              locale: AppConstants.supportedLocales[0],
+              localizationsDelegates: const [
+                AppLocalizations.delegate,
+                GlobalMaterialLocalizations.delegate,
+                GlobalWidgetsLocalizations.delegate,
+              ],
+              localeResolutionCallback: (locale, supportedLocales) {
+                for (final supportedLocale in supportedLocales) {
+                  if (supportedLocale.languageCode == locale!.languageCode &&
+                      supportedLocale.countryCode == locale.countryCode) {
+                    return supportedLocale;
+                  }
+                }
+                return supportedLocales.first;
+              },
             );
           },
         ),
