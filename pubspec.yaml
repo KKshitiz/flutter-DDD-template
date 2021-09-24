@@ -15,19 +15,19 @@ dependencies:
     sdk: flutter
   auto_route: ^2.2.0
   build_runner: ^2.0.5
-  cached_network_image: ^3.0.0
+  cached_network_image: ^3.1.0
   cupertino_icons: ^1.0.3
   dartz: ^0.10.0-nullsafety.2
-  flutter_bloc: ^7.0.1
-  flutter_secure_storage: ^4.2.0
+  flutter_bloc: ^7.3.0
+  flutter_secure_storage: ^4.2.1
   flutter_svg: ^0.22.0
-  fluttertoast: ^8.0.7
+  fluttertoast: ^8.0.8
   freezed_annotation: ^0.14.2
   get_it: ^7.1.3
   google_fonts: ^2.1.0
   injectable: ^1.4.1
   shimmer: ^2.0.0
-  url_launcher: ^6.0.9
+  url_launcher: ^6.0.12
 
 dev_dependencies:
   flutter_test:
@@ -35,11 +35,11 @@ dev_dependencies:
   integration_test:
     sdk: flutter
   auto_route_generator: ^2.1.0
-  flutter_native_splash: ^1.2.0
+  flutter_native_splash: ^1.2.4
   freezed: ^0.14.2
   injectable_generator: ^1.4.1
   json_serializable: ^4.1.3
-  lint: ^1.5.3
+  lint: ^1.7.2
 
 flutter:
   uses-material-design: true
