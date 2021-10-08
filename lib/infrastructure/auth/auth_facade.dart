@@ -8,15 +8,19 @@ class AuthFacade implements IAuthFacade {
   AuthFacade();
 
   @override
-  Future<Either<AuthFailure, Unit>> registerWithEmailAndPassword(
-      {required String emailAddress, required String password}) {
+  Future<Either<AuthFailure, Unit>> registerWithEmailAndPassword({
+    required String emailAddress,
+    required String password,
+  }) {
     // TODO: implement registerWithEmailAndPassword
     throw UnimplementedError();
   }
 
   @override
-  Future<Either<AuthFailure, Unit>> signInWithEmailAndPassword(
-      {required String emailAddress, required String password}) {
+  Future<Either<AuthFailure, Unit>> signInWithEmailAndPassword({
+    required String emailAddress,
+    required String password,
+  }) {
     // TODO: implement signInWithEmailAndPassword
     throw UnimplementedError();
   }

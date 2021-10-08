@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template/presentation/core/theme/colors.dart';
-import 'package:flutter_template/presentation/core/theme/fonts.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 mixin AppTheme {
@@ -62,7 +61,6 @@ mixin AppTheme {
         primaryIconTheme: const IconThemeData(
           color: Colors.white,
         ),
-
         appBarTheme: const AppBarTheme(
           color: Kolors.primary,
           elevation: 0,
@@ -89,8 +87,9 @@ mixin AppTheme {
           ),
         ),
         dialogTheme: DialogTheme(
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(16))),
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        ),
       );
 }
 

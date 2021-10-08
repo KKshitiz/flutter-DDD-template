@@ -15,8 +15,6 @@ import 'package:flutter_template/presentation/core/pages/splash_page.dart';
     ///[Authentication]
     AutoRoute(page: SignInPage),
     AutoRoute(page: SignUpPage),
-
-
   ],
 )
 class $AppRouter {}

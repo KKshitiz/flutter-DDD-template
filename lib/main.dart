@@ -7,7 +7,9 @@ import 'package:injectable/injectable.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   configureInjection(Environment.prod);
-  await SystemChrome.setPreferredOrientations(
-      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+  await SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]);
   runApp(AppWidget());
 }

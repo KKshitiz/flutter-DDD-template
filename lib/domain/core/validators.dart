@@ -4,7 +4,8 @@ class Validator {
   static final pincodeRegex = RegExp(r'^\d{6,}(?:,\d{6,})*$');
   static final otpRegex = RegExp(r'^[0-9]{1,6}$');
   static final emailRegex = RegExp(
-      r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
+    r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+",
+  );
   static String? email(String? value, {bool isOptional = false}) {
     if (value!.isEmpty && !isOptional) {
       return 'Please enter email';
