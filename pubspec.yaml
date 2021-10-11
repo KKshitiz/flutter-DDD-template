@@ -67,6 +67,6 @@ flutter:
         - asset: assets/fonts/Roboto-ThinItalic.ttf
           style: italic
 
-assets:
-  - lang/
-  - assets/
+  assets:
+    - lang/
+    - assets/

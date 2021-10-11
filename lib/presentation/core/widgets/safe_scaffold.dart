@@ -1,7 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-class SafeScaffold extends StatelessWidget {
+class AppScaffold extends StatelessWidget {
   final bool extendBody;
 
   final bool extendBodyBehindAppBar;
@@ -48,7 +48,7 @@ class SafeScaffold extends StatelessWidget {
 
   final String? restorationId;
 
-  const SafeScaffold({
+  const AppScaffold({
     Key? key,
     this.appBar,
     this.body,
