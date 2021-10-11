@@ -62,7 +62,7 @@ mixin AppTheme {
           color: Colors.white,
         ),
         appBarTheme: const AppBarTheme(
-          color: Kolors.primary,
+          color: AppColors.primary,
           elevation: 0,
           // brightness: Brightness.light,
           centerTitle: true,
@@ -77,7 +77,7 @@ mixin AppTheme {
         textButtonTheme: TextButtonThemeData(
           style: TextButton.styleFrom(
             textStyle: const TextStyle(
-              color: Kolors.white,
+              color: AppColors.white,
               fontSize: 20,
               fontWeight: FontWeight.w700,
             ),
