@@ -5,7 +5,7 @@ import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_template/injection.dart';
-import 'package:flutter_template/presentation/core/pages/app_widget.dart';
+import 'package:flutter_template/presentation/core/app_widget.dart';
 import 'package:injectable/injectable.dart';
 
 Future<void> main() async {
