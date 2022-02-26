@@ -6,7 +6,7 @@ import 'package:flutter_template/application/settings/settings_bloc.dart';
 import 'package:flutter_template/domain/core/constants.dart';
 import 'package:flutter_template/injection.dart';
 import 'package:flutter_template/presentation/core/styles/app_theme.dart';
-import 'package:flutter_template/presentation/core/widgets/life_cycle_watcher.dart';
+import 'package:flutter_template/presentation/core/widgets/utility/life_cycle_watcher.dart';
 import 'package:flutter_template/presentation/routes/router.gr.dart';
 
 class AppWidget extends StatelessWidget {

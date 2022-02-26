@@ -91,6 +91,30 @@ mixin AppTheme {
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
         ),
       );
+  static TextStyle linkStyle = dark.textTheme.bodyText2!.copyWith(
+    shadows: const [
+      Shadow(
+        offset: Offset(0, -3),
+      ),
+    ],
+    color: Colors.transparent,
+    decoration: TextDecoration.underline,
+    decorationColor: AppColors.secondary,
+    decorationThickness: 2,
+  );
+  static BoxDecoration pinBoxDecoration = BoxDecoration(
+    color: AppColors.white,
+    borderRadius: BorderRadius.circular(10),
+    border: Border.all(color: AppColors.extraLightGrey),
+    // boxShadow: [
+    //   BoxShadow(
+    //     offset: const Offset(0, 2),
+    //     color: Colors.black.withAlpha(20),
+    //     blurRadius: 5,
+    //     spreadRadius: 2,
+    //   )
+    // ]
+  );
 }
 
 const kGradientColors = [
