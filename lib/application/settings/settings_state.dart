@@ -6,7 +6,7 @@ class SettingsState with _$SettingsState {
     required ThemeMode appThemeMode,
     required int fontSize,
   }) = _SettingsState;
-  factory SettingsState.initial() => SettingsState(
+  factory SettingsState.initial() => const SettingsState(
         appThemeMode: ThemeMode.system,
         fontSize: 12,
       );

@@ -46,7 +46,7 @@ class RoundedOutlineButton extends StatelessWidget {
                 color: AppColors.secondary,
               ),
               child: Icon(
-                icon!,
+                icon,
                 size: 15,
                 color: AppColors.white,
               ),
