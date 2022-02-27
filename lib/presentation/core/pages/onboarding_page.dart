@@ -1,7 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_template/presentation/core/widgets/layout/app_scaffold.dart';
 import 'package:flutter_template/presentation/core/widgets/utility/dots_indicator.dart';
 import 'package:flutter_template/presentation/routes/router.gr.dart';
@@ -33,18 +32,15 @@ class _OnboardingPageState extends State<OnboardingPage> {
   Widget build(BuildContext context) {
     const List<Widget> _pages = [
       PageViewPages(
-        text:
-            "To get started with Mindstats, add a variable you wish to track. It could be your Mood or Stress Level. Next, add variables which you want to analyse in relation to the main variable. This could be Sleep Quality, Minutes of Exercise or Meditation, Coffee Consumption and so on.",
+        text: "Onboarding text 1",
         img: 'assets/onboarding4.svg',
       ),
       PageViewPages(
-        text:
-            "Next, use the Mindstats Calendar to add data points daily. You will get a better overall picture if you are consistent with data entry. If you think you might forget some days, set a Reminder by clicking the slider inside the Account tab.",
+        text: "Onboarding text 2",
         img: 'assets/onboarding5.svg',
       ),
       PageViewPages(
-        text:
-            "",
+        text: "Onboarding text 3",
         img: 'assets/onboarding6.svg',
       ),
     ];
@@ -70,9 +66,10 @@ class _OnboardingPageState extends State<OnboardingPage> {
                   child: const Text(
                     "Skip",
                     style: TextStyle(
-                        fontSize: 20,
-                        color: Color(0xFF3d405B),
-                        fontWeight: FontWeight.w600),
+                      fontSize: 20,
+                      color: Color(0xFF3d405B),
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
                 ),
               ),
@@ -96,15 +93,18 @@ class _OnboardingPageState extends State<OnboardingPage> {
                       AutoRouter.of(context).replace(const LandingRoute());
                     } else {
                       _pageController.nextPage(
-                          duration: _kDuration, curve: _kCurve);
+                        duration: _kDuration,
+                        curve: _kCurve,
+                      );
                     }
                   },
                   child: const Text(
                     "Next",
                     style: TextStyle(
-                        fontSize: 20,
-                        color: Color(0xFF3d405B),
-                        fontWeight: FontWeight.w600),
+                      fontSize: 20,
+                      color: Color(0xFF3d405B),
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
                 ),
               ),
@@ -133,12 +133,9 @@ class PageViewPages extends StatelessWidget {
       child: Column(
         children: [
           const SizedBox(height: 20),
-          Expanded(
+          const Expanded(
             flex: 3,
-            child: SvgPicture.asset(
-              img,
-              fit: BoxFit.contain,
-            ),
+            child: FlutterLogo(),
           ),
           const SizedBox(height: 20),
           Expanded(

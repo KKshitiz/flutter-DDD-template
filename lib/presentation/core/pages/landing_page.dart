@@ -10,7 +10,7 @@ class LandingPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-  return AppScaffold(
+    return AppScaffold(
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15),
         child: Column(
@@ -21,7 +21,7 @@ class LandingPage extends StatelessWidget {
             RoundedFilledButton(
               text: "Sign up",
               onTap: () {
-                AutoRouter.of(context).push(const SignUpRoute());
+                AutoRouter.of(context).push(const SignupRoute());
               },
             ),
             const SizedBox(height: 24.0),
@@ -29,12 +29,12 @@ class LandingPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text(
-                  "'Already have an account?'",
+                  "Already have an account?",
                 ),
                 const SizedBox(width: 5.0),
                 GestureDetector(
                   onTap: () {
-                    AutoRouter.of(context).push(const SignInRoute());
+                    AutoRouter.of(context).push(const SigninRoute());
                   },
                   child: const Text(
                     "Sign in",

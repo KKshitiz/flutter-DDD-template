@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_template/app_localizations.dart';
+import 'package:flutter_template/application/auth/auth_bloc.dart';
 import 'package:flutter_template/application/settings/settings_bloc.dart';
 import 'package:flutter_template/domain/core/constants.dart';
 import 'package:flutter_template/injection.dart';
@@ -16,6 +17,11 @@ class AppWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
+        BlocProvider<AuthBloc>(
+          create: (context) {
+            return getIt<AuthBloc>()..add(const AuthEvent.checkAuthState());
+          },
+        ),
         BlocProvider(
           create: (context) {
             return getIt<SettingsBloc>();
@@ -33,7 +39,6 @@ class AppWidget extends StatelessWidget {
               themeMode: state.appThemeMode,
               theme: AppTheme.light,
               darkTheme: AppTheme.dark,
-              supportedLocales: AppConstants.supportedLocales,
               locale: AppConstants.supportedLocales[0],
               localizationsDelegates: const [
                 AppLocalizations.delegate,
