@@ -10,7 +10,7 @@ class LandingPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AppScaffold(
+  return AppScaffold(
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15),
         child: Column(

@@ -13,14 +13,18 @@ Future<void> main() async {
     () async {
       WidgetsFlutterBinding.ensureInitialized();
       await Firebase.initializeApp();
-      if (!kIsWeb) {
-        await FirebaseCrashlytics.instance
-            .setCrashlyticsCollectionEnabled(true);
-      }
-      FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
+      await _initializeCrashlytics();
+
       configureInjection(Environment.prod);
       runApp(AppWidget());
     },
     (error, stack) => FirebaseCrashlytics.instance.recordError(error, stack),
   );
+}
+
+Future<void> _initializeCrashlytics() async {
+  if (!kIsWeb) {
+    await FirebaseCrashlytics.instance.setCrashlyticsCollectionEnabled(true);
+  }
+  FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
 }
