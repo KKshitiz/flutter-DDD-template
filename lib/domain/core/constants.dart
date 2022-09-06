@@ -4,8 +4,12 @@ class AppConstants {
   static const String appName = "App-Name-Here";
   static const String appVersion = "1.0.0";
   static const String playStoreLink = "";
+  static const String mailTo = "skilite007@gmail.com";
+  static const String mailSubject = "This is the subject";
+  static const String mailBody = "This is the mail body";
   static const String inviteText =
       "Hey! Download $appName I'm using it and It's a fast, simple and secure app. Get it at $playStoreLink";
+
   static const List<Locale> supportedLocales = [
     Locale('en', 'US'),
   ];

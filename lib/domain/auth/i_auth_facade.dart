@@ -11,4 +11,14 @@ abstract class IAuthFacade {
     required String password,
   });
   Future<void> signOut();
+  Future<bool> checkAuthState();
+
+  Future<Either<AuthFailure, Unit>> deleteAccount();
+  Future<Either<AuthFailure, Unit>> updateEmailAddress({
+    required String updatedEmail,
+  });
+
+  Future<Either<AuthFailure, Unit>> resetPassword({
+    required String emailAddress,
+  });
 }

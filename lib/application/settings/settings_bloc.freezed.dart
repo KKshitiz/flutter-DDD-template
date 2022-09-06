@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'settings_bloc.dart';
 
@@ -36,6 +38,11 @@ mixin _$SettingsEvent {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(ThemeMode themeMode)? changeAppThemeMode,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(ThemeMode themeMode)? changeAppThemeMode,
     required TResult orElse(),
@@ -44,6 +51,11 @@ mixin _$SettingsEvent {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_ChangeAppTheme value) changeAppThemeMode,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_ChangeAppTheme value)? changeAppThemeMode,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -138,15 +150,14 @@ class _$_ChangeAppTheme implements _ChangeAppTheme {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ChangeAppTheme &&
-            (identical(other.themeMode, themeMode) ||
-                const DeepCollectionEquality()
-                    .equals(other.themeMode, themeMode)));
+        (other.runtimeType == runtimeType &&
+            other is _ChangeAppTheme &&
+            const DeepCollectionEquality().equals(other.themeMode, themeMode));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(themeMode);
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(themeMode));
 
   @JsonKey(ignore: true)
   @override
@@ -159,6 +170,14 @@ class _$_ChangeAppTheme implements _ChangeAppTheme {
     required TResult Function(ThemeMode themeMode) changeAppThemeMode,
   }) {
     return changeAppThemeMode(themeMode);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(ThemeMode themeMode)? changeAppThemeMode,
+  }) {
+    return changeAppThemeMode?.call(themeMode);
   }
 
   @override
@@ -183,6 +202,14 @@ class _$_ChangeAppTheme implements _ChangeAppTheme {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_ChangeAppTheme value)? changeAppThemeMode,
+  }) {
+    return changeAppThemeMode?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ChangeAppTheme value)? changeAppThemeMode,
     required TResult orElse(),
@@ -198,7 +225,7 @@ abstract class _ChangeAppTheme implements SettingsEvent {
   const factory _ChangeAppTheme(ThemeMode themeMode) = _$_ChangeAppTheme;
 
   @override
-  ThemeMode get themeMode => throw _privateConstructorUsedError;
+  ThemeMode get themeMode;
   @override
   @JsonKey(ignore: true)
   _$ChangeAppThemeCopyWith<_ChangeAppTheme> get copyWith =>
@@ -323,20 +350,18 @@ class _$_SettingsState implements _SettingsState {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _SettingsState &&
-            (identical(other.appThemeMode, appThemeMode) ||
-                const DeepCollectionEquality()
-                    .equals(other.appThemeMode, appThemeMode)) &&
-            (identical(other.fontSize, fontSize) ||
-                const DeepCollectionEquality()
-                    .equals(other.fontSize, fontSize)));
+        (other.runtimeType == runtimeType &&
+            other is _SettingsState &&
+            const DeepCollectionEquality()
+                .equals(other.appThemeMode, appThemeMode) &&
+            const DeepCollectionEquality().equals(other.fontSize, fontSize));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(appThemeMode) ^
-      const DeepCollectionEquality().hash(fontSize);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(appThemeMode),
+      const DeepCollectionEquality().hash(fontSize));
 
   @JsonKey(ignore: true)
   @override
@@ -350,9 +375,9 @@ abstract class _SettingsState implements SettingsState {
       required int fontSize}) = _$_SettingsState;
 
   @override
-  ThemeMode get appThemeMode => throw _privateConstructorUsedError;
+  ThemeMode get appThemeMode;
   @override
-  int get fontSize => throw _privateConstructorUsedError;
+  int get fontSize;
   @override
   @JsonKey(ignore: true)
   _$SettingsStateCopyWith<_SettingsState> get copyWith =>
