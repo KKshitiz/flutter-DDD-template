@@ -40,7 +40,7 @@ class RoundedFilledButton extends StatelessWidget {
                 Icons.arrow_forward,
                 size: 13,
               ),
-            ]
+            ],
           ],
         ),
       ),

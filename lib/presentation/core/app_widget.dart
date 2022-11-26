@@ -52,6 +52,7 @@ class AppWidget extends StatelessWidget {
                     return supportedLocale;
                   }
                 }
+
                 return supportedLocales.first;
               },
             );

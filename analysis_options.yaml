@@ -1,4 +1,4 @@
-include: package:lint/analysis_options.yaml
+include: package:flutter_lints/flutter.yaml
 
 linter:
   rules:
@@ -10,9 +10,6 @@ analyzer:
   exclude:
     - "build/**"
     - "lib/injection.config.dart"
-    - "lib/application/**"
-    - "lib/domain/**"
-    - "lib/infrastructure/**"
     - "**/*.g.dart"
     - "**/*.gr.dart"
     - "**/*.freezed.dart"

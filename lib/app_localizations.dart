@@ -28,6 +28,7 @@ class AppLocalizations {
     _localizedStrings = jsonMap.map((key, value) {
       return MapEntry(key, value.toString());
     });
+
     return true;
   }
 
@@ -58,6 +59,7 @@ class _AppLocalizationsDelegate
     // AppLocalizations class is where the JSON loading actually runs
     final AppLocalizations localizations = AppLocalizations(locale);
     await localizations.load();
+
     return localizations;
   }
 

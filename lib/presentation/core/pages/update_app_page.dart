@@ -8,10 +8,10 @@ class UpdateAppPage extends StatefulWidget {
   const UpdateAppPage({Key? key}) : super(key: key);
 
   @override
-  _UpdateAppPageState createState() => _UpdateAppPageState();
+  UpdateAppPageState createState() => UpdateAppPageState();
 }
 
-class _UpdateAppPageState extends State<UpdateAppPage>
+class UpdateAppPageState extends State<UpdateAppPage>
     with WidgetsBindingObserver {
   @override
   void initState() {
@@ -67,7 +67,7 @@ class _UpdateAppPageState extends State<UpdateAppPage>
                 },
                 child: const Text('Update now'),
               ),
-            )
+            ),
           ],
         ),
       ),

@@ -5,10 +5,10 @@ class LifecycleWatcher extends StatefulWidget {
 
   const LifecycleWatcher({Key? key, required this.child}) : super(key: key);
   @override
-  _LifecycleWatcherState createState() => _LifecycleWatcherState();
+  LifecycleWatcherState createState() => LifecycleWatcherState();
 }
 
-class _LifecycleWatcherState extends State<LifecycleWatcher>
+class LifecycleWatcherState extends State<LifecycleWatcher>
     with WidgetsBindingObserver {
   AppLifecycleState? _lastLifecycleState;
 
@@ -45,6 +45,7 @@ class _LifecycleWatcherState extends State<LifecycleWatcher>
       default:
     }
     debugPrint('App Life Cycle state ===> $_lastLifecycleState.');
+    
     return widget.child;
   }
 }

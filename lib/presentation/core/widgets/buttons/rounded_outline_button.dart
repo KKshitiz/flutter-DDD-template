@@ -66,7 +66,7 @@ class RoundedOutlineButton extends StatelessWidget {
               Icons.arrow_forward,
               size: 13,
             ),
-          ]
+          ],
         ],
       ),
     );

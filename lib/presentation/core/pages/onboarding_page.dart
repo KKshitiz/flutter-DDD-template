@@ -9,10 +9,10 @@ class OnboardingPage extends StatefulWidget {
   const OnboardingPage({Key? key}) : super(key: key);
 
   @override
-  _OnboardingPageState createState() => _OnboardingPageState();
+  OnboardingPageState createState() => OnboardingPageState();
 }
 
-class _OnboardingPageState extends State<OnboardingPage> {
+class OnboardingPageState extends State<OnboardingPage> {
   final Duration _kDuration = const Duration(milliseconds: 100);
   final _kCurve = Curves.easeIn;
   late PageController _pageController;
@@ -44,6 +44,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
         img: 'assets/onboarding6.svg',
       ),
     ];
+
     return AppScaffold(
       body: Column(
         children: [

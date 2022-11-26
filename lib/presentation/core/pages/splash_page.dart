@@ -6,6 +6,8 @@ import 'package:flutter_template/presentation/core/widgets/layout/app_scaffold.d
 import 'package:flutter_template/presentation/routes/router.gr.dart';
 
 class SplashPage extends StatelessWidget {
+  const SplashPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<AuthBloc, AuthState>(

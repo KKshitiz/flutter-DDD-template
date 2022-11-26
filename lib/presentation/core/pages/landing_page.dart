@@ -42,7 +42,7 @@ class LandingPage extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 60.0)
+            const SizedBox(height: 60.0),
           ],
         ),
       ),
