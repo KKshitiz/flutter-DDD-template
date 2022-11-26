@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.skilite.ddd_template">
+    package="com.example.ddd_template">
    <application
         android:label="flutter_template"
         android:icon="@mipmap/ic_launcher">
