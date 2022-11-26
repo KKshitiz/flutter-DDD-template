@@ -38,3 +38,11 @@ This layer contains all the screen i.e. UI/UX part will be there and will remain
 ```code
 
 ```
+
+### Priciples followed:
+
+- Don't put string literals which are used to display on the app directly anywhere. Instead, reference it through the key from the localization file. This will make sure it's easy to add localization at a later stage without changing any code, just by updating the l10n file
+
+- All the constants/configs which can change bw deployments (dev, staging, prod) should reside in the .env file. In a hypothetical scenario when the source code needs to be open sourced, no credentials should be compromised. [Further Reading](https://12factor.net/config)
+
+- While integrating with any 3rd party libraries/services, there should not be tight coupling with their APIs. Instead, interfaces should be created for each service, so that at a later stage, they can be swapped out easily with other services by changing just the concrete implementation
