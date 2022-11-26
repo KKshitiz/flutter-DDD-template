@@ -21,7 +21,7 @@ class RoundedFilledButton extends StatelessWidget {
     return TextButton(
       onPressed: disable ? null : onTap,
       style: TextButton.styleFrom(
-        primary: AppColors.white,
+        foregroundColor: AppColors.white,
         backgroundColor: AppColors.primary,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
       ),

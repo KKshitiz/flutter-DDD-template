@@ -30,7 +30,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
 
   @override
   Widget build(BuildContext context) {
-    const List<Widget> _pages = [
+    const List<Widget> pages = [
       PageViewPages(
         text: "Onboarding text 1",
         img: 'assets/onboarding4.svg',
@@ -50,7 +50,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
           Expanded(
             child: PageView(
               controller: _pageController,
-              children: _pages,
+              children: pages,
             ),
           ),
           Row(
@@ -75,7 +75,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
               ),
               DotsIndicator(
                 controller: _pageController,
-                itemCount: _pages.length,
+                itemCount: pages.length,
                 onPageSelected: (int page) {
                   _pageController.animateToPage(
                     page,

@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_template/presentation/core/styles/app_colors.dart';
 
