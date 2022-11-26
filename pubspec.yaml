@@ -10,12 +10,12 @@ environment:
 
 dependencies:
   auto_route: ^5.0.3
-  build_runner: ^2.1.7
-  cached_network_image: ^3.2.0
+  build_runner: ^2.3.2
+  cached_network_image: ^3.2.3
   cloud_firestore: ^3.1.10
   cloud_functions: ^3.2.9
-  connectivity_plus: ^2.2.1
-  cupertino_icons: ^1.0.4
+  connectivity_plus: ^3.0.2
+  cupertino_icons: ^1.0.5
   dartz: ^0.10.0-nullsafety.2
   firebase_auth: ^3.3.9
   firebase_core: ^1.13.1
