@@ -11,6 +11,7 @@ analyzer:
     - "build/**"
     - "lib/injection.config.dart"
     - "**/*.g.dart"
+    - "**/*.gen.dart"
     - "**/*.gr.dart"
     - "**/*.freezed.dart"
   errors:
