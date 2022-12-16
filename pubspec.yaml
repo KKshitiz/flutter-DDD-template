@@ -17,7 +17,10 @@ dependencies:
   connectivity_plus: ^3.0.2
   cupertino_icons: ^1.0.5
   dartz: ^0.10.0-nullsafety.2
+  dio: ^4.0.6
+  dio_smart_retry: ^1.4.0
   equatable: ^2.0.5
+  file_picker: ^5.2.4
   firebase_auth: ^4.1.4
   firebase_core: ^2.3.0
   firebase_crashlytics: ^3.0.6
@@ -36,10 +39,14 @@ dependencies:
   freezed_annotation: ^2.2.0
   get_it: ^7.2.0
   google_fonts: ^3.0.1
+  graphql_flutter: ^5.1.1-beta.5
+  image_picker: ^0.8.6
   injectable: ^2.0.1
   pin_code_text_field: ^1.8.0
+  shared_preferences: ^2.0.15
   shimmer: ^2.0.0
   url_launcher: ^6.1.7
+  validators: ^3.0.0
 
 dev_dependencies:
   auto_route_generator: ^5.0.3
