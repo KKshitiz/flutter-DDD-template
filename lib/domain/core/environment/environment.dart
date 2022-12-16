@@ -15,7 +15,7 @@ class Environment {
 
   late BaseConfig config;
 
-  initConfig(String environment) {
+  void initConfig(String environment) {
     config = _getConfig(environment);
   }
 

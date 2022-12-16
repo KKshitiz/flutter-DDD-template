@@ -3,7 +3,7 @@
 import 'package:flutter/foundation.dart';
 
 class Validators {
-  static final emailRegex = RegExp(
+  static final _emailRegex = RegExp(
     r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+",
   );
   static final _nameRegex = RegExp(r"[a-zA-Z][a-zA-Z ]+[a-zA-Z]$");
@@ -25,7 +25,7 @@ class Validators {
     if (emailString.isEmpty) {
       return 'Please enter an email address';
     } else if (emailString.isNotEmpty &&
-        !Validators.emailRegex.hasMatch(emailString)) {
+        !Validators._emailRegex.hasMatch(emailString)) {
       return 'Please enter a valid email address';
     } else if (emailString.length > 100) {
       return 'This field cannot exceed 100 characters';
