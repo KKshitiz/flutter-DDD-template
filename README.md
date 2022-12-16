@@ -68,4 +68,6 @@ This layer contains all the screen i.e. UI/UX part will be there and will remain
 - Assets class generator support - flutter gen
 - Class value equality using Equatable
 - Add dart docs
+- Add commit lint - git_hooks package
+
 

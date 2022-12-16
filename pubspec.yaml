@@ -33,13 +33,13 @@ dependencies:
   flutter_dotenv: ^5.0.2
   flutter_localizations:
     sdk: flutter
-  flutter_secure_storage: ^6.1.0
+  flutter_secure_storage: ^7.0.1
   flutter_svg: ^1.1.6
-  fluttertoast: ^8.1.1
+  fluttertoast: ^8.1.2
   freezed_annotation: ^2.2.0
   get_it: ^7.2.0
   google_fonts: ^3.0.1
-  graphql_flutter: ^5.1.1-beta.5
+  graphql_flutter: ^5.1.0
   image_picker: ^0.8.6
   injectable: ^2.0.1
   pin_code_text_field: ^1.8.0
@@ -50,7 +50,7 @@ dependencies:
 
 dev_dependencies:
   auto_route_generator: ^5.0.3
-  dart_code_metrics: ^5.0.1
+  dart_code_metrics: ^5.2.1
   flutter_gen_runner: ^5.1.0+1
   flutter_lints: ^2.0.1
   flutter_native_splash: ^2.2.15
@@ -61,7 +61,7 @@ dev_dependencies:
   integration_test:
     sdk: flutter
   json_serializable: ^6.5.4
-  lint: ^1.10.0
+  lint: ^2.0.1
 
 flutter:
   uses-material-design: true
