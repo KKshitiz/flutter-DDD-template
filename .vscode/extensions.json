@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "nash.awesome-flutter-snippets",
+        "felixangelov.bloc",
+        "dart-code.dart-code",
+        "dotup.dart-data-class-generator",
+        "dart-code.flutter",
+        "gruntfuggly.todo-tree"
+    ]
+}
