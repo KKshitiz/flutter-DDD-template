@@ -12,26 +12,11 @@ part of 'settings_bloc.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$SettingsEventTearOff {
-  const _$SettingsEventTearOff();
-
-  _ChangeAppTheme changeAppThemeMode(ThemeMode themeMode) {
-    return _ChangeAppTheme(
-      themeMode,
-    );
-  }
-}
-
-/// @nodoc
-const $SettingsEvent = _$SettingsEventTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$SettingsEvent {
   ThemeMode get themeMode => throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(ThemeMode themeMode) changeAppThemeMode,
@@ -39,7 +24,7 @@ mixin _$SettingsEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(ThemeMode themeMode)? changeAppThemeMode,
+    TResult? Function(ThemeMode themeMode)? changeAppThemeMode,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,7 +40,7 @@ mixin _$SettingsEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_ChangeAppTheme value)? changeAppThemeMode,
+    TResult? Function(_ChangeAppTheme value)? changeAppThemeMode,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -74,59 +59,61 @@ mixin _$SettingsEvent {
 abstract class $SettingsEventCopyWith<$Res> {
   factory $SettingsEventCopyWith(
           SettingsEvent value, $Res Function(SettingsEvent) then) =
-      _$SettingsEventCopyWithImpl<$Res>;
+      _$SettingsEventCopyWithImpl<$Res, SettingsEvent>;
+  @useResult
   $Res call({ThemeMode themeMode});
 }
 
 /// @nodoc
-class _$SettingsEventCopyWithImpl<$Res>
+class _$SettingsEventCopyWithImpl<$Res, $Val extends SettingsEvent>
     implements $SettingsEventCopyWith<$Res> {
   _$SettingsEventCopyWithImpl(this._value, this._then);
 
-  final SettingsEvent _value;
   // ignore: unused_field
-  final $Res Function(SettingsEvent) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? themeMode = freezed,
+    Object? themeMode = null,
   }) {
     return _then(_value.copyWith(
-      themeMode: themeMode == freezed
+      themeMode: null == themeMode
           ? _value.themeMode
           : themeMode // ignore: cast_nullable_to_non_nullable
               as ThemeMode,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$ChangeAppThemeCopyWith<$Res>
+abstract class _$$_ChangeAppThemeCopyWith<$Res>
     implements $SettingsEventCopyWith<$Res> {
-  factory _$ChangeAppThemeCopyWith(
-          _ChangeAppTheme value, $Res Function(_ChangeAppTheme) then) =
-      __$ChangeAppThemeCopyWithImpl<$Res>;
+  factory _$$_ChangeAppThemeCopyWith(
+          _$_ChangeAppTheme value, $Res Function(_$_ChangeAppTheme) then) =
+      __$$_ChangeAppThemeCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({ThemeMode themeMode});
 }
 
 /// @nodoc
-class __$ChangeAppThemeCopyWithImpl<$Res>
-    extends _$SettingsEventCopyWithImpl<$Res>
-    implements _$ChangeAppThemeCopyWith<$Res> {
-  __$ChangeAppThemeCopyWithImpl(
-      _ChangeAppTheme _value, $Res Function(_ChangeAppTheme) _then)
-      : super(_value, (v) => _then(v as _ChangeAppTheme));
+class __$$_ChangeAppThemeCopyWithImpl<$Res>
+    extends _$SettingsEventCopyWithImpl<$Res, _$_ChangeAppTheme>
+    implements _$$_ChangeAppThemeCopyWith<$Res> {
+  __$$_ChangeAppThemeCopyWithImpl(
+      _$_ChangeAppTheme _value, $Res Function(_$_ChangeAppTheme) _then)
+      : super(_value, _then);
 
-  @override
-  _ChangeAppTheme get _value => super._value as _ChangeAppTheme;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? themeMode = freezed,
+    Object? themeMode = null,
   }) {
-    return _then(_ChangeAppTheme(
-      themeMode == freezed
+    return _then(_$_ChangeAppTheme(
+      null == themeMode
           ? _value.themeMode
           : themeMode // ignore: cast_nullable_to_non_nullable
               as ThemeMode,
@@ -151,18 +138,19 @@ class _$_ChangeAppTheme implements _ChangeAppTheme {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ChangeAppTheme &&
-            const DeepCollectionEquality().equals(other.themeMode, themeMode));
+            other is _$_ChangeAppTheme &&
+            (identical(other.themeMode, themeMode) ||
+                other.themeMode == themeMode));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(themeMode));
+  int get hashCode => Object.hash(runtimeType, themeMode);
 
   @JsonKey(ignore: true)
   @override
-  _$ChangeAppThemeCopyWith<_ChangeAppTheme> get copyWith =>
-      __$ChangeAppThemeCopyWithImpl<_ChangeAppTheme>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_ChangeAppThemeCopyWith<_$_ChangeAppTheme> get copyWith =>
+      __$$_ChangeAppThemeCopyWithImpl<_$_ChangeAppTheme>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -175,7 +163,7 @@ class _$_ChangeAppTheme implements _ChangeAppTheme {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(ThemeMode themeMode)? changeAppThemeMode,
+    TResult? Function(ThemeMode themeMode)? changeAppThemeMode,
   }) {
     return changeAppThemeMode?.call(themeMode);
   }
@@ -203,7 +191,7 @@ class _$_ChangeAppTheme implements _ChangeAppTheme {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_ChangeAppTheme value)? changeAppThemeMode,
+    TResult? Function(_ChangeAppTheme value)? changeAppThemeMode,
   }) {
     return changeAppThemeMode?.call(this);
   }
@@ -222,31 +210,15 @@ class _$_ChangeAppTheme implements _ChangeAppTheme {
 }
 
 abstract class _ChangeAppTheme implements SettingsEvent {
-  const factory _ChangeAppTheme(ThemeMode themeMode) = _$_ChangeAppTheme;
+  const factory _ChangeAppTheme(final ThemeMode themeMode) = _$_ChangeAppTheme;
 
   @override
   ThemeMode get themeMode;
   @override
   @JsonKey(ignore: true)
-  _$ChangeAppThemeCopyWith<_ChangeAppTheme> get copyWith =>
+  _$$_ChangeAppThemeCopyWith<_$_ChangeAppTheme> get copyWith =>
       throw _privateConstructorUsedError;
 }
-
-/// @nodoc
-class _$SettingsStateTearOff {
-  const _$SettingsStateTearOff();
-
-  _SettingsState call(
-      {required ThemeMode appThemeMode, required int fontSize}) {
-    return _SettingsState(
-      appThemeMode: appThemeMode,
-      fontSize: fontSize,
-    );
-  }
-}
-
-/// @nodoc
-const $SettingsState = _$SettingsStateTearOff();
 
 /// @nodoc
 mixin _$SettingsState {
@@ -262,69 +234,71 @@ mixin _$SettingsState {
 abstract class $SettingsStateCopyWith<$Res> {
   factory $SettingsStateCopyWith(
           SettingsState value, $Res Function(SettingsState) then) =
-      _$SettingsStateCopyWithImpl<$Res>;
+      _$SettingsStateCopyWithImpl<$Res, SettingsState>;
+  @useResult
   $Res call({ThemeMode appThemeMode, int fontSize});
 }
 
 /// @nodoc
-class _$SettingsStateCopyWithImpl<$Res>
+class _$SettingsStateCopyWithImpl<$Res, $Val extends SettingsState>
     implements $SettingsStateCopyWith<$Res> {
   _$SettingsStateCopyWithImpl(this._value, this._then);
 
-  final SettingsState _value;
   // ignore: unused_field
-  final $Res Function(SettingsState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? appThemeMode = freezed,
-    Object? fontSize = freezed,
+    Object? appThemeMode = null,
+    Object? fontSize = null,
   }) {
     return _then(_value.copyWith(
-      appThemeMode: appThemeMode == freezed
+      appThemeMode: null == appThemeMode
           ? _value.appThemeMode
           : appThemeMode // ignore: cast_nullable_to_non_nullable
               as ThemeMode,
-      fontSize: fontSize == freezed
+      fontSize: null == fontSize
           ? _value.fontSize
           : fontSize // ignore: cast_nullable_to_non_nullable
               as int,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$SettingsStateCopyWith<$Res>
+abstract class _$$_SettingsStateCopyWith<$Res>
     implements $SettingsStateCopyWith<$Res> {
-  factory _$SettingsStateCopyWith(
-          _SettingsState value, $Res Function(_SettingsState) then) =
-      __$SettingsStateCopyWithImpl<$Res>;
+  factory _$$_SettingsStateCopyWith(
+          _$_SettingsState value, $Res Function(_$_SettingsState) then) =
+      __$$_SettingsStateCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({ThemeMode appThemeMode, int fontSize});
 }
 
 /// @nodoc
-class __$SettingsStateCopyWithImpl<$Res>
-    extends _$SettingsStateCopyWithImpl<$Res>
-    implements _$SettingsStateCopyWith<$Res> {
-  __$SettingsStateCopyWithImpl(
-      _SettingsState _value, $Res Function(_SettingsState) _then)
-      : super(_value, (v) => _then(v as _SettingsState));
+class __$$_SettingsStateCopyWithImpl<$Res>
+    extends _$SettingsStateCopyWithImpl<$Res, _$_SettingsState>
+    implements _$$_SettingsStateCopyWith<$Res> {
+  __$$_SettingsStateCopyWithImpl(
+      _$_SettingsState _value, $Res Function(_$_SettingsState) _then)
+      : super(_value, _then);
 
-  @override
-  _SettingsState get _value => super._value as _SettingsState;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? appThemeMode = freezed,
-    Object? fontSize = freezed,
+    Object? appThemeMode = null,
+    Object? fontSize = null,
   }) {
-    return _then(_SettingsState(
-      appThemeMode: appThemeMode == freezed
+    return _then(_$_SettingsState(
+      appThemeMode: null == appThemeMode
           ? _value.appThemeMode
           : appThemeMode // ignore: cast_nullable_to_non_nullable
               as ThemeMode,
-      fontSize: fontSize == freezed
+      fontSize: null == fontSize
           ? _value.fontSize
           : fontSize // ignore: cast_nullable_to_non_nullable
               as int,
@@ -351,28 +325,27 @@ class _$_SettingsState implements _SettingsState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SettingsState &&
-            const DeepCollectionEquality()
-                .equals(other.appThemeMode, appThemeMode) &&
-            const DeepCollectionEquality().equals(other.fontSize, fontSize));
+            other is _$_SettingsState &&
+            (identical(other.appThemeMode, appThemeMode) ||
+                other.appThemeMode == appThemeMode) &&
+            (identical(other.fontSize, fontSize) ||
+                other.fontSize == fontSize));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(appThemeMode),
-      const DeepCollectionEquality().hash(fontSize));
+  int get hashCode => Object.hash(runtimeType, appThemeMode, fontSize);
 
   @JsonKey(ignore: true)
   @override
-  _$SettingsStateCopyWith<_SettingsState> get copyWith =>
-      __$SettingsStateCopyWithImpl<_SettingsState>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_SettingsStateCopyWith<_$_SettingsState> get copyWith =>
+      __$$_SettingsStateCopyWithImpl<_$_SettingsState>(this, _$identity);
 }
 
 abstract class _SettingsState implements SettingsState {
   const factory _SettingsState(
-      {required ThemeMode appThemeMode,
-      required int fontSize}) = _$_SettingsState;
+      {required final ThemeMode appThemeMode,
+      required final int fontSize}) = _$_SettingsState;
 
   @override
   ThemeMode get appThemeMode;
@@ -380,6 +353,6 @@ abstract class _SettingsState implements SettingsState {
   int get fontSize;
   @override
   @JsonKey(ignore: true)
-  _$SettingsStateCopyWith<_SettingsState> get copyWith =>
+  _$$_SettingsStateCopyWith<_$_SettingsState> get copyWith =>
       throw _privateConstructorUsedError;
 }

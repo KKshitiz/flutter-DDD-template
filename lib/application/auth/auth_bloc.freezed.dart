@@ -12,66 +12,7 @@ part of 'auth_bloc.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$AuthEventTearOff {
-  const _$AuthEventTearOff();
-
-  _RegisterWithEmailAndPassword registerWithEmailAndPassword(
-      {required String email, required String password}) {
-    return _RegisterWithEmailAndPassword(
-      email: email,
-      password: password,
-    );
-  }
-
-  _SignInWithEmailAndPassword signInWithEmailAndPassword(
-      {required String email, required String password}) {
-    return _SignInWithEmailAndPassword(
-      email: email,
-      password: password,
-    );
-  }
-
-  SignOut signOut() {
-    return const SignOut();
-  }
-
-  CheckAuthState checkAuthState() {
-    return const CheckAuthState();
-  }
-
-  _SendEmailConfirmation sendEmailConfirmation({required String email}) {
-    return _SendEmailConfirmation(
-      email: email,
-    );
-  }
-
-  _DeleteAccount deleteAcccount() {
-    return const _DeleteAccount();
-  }
-
-  _UpdateEmailAddress updateEmailAddress(String updatedEmail) {
-    return _UpdateEmailAddress(
-      updatedEmail,
-    );
-  }
-
-  _UpdateConnectivityStatus updateConnectivityStatus(
-      ConnectivityResult status) {
-    return _UpdateConnectivityStatus(
-      status,
-    );
-  }
-
-  _CheckConnectivityStatus checkConnectivityStatus() {
-    return const _CheckConnectivityStatus();
-  }
-}
-
-/// @nodoc
-const $AuthEvent = _$AuthEventTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$AuthEvent {
@@ -93,16 +34,17 @@ mixin _$AuthEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String email, String password)?
+    TResult? Function(String email, String password)?
         registerWithEmailAndPassword,
-    TResult Function(String email, String password)? signInWithEmailAndPassword,
-    TResult Function()? signOut,
-    TResult Function()? checkAuthState,
-    TResult Function(String email)? sendEmailConfirmation,
-    TResult Function()? deleteAcccount,
-    TResult Function(String updatedEmail)? updateEmailAddress,
-    TResult Function(ConnectivityResult status)? updateConnectivityStatus,
-    TResult Function()? checkConnectivityStatus,
+    TResult? Function(String email, String password)?
+        signInWithEmailAndPassword,
+    TResult? Function()? signOut,
+    TResult? Function()? checkAuthState,
+    TResult? Function(String email)? sendEmailConfirmation,
+    TResult? Function()? deleteAcccount,
+    TResult? Function(String updatedEmail)? updateEmailAddress,
+    TResult? Function(ConnectivityResult status)? updateConnectivityStatus,
+    TResult? Function()? checkConnectivityStatus,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -140,17 +82,18 @@ mixin _$AuthEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_RegisterWithEmailAndPassword value)?
+    TResult? Function(_RegisterWithEmailAndPassword value)?
         registerWithEmailAndPassword,
-    TResult Function(_SignInWithEmailAndPassword value)?
+    TResult? Function(_SignInWithEmailAndPassword value)?
         signInWithEmailAndPassword,
-    TResult Function(SignOut value)? signOut,
-    TResult Function(CheckAuthState value)? checkAuthState,
-    TResult Function(_SendEmailConfirmation value)? sendEmailConfirmation,
-    TResult Function(_DeleteAccount value)? deleteAcccount,
-    TResult Function(_UpdateEmailAddress value)? updateEmailAddress,
-    TResult Function(_UpdateConnectivityStatus value)? updateConnectivityStatus,
-    TResult Function(_CheckConnectivityStatus value)? checkConnectivityStatus,
+    TResult? Function(SignOut value)? signOut,
+    TResult? Function(CheckAuthState value)? checkAuthState,
+    TResult? Function(_SendEmailConfirmation value)? sendEmailConfirmation,
+    TResult? Function(_DeleteAccount value)? deleteAcccount,
+    TResult? Function(_UpdateEmailAddress value)? updateEmailAddress,
+    TResult? Function(_UpdateConnectivityStatus value)?
+        updateConnectivityStatus,
+    TResult? Function(_CheckConnectivityStatus value)? checkConnectivityStatus,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -174,51 +117,51 @@ mixin _$AuthEvent {
 /// @nodoc
 abstract class $AuthEventCopyWith<$Res> {
   factory $AuthEventCopyWith(AuthEvent value, $Res Function(AuthEvent) then) =
-      _$AuthEventCopyWithImpl<$Res>;
+      _$AuthEventCopyWithImpl<$Res, AuthEvent>;
 }
 
 /// @nodoc
-class _$AuthEventCopyWithImpl<$Res> implements $AuthEventCopyWith<$Res> {
+class _$AuthEventCopyWithImpl<$Res, $Val extends AuthEvent>
+    implements $AuthEventCopyWith<$Res> {
   _$AuthEventCopyWithImpl(this._value, this._then);
 
-  final AuthEvent _value;
   // ignore: unused_field
-  final $Res Function(AuthEvent) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class _$RegisterWithEmailAndPasswordCopyWith<$Res> {
-  factory _$RegisterWithEmailAndPasswordCopyWith(
-          _RegisterWithEmailAndPassword value,
-          $Res Function(_RegisterWithEmailAndPassword) then) =
-      __$RegisterWithEmailAndPasswordCopyWithImpl<$Res>;
+abstract class _$$_RegisterWithEmailAndPasswordCopyWith<$Res> {
+  factory _$$_RegisterWithEmailAndPasswordCopyWith(
+          _$_RegisterWithEmailAndPassword value,
+          $Res Function(_$_RegisterWithEmailAndPassword) then) =
+      __$$_RegisterWithEmailAndPasswordCopyWithImpl<$Res>;
+  @useResult
   $Res call({String email, String password});
 }
 
 /// @nodoc
-class __$RegisterWithEmailAndPasswordCopyWithImpl<$Res>
-    extends _$AuthEventCopyWithImpl<$Res>
-    implements _$RegisterWithEmailAndPasswordCopyWith<$Res> {
-  __$RegisterWithEmailAndPasswordCopyWithImpl(
-      _RegisterWithEmailAndPassword _value,
-      $Res Function(_RegisterWithEmailAndPassword) _then)
-      : super(_value, (v) => _then(v as _RegisterWithEmailAndPassword));
+class __$$_RegisterWithEmailAndPasswordCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$_RegisterWithEmailAndPassword>
+    implements _$$_RegisterWithEmailAndPasswordCopyWith<$Res> {
+  __$$_RegisterWithEmailAndPasswordCopyWithImpl(
+      _$_RegisterWithEmailAndPassword _value,
+      $Res Function(_$_RegisterWithEmailAndPassword) _then)
+      : super(_value, _then);
 
-  @override
-  _RegisterWithEmailAndPassword get _value =>
-      super._value as _RegisterWithEmailAndPassword;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? email = freezed,
-    Object? password = freezed,
+    Object? email = null,
+    Object? password = null,
   }) {
-    return _then(_RegisterWithEmailAndPassword(
-      email: email == freezed
+    return _then(_$_RegisterWithEmailAndPassword(
+      email: null == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String,
-      password: password == freezed
+      password: null == password
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
               as String,
@@ -246,22 +189,21 @@ class _$_RegisterWithEmailAndPassword implements _RegisterWithEmailAndPassword {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _RegisterWithEmailAndPassword &&
-            const DeepCollectionEquality().equals(other.email, email) &&
-            const DeepCollectionEquality().equals(other.password, password));
+            other is _$_RegisterWithEmailAndPassword &&
+            (identical(other.email, email) || other.email == email) &&
+            (identical(other.password, password) ||
+                other.password == password));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(email),
-      const DeepCollectionEquality().hash(password));
+  int get hashCode => Object.hash(runtimeType, email, password);
 
   @JsonKey(ignore: true)
   @override
-  _$RegisterWithEmailAndPasswordCopyWith<_RegisterWithEmailAndPassword>
-      get copyWith => __$RegisterWithEmailAndPasswordCopyWithImpl<
-          _RegisterWithEmailAndPassword>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_RegisterWithEmailAndPasswordCopyWith<_$_RegisterWithEmailAndPassword>
+      get copyWith => __$$_RegisterWithEmailAndPasswordCopyWithImpl<
+          _$_RegisterWithEmailAndPassword>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -285,16 +227,17 @@ class _$_RegisterWithEmailAndPassword implements _RegisterWithEmailAndPassword {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String email, String password)?
+    TResult? Function(String email, String password)?
         registerWithEmailAndPassword,
-    TResult Function(String email, String password)? signInWithEmailAndPassword,
-    TResult Function()? signOut,
-    TResult Function()? checkAuthState,
-    TResult Function(String email)? sendEmailConfirmation,
-    TResult Function()? deleteAcccount,
-    TResult Function(String updatedEmail)? updateEmailAddress,
-    TResult Function(ConnectivityResult status)? updateConnectivityStatus,
-    TResult Function()? checkConnectivityStatus,
+    TResult? Function(String email, String password)?
+        signInWithEmailAndPassword,
+    TResult? Function()? signOut,
+    TResult? Function()? checkAuthState,
+    TResult? Function(String email)? sendEmailConfirmation,
+    TResult? Function()? deleteAcccount,
+    TResult? Function(String updatedEmail)? updateEmailAddress,
+    TResult? Function(ConnectivityResult status)? updateConnectivityStatus,
+    TResult? Function()? checkConnectivityStatus,
   }) {
     return registerWithEmailAndPassword?.call(email, password);
   }
@@ -344,17 +287,18 @@ class _$_RegisterWithEmailAndPassword implements _RegisterWithEmailAndPassword {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_RegisterWithEmailAndPassword value)?
+    TResult? Function(_RegisterWithEmailAndPassword value)?
         registerWithEmailAndPassword,
-    TResult Function(_SignInWithEmailAndPassword value)?
+    TResult? Function(_SignInWithEmailAndPassword value)?
         signInWithEmailAndPassword,
-    TResult Function(SignOut value)? signOut,
-    TResult Function(CheckAuthState value)? checkAuthState,
-    TResult Function(_SendEmailConfirmation value)? sendEmailConfirmation,
-    TResult Function(_DeleteAccount value)? deleteAcccount,
-    TResult Function(_UpdateEmailAddress value)? updateEmailAddress,
-    TResult Function(_UpdateConnectivityStatus value)? updateConnectivityStatus,
-    TResult Function(_CheckConnectivityStatus value)? checkConnectivityStatus,
+    TResult? Function(SignOut value)? signOut,
+    TResult? Function(CheckAuthState value)? checkAuthState,
+    TResult? Function(_SendEmailConfirmation value)? sendEmailConfirmation,
+    TResult? Function(_DeleteAccount value)? deleteAcccount,
+    TResult? Function(_UpdateEmailAddress value)? updateEmailAddress,
+    TResult? Function(_UpdateConnectivityStatus value)?
+        updateConnectivityStatus,
+    TResult? Function(_CheckConnectivityStatus value)? checkConnectivityStatus,
   }) {
     return registerWithEmailAndPassword?.call(this);
   }
@@ -384,48 +328,47 @@ class _$_RegisterWithEmailAndPassword implements _RegisterWithEmailAndPassword {
 
 abstract class _RegisterWithEmailAndPassword implements AuthEvent {
   const factory _RegisterWithEmailAndPassword(
-      {required String email,
-      required String password}) = _$_RegisterWithEmailAndPassword;
+      {required final String email,
+      required final String password}) = _$_RegisterWithEmailAndPassword;
 
   String get email;
   String get password;
   @JsonKey(ignore: true)
-  _$RegisterWithEmailAndPasswordCopyWith<_RegisterWithEmailAndPassword>
+  _$$_RegisterWithEmailAndPasswordCopyWith<_$_RegisterWithEmailAndPassword>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$SignInWithEmailAndPasswordCopyWith<$Res> {
-  factory _$SignInWithEmailAndPasswordCopyWith(
-          _SignInWithEmailAndPassword value,
-          $Res Function(_SignInWithEmailAndPassword) then) =
-      __$SignInWithEmailAndPasswordCopyWithImpl<$Res>;
+abstract class _$$_SignInWithEmailAndPasswordCopyWith<$Res> {
+  factory _$$_SignInWithEmailAndPasswordCopyWith(
+          _$_SignInWithEmailAndPassword value,
+          $Res Function(_$_SignInWithEmailAndPassword) then) =
+      __$$_SignInWithEmailAndPasswordCopyWithImpl<$Res>;
+  @useResult
   $Res call({String email, String password});
 }
 
 /// @nodoc
-class __$SignInWithEmailAndPasswordCopyWithImpl<$Res>
-    extends _$AuthEventCopyWithImpl<$Res>
-    implements _$SignInWithEmailAndPasswordCopyWith<$Res> {
-  __$SignInWithEmailAndPasswordCopyWithImpl(_SignInWithEmailAndPassword _value,
-      $Res Function(_SignInWithEmailAndPassword) _then)
-      : super(_value, (v) => _then(v as _SignInWithEmailAndPassword));
+class __$$_SignInWithEmailAndPasswordCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$_SignInWithEmailAndPassword>
+    implements _$$_SignInWithEmailAndPasswordCopyWith<$Res> {
+  __$$_SignInWithEmailAndPasswordCopyWithImpl(
+      _$_SignInWithEmailAndPassword _value,
+      $Res Function(_$_SignInWithEmailAndPassword) _then)
+      : super(_value, _then);
 
-  @override
-  _SignInWithEmailAndPassword get _value =>
-      super._value as _SignInWithEmailAndPassword;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? email = freezed,
-    Object? password = freezed,
+    Object? email = null,
+    Object? password = null,
   }) {
-    return _then(_SignInWithEmailAndPassword(
-      email: email == freezed
+    return _then(_$_SignInWithEmailAndPassword(
+      email: null == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String,
-      password: password == freezed
+      password: null == password
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
               as String,
@@ -453,22 +396,21 @@ class _$_SignInWithEmailAndPassword implements _SignInWithEmailAndPassword {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SignInWithEmailAndPassword &&
-            const DeepCollectionEquality().equals(other.email, email) &&
-            const DeepCollectionEquality().equals(other.password, password));
+            other is _$_SignInWithEmailAndPassword &&
+            (identical(other.email, email) || other.email == email) &&
+            (identical(other.password, password) ||
+                other.password == password));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(email),
-      const DeepCollectionEquality().hash(password));
+  int get hashCode => Object.hash(runtimeType, email, password);
 
   @JsonKey(ignore: true)
   @override
-  _$SignInWithEmailAndPasswordCopyWith<_SignInWithEmailAndPassword>
-      get copyWith => __$SignInWithEmailAndPasswordCopyWithImpl<
-          _SignInWithEmailAndPassword>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_SignInWithEmailAndPasswordCopyWith<_$_SignInWithEmailAndPassword>
+      get copyWith => __$$_SignInWithEmailAndPasswordCopyWithImpl<
+          _$_SignInWithEmailAndPassword>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -492,16 +434,17 @@ class _$_SignInWithEmailAndPassword implements _SignInWithEmailAndPassword {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String email, String password)?
+    TResult? Function(String email, String password)?
         registerWithEmailAndPassword,
-    TResult Function(String email, String password)? signInWithEmailAndPassword,
-    TResult Function()? signOut,
-    TResult Function()? checkAuthState,
-    TResult Function(String email)? sendEmailConfirmation,
-    TResult Function()? deleteAcccount,
-    TResult Function(String updatedEmail)? updateEmailAddress,
-    TResult Function(ConnectivityResult status)? updateConnectivityStatus,
-    TResult Function()? checkConnectivityStatus,
+    TResult? Function(String email, String password)?
+        signInWithEmailAndPassword,
+    TResult? Function()? signOut,
+    TResult? Function()? checkAuthState,
+    TResult? Function(String email)? sendEmailConfirmation,
+    TResult? Function()? deleteAcccount,
+    TResult? Function(String updatedEmail)? updateEmailAddress,
+    TResult? Function(ConnectivityResult status)? updateConnectivityStatus,
+    TResult? Function()? checkConnectivityStatus,
   }) {
     return signInWithEmailAndPassword?.call(email, password);
   }
@@ -551,17 +494,18 @@ class _$_SignInWithEmailAndPassword implements _SignInWithEmailAndPassword {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_RegisterWithEmailAndPassword value)?
+    TResult? Function(_RegisterWithEmailAndPassword value)?
         registerWithEmailAndPassword,
-    TResult Function(_SignInWithEmailAndPassword value)?
+    TResult? Function(_SignInWithEmailAndPassword value)?
         signInWithEmailAndPassword,
-    TResult Function(SignOut value)? signOut,
-    TResult Function(CheckAuthState value)? checkAuthState,
-    TResult Function(_SendEmailConfirmation value)? sendEmailConfirmation,
-    TResult Function(_DeleteAccount value)? deleteAcccount,
-    TResult Function(_UpdateEmailAddress value)? updateEmailAddress,
-    TResult Function(_UpdateConnectivityStatus value)? updateConnectivityStatus,
-    TResult Function(_CheckConnectivityStatus value)? checkConnectivityStatus,
+    TResult? Function(SignOut value)? signOut,
+    TResult? Function(CheckAuthState value)? checkAuthState,
+    TResult? Function(_SendEmailConfirmation value)? sendEmailConfirmation,
+    TResult? Function(_DeleteAccount value)? deleteAcccount,
+    TResult? Function(_UpdateEmailAddress value)? updateEmailAddress,
+    TResult? Function(_UpdateConnectivityStatus value)?
+        updateConnectivityStatus,
+    TResult? Function(_CheckConnectivityStatus value)? checkConnectivityStatus,
   }) {
     return signInWithEmailAndPassword?.call(this);
   }
@@ -591,30 +535,28 @@ class _$_SignInWithEmailAndPassword implements _SignInWithEmailAndPassword {
 
 abstract class _SignInWithEmailAndPassword implements AuthEvent {
   const factory _SignInWithEmailAndPassword(
-      {required String email,
-      required String password}) = _$_SignInWithEmailAndPassword;
+      {required final String email,
+      required final String password}) = _$_SignInWithEmailAndPassword;
 
   String get email;
   String get password;
   @JsonKey(ignore: true)
-  _$SignInWithEmailAndPasswordCopyWith<_SignInWithEmailAndPassword>
+  _$$_SignInWithEmailAndPasswordCopyWith<_$_SignInWithEmailAndPassword>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $SignOutCopyWith<$Res> {
-  factory $SignOutCopyWith(SignOut value, $Res Function(SignOut) then) =
-      _$SignOutCopyWithImpl<$Res>;
+abstract class _$$SignOutCopyWith<$Res> {
+  factory _$$SignOutCopyWith(_$SignOut value, $Res Function(_$SignOut) then) =
+      __$$SignOutCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$SignOutCopyWithImpl<$Res> extends _$AuthEventCopyWithImpl<$Res>
-    implements $SignOutCopyWith<$Res> {
-  _$SignOutCopyWithImpl(SignOut _value, $Res Function(SignOut) _then)
-      : super(_value, (v) => _then(v as SignOut));
-
-  @override
-  SignOut get _value => super._value as SignOut;
+class __$$SignOutCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$SignOut>
+    implements _$$SignOutCopyWith<$Res> {
+  __$$SignOutCopyWithImpl(_$SignOut _value, $Res Function(_$SignOut) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -630,7 +572,7 @@ class _$SignOut implements SignOut {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is SignOut);
+        (other.runtimeType == runtimeType && other is _$SignOut);
   }
 
   @override
@@ -658,16 +600,17 @@ class _$SignOut implements SignOut {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String email, String password)?
+    TResult? Function(String email, String password)?
         registerWithEmailAndPassword,
-    TResult Function(String email, String password)? signInWithEmailAndPassword,
-    TResult Function()? signOut,
-    TResult Function()? checkAuthState,
-    TResult Function(String email)? sendEmailConfirmation,
-    TResult Function()? deleteAcccount,
-    TResult Function(String updatedEmail)? updateEmailAddress,
-    TResult Function(ConnectivityResult status)? updateConnectivityStatus,
-    TResult Function()? checkConnectivityStatus,
+    TResult? Function(String email, String password)?
+        signInWithEmailAndPassword,
+    TResult? Function()? signOut,
+    TResult? Function()? checkAuthState,
+    TResult? Function(String email)? sendEmailConfirmation,
+    TResult? Function()? deleteAcccount,
+    TResult? Function(String updatedEmail)? updateEmailAddress,
+    TResult? Function(ConnectivityResult status)? updateConnectivityStatus,
+    TResult? Function()? checkConnectivityStatus,
   }) {
     return signOut?.call();
   }
@@ -717,17 +660,18 @@ class _$SignOut implements SignOut {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_RegisterWithEmailAndPassword value)?
+    TResult? Function(_RegisterWithEmailAndPassword value)?
         registerWithEmailAndPassword,
-    TResult Function(_SignInWithEmailAndPassword value)?
+    TResult? Function(_SignInWithEmailAndPassword value)?
         signInWithEmailAndPassword,
-    TResult Function(SignOut value)? signOut,
-    TResult Function(CheckAuthState value)? checkAuthState,
-    TResult Function(_SendEmailConfirmation value)? sendEmailConfirmation,
-    TResult Function(_DeleteAccount value)? deleteAcccount,
-    TResult Function(_UpdateEmailAddress value)? updateEmailAddress,
-    TResult Function(_UpdateConnectivityStatus value)? updateConnectivityStatus,
-    TResult Function(_CheckConnectivityStatus value)? checkConnectivityStatus,
+    TResult? Function(SignOut value)? signOut,
+    TResult? Function(CheckAuthState value)? checkAuthState,
+    TResult? Function(_SendEmailConfirmation value)? sendEmailConfirmation,
+    TResult? Function(_DeleteAccount value)? deleteAcccount,
+    TResult? Function(_UpdateEmailAddress value)? updateEmailAddress,
+    TResult? Function(_UpdateConnectivityStatus value)?
+        updateConnectivityStatus,
+    TResult? Function(_CheckConnectivityStatus value)? checkConnectivityStatus,
   }) {
     return signOut?.call(this);
   }
@@ -760,21 +704,19 @@ abstract class SignOut implements AuthEvent {
 }
 
 /// @nodoc
-abstract class $CheckAuthStateCopyWith<$Res> {
-  factory $CheckAuthStateCopyWith(
-          CheckAuthState value, $Res Function(CheckAuthState) then) =
-      _$CheckAuthStateCopyWithImpl<$Res>;
+abstract class _$$CheckAuthStateCopyWith<$Res> {
+  factory _$$CheckAuthStateCopyWith(
+          _$CheckAuthState value, $Res Function(_$CheckAuthState) then) =
+      __$$CheckAuthStateCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$CheckAuthStateCopyWithImpl<$Res> extends _$AuthEventCopyWithImpl<$Res>
-    implements $CheckAuthStateCopyWith<$Res> {
-  _$CheckAuthStateCopyWithImpl(
-      CheckAuthState _value, $Res Function(CheckAuthState) _then)
-      : super(_value, (v) => _then(v as CheckAuthState));
-
-  @override
-  CheckAuthState get _value => super._value as CheckAuthState;
+class __$$CheckAuthStateCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$CheckAuthState>
+    implements _$$CheckAuthStateCopyWith<$Res> {
+  __$$CheckAuthStateCopyWithImpl(
+      _$CheckAuthState _value, $Res Function(_$CheckAuthState) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -790,7 +732,7 @@ class _$CheckAuthState implements CheckAuthState {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is CheckAuthState);
+        (other.runtimeType == runtimeType && other is _$CheckAuthState);
   }
 
   @override
@@ -818,16 +760,17 @@ class _$CheckAuthState implements CheckAuthState {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String email, String password)?
+    TResult? Function(String email, String password)?
         registerWithEmailAndPassword,
-    TResult Function(String email, String password)? signInWithEmailAndPassword,
-    TResult Function()? signOut,
-    TResult Function()? checkAuthState,
-    TResult Function(String email)? sendEmailConfirmation,
-    TResult Function()? deleteAcccount,
-    TResult Function(String updatedEmail)? updateEmailAddress,
-    TResult Function(ConnectivityResult status)? updateConnectivityStatus,
-    TResult Function()? checkConnectivityStatus,
+    TResult? Function(String email, String password)?
+        signInWithEmailAndPassword,
+    TResult? Function()? signOut,
+    TResult? Function()? checkAuthState,
+    TResult? Function(String email)? sendEmailConfirmation,
+    TResult? Function()? deleteAcccount,
+    TResult? Function(String updatedEmail)? updateEmailAddress,
+    TResult? Function(ConnectivityResult status)? updateConnectivityStatus,
+    TResult? Function()? checkConnectivityStatus,
   }) {
     return checkAuthState?.call();
   }
@@ -877,17 +820,18 @@ class _$CheckAuthState implements CheckAuthState {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_RegisterWithEmailAndPassword value)?
+    TResult? Function(_RegisterWithEmailAndPassword value)?
         registerWithEmailAndPassword,
-    TResult Function(_SignInWithEmailAndPassword value)?
+    TResult? Function(_SignInWithEmailAndPassword value)?
         signInWithEmailAndPassword,
-    TResult Function(SignOut value)? signOut,
-    TResult Function(CheckAuthState value)? checkAuthState,
-    TResult Function(_SendEmailConfirmation value)? sendEmailConfirmation,
-    TResult Function(_DeleteAccount value)? deleteAcccount,
-    TResult Function(_UpdateEmailAddress value)? updateEmailAddress,
-    TResult Function(_UpdateConnectivityStatus value)? updateConnectivityStatus,
-    TResult Function(_CheckConnectivityStatus value)? checkConnectivityStatus,
+    TResult? Function(SignOut value)? signOut,
+    TResult? Function(CheckAuthState value)? checkAuthState,
+    TResult? Function(_SendEmailConfirmation value)? sendEmailConfirmation,
+    TResult? Function(_DeleteAccount value)? deleteAcccount,
+    TResult? Function(_UpdateEmailAddress value)? updateEmailAddress,
+    TResult? Function(_UpdateConnectivityStatus value)?
+        updateConnectivityStatus,
+    TResult? Function(_CheckConnectivityStatus value)? checkConnectivityStatus,
   }) {
     return checkAuthState?.call(this);
   }
@@ -920,30 +864,29 @@ abstract class CheckAuthState implements AuthEvent {
 }
 
 /// @nodoc
-abstract class _$SendEmailConfirmationCopyWith<$Res> {
-  factory _$SendEmailConfirmationCopyWith(_SendEmailConfirmation value,
-          $Res Function(_SendEmailConfirmation) then) =
-      __$SendEmailConfirmationCopyWithImpl<$Res>;
+abstract class _$$_SendEmailConfirmationCopyWith<$Res> {
+  factory _$$_SendEmailConfirmationCopyWith(_$_SendEmailConfirmation value,
+          $Res Function(_$_SendEmailConfirmation) then) =
+      __$$_SendEmailConfirmationCopyWithImpl<$Res>;
+  @useResult
   $Res call({String email});
 }
 
 /// @nodoc
-class __$SendEmailConfirmationCopyWithImpl<$Res>
-    extends _$AuthEventCopyWithImpl<$Res>
-    implements _$SendEmailConfirmationCopyWith<$Res> {
-  __$SendEmailConfirmationCopyWithImpl(_SendEmailConfirmation _value,
-      $Res Function(_SendEmailConfirmation) _then)
-      : super(_value, (v) => _then(v as _SendEmailConfirmation));
+class __$$_SendEmailConfirmationCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$_SendEmailConfirmation>
+    implements _$$_SendEmailConfirmationCopyWith<$Res> {
+  __$$_SendEmailConfirmationCopyWithImpl(_$_SendEmailConfirmation _value,
+      $Res Function(_$_SendEmailConfirmation) _then)
+      : super(_value, _then);
 
-  @override
-  _SendEmailConfirmation get _value => super._value as _SendEmailConfirmation;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? email = freezed,
+    Object? email = null,
   }) {
-    return _then(_SendEmailConfirmation(
-      email: email == freezed
+    return _then(_$_SendEmailConfirmation(
+      email: null == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String,
@@ -968,18 +911,18 @@ class _$_SendEmailConfirmation implements _SendEmailConfirmation {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SendEmailConfirmation &&
-            const DeepCollectionEquality().equals(other.email, email));
+            other is _$_SendEmailConfirmation &&
+            (identical(other.email, email) || other.email == email));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(email));
+  int get hashCode => Object.hash(runtimeType, email);
 
   @JsonKey(ignore: true)
   @override
-  _$SendEmailConfirmationCopyWith<_SendEmailConfirmation> get copyWith =>
-      __$SendEmailConfirmationCopyWithImpl<_SendEmailConfirmation>(
+  @pragma('vm:prefer-inline')
+  _$$_SendEmailConfirmationCopyWith<_$_SendEmailConfirmation> get copyWith =>
+      __$$_SendEmailConfirmationCopyWithImpl<_$_SendEmailConfirmation>(
           this, _$identity);
 
   @override
@@ -1004,16 +947,17 @@ class _$_SendEmailConfirmation implements _SendEmailConfirmation {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String email, String password)?
+    TResult? Function(String email, String password)?
         registerWithEmailAndPassword,
-    TResult Function(String email, String password)? signInWithEmailAndPassword,
-    TResult Function()? signOut,
-    TResult Function()? checkAuthState,
-    TResult Function(String email)? sendEmailConfirmation,
-    TResult Function()? deleteAcccount,
-    TResult Function(String updatedEmail)? updateEmailAddress,
-    TResult Function(ConnectivityResult status)? updateConnectivityStatus,
-    TResult Function()? checkConnectivityStatus,
+    TResult? Function(String email, String password)?
+        signInWithEmailAndPassword,
+    TResult? Function()? signOut,
+    TResult? Function()? checkAuthState,
+    TResult? Function(String email)? sendEmailConfirmation,
+    TResult? Function()? deleteAcccount,
+    TResult? Function(String updatedEmail)? updateEmailAddress,
+    TResult? Function(ConnectivityResult status)? updateConnectivityStatus,
+    TResult? Function()? checkConnectivityStatus,
   }) {
     return sendEmailConfirmation?.call(email);
   }
@@ -1063,17 +1007,18 @@ class _$_SendEmailConfirmation implements _SendEmailConfirmation {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_RegisterWithEmailAndPassword value)?
+    TResult? Function(_RegisterWithEmailAndPassword value)?
         registerWithEmailAndPassword,
-    TResult Function(_SignInWithEmailAndPassword value)?
+    TResult? Function(_SignInWithEmailAndPassword value)?
         signInWithEmailAndPassword,
-    TResult Function(SignOut value)? signOut,
-    TResult Function(CheckAuthState value)? checkAuthState,
-    TResult Function(_SendEmailConfirmation value)? sendEmailConfirmation,
-    TResult Function(_DeleteAccount value)? deleteAcccount,
-    TResult Function(_UpdateEmailAddress value)? updateEmailAddress,
-    TResult Function(_UpdateConnectivityStatus value)? updateConnectivityStatus,
-    TResult Function(_CheckConnectivityStatus value)? checkConnectivityStatus,
+    TResult? Function(SignOut value)? signOut,
+    TResult? Function(CheckAuthState value)? checkAuthState,
+    TResult? Function(_SendEmailConfirmation value)? sendEmailConfirmation,
+    TResult? Function(_DeleteAccount value)? deleteAcccount,
+    TResult? Function(_UpdateEmailAddress value)? updateEmailAddress,
+    TResult? Function(_UpdateConnectivityStatus value)?
+        updateConnectivityStatus,
+    TResult? Function(_CheckConnectivityStatus value)? checkConnectivityStatus,
   }) {
     return sendEmailConfirmation?.call(this);
   }
@@ -1102,31 +1047,29 @@ class _$_SendEmailConfirmation implements _SendEmailConfirmation {
 }
 
 abstract class _SendEmailConfirmation implements AuthEvent {
-  const factory _SendEmailConfirmation({required String email}) =
+  const factory _SendEmailConfirmation({required final String email}) =
       _$_SendEmailConfirmation;
 
   String get email;
   @JsonKey(ignore: true)
-  _$SendEmailConfirmationCopyWith<_SendEmailConfirmation> get copyWith =>
+  _$$_SendEmailConfirmationCopyWith<_$_SendEmailConfirmation> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$DeleteAccountCopyWith<$Res> {
-  factory _$DeleteAccountCopyWith(
-          _DeleteAccount value, $Res Function(_DeleteAccount) then) =
-      __$DeleteAccountCopyWithImpl<$Res>;
+abstract class _$$_DeleteAccountCopyWith<$Res> {
+  factory _$$_DeleteAccountCopyWith(
+          _$_DeleteAccount value, $Res Function(_$_DeleteAccount) then) =
+      __$$_DeleteAccountCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$DeleteAccountCopyWithImpl<$Res> extends _$AuthEventCopyWithImpl<$Res>
-    implements _$DeleteAccountCopyWith<$Res> {
-  __$DeleteAccountCopyWithImpl(
-      _DeleteAccount _value, $Res Function(_DeleteAccount) _then)
-      : super(_value, (v) => _then(v as _DeleteAccount));
-
-  @override
-  _DeleteAccount get _value => super._value as _DeleteAccount;
+class __$$_DeleteAccountCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$_DeleteAccount>
+    implements _$$_DeleteAccountCopyWith<$Res> {
+  __$$_DeleteAccountCopyWithImpl(
+      _$_DeleteAccount _value, $Res Function(_$_DeleteAccount) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -1142,7 +1085,7 @@ class _$_DeleteAccount implements _DeleteAccount {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _DeleteAccount);
+        (other.runtimeType == runtimeType && other is _$_DeleteAccount);
   }
 
   @override
@@ -1170,16 +1113,17 @@ class _$_DeleteAccount implements _DeleteAccount {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String email, String password)?
+    TResult? Function(String email, String password)?
         registerWithEmailAndPassword,
-    TResult Function(String email, String password)? signInWithEmailAndPassword,
-    TResult Function()? signOut,
-    TResult Function()? checkAuthState,
-    TResult Function(String email)? sendEmailConfirmation,
-    TResult Function()? deleteAcccount,
-    TResult Function(String updatedEmail)? updateEmailAddress,
-    TResult Function(ConnectivityResult status)? updateConnectivityStatus,
-    TResult Function()? checkConnectivityStatus,
+    TResult? Function(String email, String password)?
+        signInWithEmailAndPassword,
+    TResult? Function()? signOut,
+    TResult? Function()? checkAuthState,
+    TResult? Function(String email)? sendEmailConfirmation,
+    TResult? Function()? deleteAcccount,
+    TResult? Function(String updatedEmail)? updateEmailAddress,
+    TResult? Function(ConnectivityResult status)? updateConnectivityStatus,
+    TResult? Function()? checkConnectivityStatus,
   }) {
     return deleteAcccount?.call();
   }
@@ -1229,17 +1173,18 @@ class _$_DeleteAccount implements _DeleteAccount {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_RegisterWithEmailAndPassword value)?
+    TResult? Function(_RegisterWithEmailAndPassword value)?
         registerWithEmailAndPassword,
-    TResult Function(_SignInWithEmailAndPassword value)?
+    TResult? Function(_SignInWithEmailAndPassword value)?
         signInWithEmailAndPassword,
-    TResult Function(SignOut value)? signOut,
-    TResult Function(CheckAuthState value)? checkAuthState,
-    TResult Function(_SendEmailConfirmation value)? sendEmailConfirmation,
-    TResult Function(_DeleteAccount value)? deleteAcccount,
-    TResult Function(_UpdateEmailAddress value)? updateEmailAddress,
-    TResult Function(_UpdateConnectivityStatus value)? updateConnectivityStatus,
-    TResult Function(_CheckConnectivityStatus value)? checkConnectivityStatus,
+    TResult? Function(SignOut value)? signOut,
+    TResult? Function(CheckAuthState value)? checkAuthState,
+    TResult? Function(_SendEmailConfirmation value)? sendEmailConfirmation,
+    TResult? Function(_DeleteAccount value)? deleteAcccount,
+    TResult? Function(_UpdateEmailAddress value)? updateEmailAddress,
+    TResult? Function(_UpdateConnectivityStatus value)?
+        updateConnectivityStatus,
+    TResult? Function(_CheckConnectivityStatus value)? checkConnectivityStatus,
   }) {
     return deleteAcccount?.call(this);
   }
@@ -1272,30 +1217,29 @@ abstract class _DeleteAccount implements AuthEvent {
 }
 
 /// @nodoc
-abstract class _$UpdateEmailAddressCopyWith<$Res> {
-  factory _$UpdateEmailAddressCopyWith(
-          _UpdateEmailAddress value, $Res Function(_UpdateEmailAddress) then) =
-      __$UpdateEmailAddressCopyWithImpl<$Res>;
+abstract class _$$_UpdateEmailAddressCopyWith<$Res> {
+  factory _$$_UpdateEmailAddressCopyWith(_$_UpdateEmailAddress value,
+          $Res Function(_$_UpdateEmailAddress) then) =
+      __$$_UpdateEmailAddressCopyWithImpl<$Res>;
+  @useResult
   $Res call({String updatedEmail});
 }
 
 /// @nodoc
-class __$UpdateEmailAddressCopyWithImpl<$Res>
-    extends _$AuthEventCopyWithImpl<$Res>
-    implements _$UpdateEmailAddressCopyWith<$Res> {
-  __$UpdateEmailAddressCopyWithImpl(
-      _UpdateEmailAddress _value, $Res Function(_UpdateEmailAddress) _then)
-      : super(_value, (v) => _then(v as _UpdateEmailAddress));
+class __$$_UpdateEmailAddressCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$_UpdateEmailAddress>
+    implements _$$_UpdateEmailAddressCopyWith<$Res> {
+  __$$_UpdateEmailAddressCopyWithImpl(
+      _$_UpdateEmailAddress _value, $Res Function(_$_UpdateEmailAddress) _then)
+      : super(_value, _then);
 
-  @override
-  _UpdateEmailAddress get _value => super._value as _UpdateEmailAddress;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? updatedEmail = freezed,
+    Object? updatedEmail = null,
   }) {
-    return _then(_UpdateEmailAddress(
-      updatedEmail == freezed
+    return _then(_$_UpdateEmailAddress(
+      null == updatedEmail
           ? _value.updatedEmail
           : updatedEmail // ignore: cast_nullable_to_non_nullable
               as String,
@@ -1320,19 +1264,20 @@ class _$_UpdateEmailAddress implements _UpdateEmailAddress {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _UpdateEmailAddress &&
-            const DeepCollectionEquality()
-                .equals(other.updatedEmail, updatedEmail));
+            other is _$_UpdateEmailAddress &&
+            (identical(other.updatedEmail, updatedEmail) ||
+                other.updatedEmail == updatedEmail));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(updatedEmail));
+  int get hashCode => Object.hash(runtimeType, updatedEmail);
 
   @JsonKey(ignore: true)
   @override
-  _$UpdateEmailAddressCopyWith<_UpdateEmailAddress> get copyWith =>
-      __$UpdateEmailAddressCopyWithImpl<_UpdateEmailAddress>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_UpdateEmailAddressCopyWith<_$_UpdateEmailAddress> get copyWith =>
+      __$$_UpdateEmailAddressCopyWithImpl<_$_UpdateEmailAddress>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1356,16 +1301,17 @@ class _$_UpdateEmailAddress implements _UpdateEmailAddress {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String email, String password)?
+    TResult? Function(String email, String password)?
         registerWithEmailAndPassword,
-    TResult Function(String email, String password)? signInWithEmailAndPassword,
-    TResult Function()? signOut,
-    TResult Function()? checkAuthState,
-    TResult Function(String email)? sendEmailConfirmation,
-    TResult Function()? deleteAcccount,
-    TResult Function(String updatedEmail)? updateEmailAddress,
-    TResult Function(ConnectivityResult status)? updateConnectivityStatus,
-    TResult Function()? checkConnectivityStatus,
+    TResult? Function(String email, String password)?
+        signInWithEmailAndPassword,
+    TResult? Function()? signOut,
+    TResult? Function()? checkAuthState,
+    TResult? Function(String email)? sendEmailConfirmation,
+    TResult? Function()? deleteAcccount,
+    TResult? Function(String updatedEmail)? updateEmailAddress,
+    TResult? Function(ConnectivityResult status)? updateConnectivityStatus,
+    TResult? Function()? checkConnectivityStatus,
   }) {
     return updateEmailAddress?.call(updatedEmail);
   }
@@ -1415,17 +1361,18 @@ class _$_UpdateEmailAddress implements _UpdateEmailAddress {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_RegisterWithEmailAndPassword value)?
+    TResult? Function(_RegisterWithEmailAndPassword value)?
         registerWithEmailAndPassword,
-    TResult Function(_SignInWithEmailAndPassword value)?
+    TResult? Function(_SignInWithEmailAndPassword value)?
         signInWithEmailAndPassword,
-    TResult Function(SignOut value)? signOut,
-    TResult Function(CheckAuthState value)? checkAuthState,
-    TResult Function(_SendEmailConfirmation value)? sendEmailConfirmation,
-    TResult Function(_DeleteAccount value)? deleteAcccount,
-    TResult Function(_UpdateEmailAddress value)? updateEmailAddress,
-    TResult Function(_UpdateConnectivityStatus value)? updateConnectivityStatus,
-    TResult Function(_CheckConnectivityStatus value)? checkConnectivityStatus,
+    TResult? Function(SignOut value)? signOut,
+    TResult? Function(CheckAuthState value)? checkAuthState,
+    TResult? Function(_SendEmailConfirmation value)? sendEmailConfirmation,
+    TResult? Function(_DeleteAccount value)? deleteAcccount,
+    TResult? Function(_UpdateEmailAddress value)? updateEmailAddress,
+    TResult? Function(_UpdateConnectivityStatus value)?
+        updateConnectivityStatus,
+    TResult? Function(_CheckConnectivityStatus value)? checkConnectivityStatus,
   }) {
     return updateEmailAddress?.call(this);
   }
@@ -1454,41 +1401,40 @@ class _$_UpdateEmailAddress implements _UpdateEmailAddress {
 }
 
 abstract class _UpdateEmailAddress implements AuthEvent {
-  const factory _UpdateEmailAddress(String updatedEmail) =
+  const factory _UpdateEmailAddress(final String updatedEmail) =
       _$_UpdateEmailAddress;
 
   String get updatedEmail;
   @JsonKey(ignore: true)
-  _$UpdateEmailAddressCopyWith<_UpdateEmailAddress> get copyWith =>
+  _$$_UpdateEmailAddressCopyWith<_$_UpdateEmailAddress> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$UpdateConnectivityStatusCopyWith<$Res> {
-  factory _$UpdateConnectivityStatusCopyWith(_UpdateConnectivityStatus value,
-          $Res Function(_UpdateConnectivityStatus) then) =
-      __$UpdateConnectivityStatusCopyWithImpl<$Res>;
+abstract class _$$_UpdateConnectivityStatusCopyWith<$Res> {
+  factory _$$_UpdateConnectivityStatusCopyWith(
+          _$_UpdateConnectivityStatus value,
+          $Res Function(_$_UpdateConnectivityStatus) then) =
+      __$$_UpdateConnectivityStatusCopyWithImpl<$Res>;
+  @useResult
   $Res call({ConnectivityResult status});
 }
 
 /// @nodoc
-class __$UpdateConnectivityStatusCopyWithImpl<$Res>
-    extends _$AuthEventCopyWithImpl<$Res>
-    implements _$UpdateConnectivityStatusCopyWith<$Res> {
-  __$UpdateConnectivityStatusCopyWithImpl(_UpdateConnectivityStatus _value,
-      $Res Function(_UpdateConnectivityStatus) _then)
-      : super(_value, (v) => _then(v as _UpdateConnectivityStatus));
+class __$$_UpdateConnectivityStatusCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$_UpdateConnectivityStatus>
+    implements _$$_UpdateConnectivityStatusCopyWith<$Res> {
+  __$$_UpdateConnectivityStatusCopyWithImpl(_$_UpdateConnectivityStatus _value,
+      $Res Function(_$_UpdateConnectivityStatus) _then)
+      : super(_value, _then);
 
-  @override
-  _UpdateConnectivityStatus get _value =>
-      super._value as _UpdateConnectivityStatus;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? status = freezed,
+    Object? status = null,
   }) {
-    return _then(_UpdateConnectivityStatus(
-      status == freezed
+    return _then(_$_UpdateConnectivityStatus(
+      null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as ConnectivityResult,
@@ -1513,19 +1459,19 @@ class _$_UpdateConnectivityStatus implements _UpdateConnectivityStatus {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _UpdateConnectivityStatus &&
-            const DeepCollectionEquality().equals(other.status, status));
+            other is _$_UpdateConnectivityStatus &&
+            (identical(other.status, status) || other.status == status));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(status));
+  int get hashCode => Object.hash(runtimeType, status);
 
   @JsonKey(ignore: true)
   @override
-  _$UpdateConnectivityStatusCopyWith<_UpdateConnectivityStatus> get copyWith =>
-      __$UpdateConnectivityStatusCopyWithImpl<_UpdateConnectivityStatus>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_UpdateConnectivityStatusCopyWith<_$_UpdateConnectivityStatus>
+      get copyWith => __$$_UpdateConnectivityStatusCopyWithImpl<
+          _$_UpdateConnectivityStatus>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1549,16 +1495,17 @@ class _$_UpdateConnectivityStatus implements _UpdateConnectivityStatus {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String email, String password)?
+    TResult? Function(String email, String password)?
         registerWithEmailAndPassword,
-    TResult Function(String email, String password)? signInWithEmailAndPassword,
-    TResult Function()? signOut,
-    TResult Function()? checkAuthState,
-    TResult Function(String email)? sendEmailConfirmation,
-    TResult Function()? deleteAcccount,
-    TResult Function(String updatedEmail)? updateEmailAddress,
-    TResult Function(ConnectivityResult status)? updateConnectivityStatus,
-    TResult Function()? checkConnectivityStatus,
+    TResult? Function(String email, String password)?
+        signInWithEmailAndPassword,
+    TResult? Function()? signOut,
+    TResult? Function()? checkAuthState,
+    TResult? Function(String email)? sendEmailConfirmation,
+    TResult? Function()? deleteAcccount,
+    TResult? Function(String updatedEmail)? updateEmailAddress,
+    TResult? Function(ConnectivityResult status)? updateConnectivityStatus,
+    TResult? Function()? checkConnectivityStatus,
   }) {
     return updateConnectivityStatus?.call(status);
   }
@@ -1608,17 +1555,18 @@ class _$_UpdateConnectivityStatus implements _UpdateConnectivityStatus {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_RegisterWithEmailAndPassword value)?
+    TResult? Function(_RegisterWithEmailAndPassword value)?
         registerWithEmailAndPassword,
-    TResult Function(_SignInWithEmailAndPassword value)?
+    TResult? Function(_SignInWithEmailAndPassword value)?
         signInWithEmailAndPassword,
-    TResult Function(SignOut value)? signOut,
-    TResult Function(CheckAuthState value)? checkAuthState,
-    TResult Function(_SendEmailConfirmation value)? sendEmailConfirmation,
-    TResult Function(_DeleteAccount value)? deleteAcccount,
-    TResult Function(_UpdateEmailAddress value)? updateEmailAddress,
-    TResult Function(_UpdateConnectivityStatus value)? updateConnectivityStatus,
-    TResult Function(_CheckConnectivityStatus value)? checkConnectivityStatus,
+    TResult? Function(SignOut value)? signOut,
+    TResult? Function(CheckAuthState value)? checkAuthState,
+    TResult? Function(_SendEmailConfirmation value)? sendEmailConfirmation,
+    TResult? Function(_DeleteAccount value)? deleteAcccount,
+    TResult? Function(_UpdateEmailAddress value)? updateEmailAddress,
+    TResult? Function(_UpdateConnectivityStatus value)?
+        updateConnectivityStatus,
+    TResult? Function(_CheckConnectivityStatus value)? checkConnectivityStatus,
   }) {
     return updateConnectivityStatus?.call(this);
   }
@@ -1647,33 +1595,29 @@ class _$_UpdateConnectivityStatus implements _UpdateConnectivityStatus {
 }
 
 abstract class _UpdateConnectivityStatus implements AuthEvent {
-  const factory _UpdateConnectivityStatus(ConnectivityResult status) =
+  const factory _UpdateConnectivityStatus(final ConnectivityResult status) =
       _$_UpdateConnectivityStatus;
 
   ConnectivityResult get status;
   @JsonKey(ignore: true)
-  _$UpdateConnectivityStatusCopyWith<_UpdateConnectivityStatus> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_UpdateConnectivityStatusCopyWith<_$_UpdateConnectivityStatus>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$CheckConnectivityStatusCopyWith<$Res> {
-  factory _$CheckConnectivityStatusCopyWith(_CheckConnectivityStatus value,
-          $Res Function(_CheckConnectivityStatus) then) =
-      __$CheckConnectivityStatusCopyWithImpl<$Res>;
+abstract class _$$_CheckConnectivityStatusCopyWith<$Res> {
+  factory _$$_CheckConnectivityStatusCopyWith(_$_CheckConnectivityStatus value,
+          $Res Function(_$_CheckConnectivityStatus) then) =
+      __$$_CheckConnectivityStatusCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$CheckConnectivityStatusCopyWithImpl<$Res>
-    extends _$AuthEventCopyWithImpl<$Res>
-    implements _$CheckConnectivityStatusCopyWith<$Res> {
-  __$CheckConnectivityStatusCopyWithImpl(_CheckConnectivityStatus _value,
-      $Res Function(_CheckConnectivityStatus) _then)
-      : super(_value, (v) => _then(v as _CheckConnectivityStatus));
-
-  @override
-  _CheckConnectivityStatus get _value =>
-      super._value as _CheckConnectivityStatus;
+class __$$_CheckConnectivityStatusCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$_CheckConnectivityStatus>
+    implements _$$_CheckConnectivityStatusCopyWith<$Res> {
+  __$$_CheckConnectivityStatusCopyWithImpl(_$_CheckConnectivityStatus _value,
+      $Res Function(_$_CheckConnectivityStatus) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -1689,7 +1633,8 @@ class _$_CheckConnectivityStatus implements _CheckConnectivityStatus {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _CheckConnectivityStatus);
+        (other.runtimeType == runtimeType &&
+            other is _$_CheckConnectivityStatus);
   }
 
   @override
@@ -1717,16 +1662,17 @@ class _$_CheckConnectivityStatus implements _CheckConnectivityStatus {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String email, String password)?
+    TResult? Function(String email, String password)?
         registerWithEmailAndPassword,
-    TResult Function(String email, String password)? signInWithEmailAndPassword,
-    TResult Function()? signOut,
-    TResult Function()? checkAuthState,
-    TResult Function(String email)? sendEmailConfirmation,
-    TResult Function()? deleteAcccount,
-    TResult Function(String updatedEmail)? updateEmailAddress,
-    TResult Function(ConnectivityResult status)? updateConnectivityStatus,
-    TResult Function()? checkConnectivityStatus,
+    TResult? Function(String email, String password)?
+        signInWithEmailAndPassword,
+    TResult? Function()? signOut,
+    TResult? Function()? checkAuthState,
+    TResult? Function(String email)? sendEmailConfirmation,
+    TResult? Function()? deleteAcccount,
+    TResult? Function(String updatedEmail)? updateEmailAddress,
+    TResult? Function(ConnectivityResult status)? updateConnectivityStatus,
+    TResult? Function()? checkConnectivityStatus,
   }) {
     return checkConnectivityStatus?.call();
   }
@@ -1776,17 +1722,18 @@ class _$_CheckConnectivityStatus implements _CheckConnectivityStatus {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_RegisterWithEmailAndPassword value)?
+    TResult? Function(_RegisterWithEmailAndPassword value)?
         registerWithEmailAndPassword,
-    TResult Function(_SignInWithEmailAndPassword value)?
+    TResult? Function(_SignInWithEmailAndPassword value)?
         signInWithEmailAndPassword,
-    TResult Function(SignOut value)? signOut,
-    TResult Function(CheckAuthState value)? checkAuthState,
-    TResult Function(_SendEmailConfirmation value)? sendEmailConfirmation,
-    TResult Function(_DeleteAccount value)? deleteAcccount,
-    TResult Function(_UpdateEmailAddress value)? updateEmailAddress,
-    TResult Function(_UpdateConnectivityStatus value)? updateConnectivityStatus,
-    TResult Function(_CheckConnectivityStatus value)? checkConnectivityStatus,
+    TResult? Function(SignOut value)? signOut,
+    TResult? Function(CheckAuthState value)? checkAuthState,
+    TResult? Function(_SendEmailConfirmation value)? sendEmailConfirmation,
+    TResult? Function(_DeleteAccount value)? deleteAcccount,
+    TResult? Function(_UpdateEmailAddress value)? updateEmailAddress,
+    TResult? Function(_UpdateConnectivityStatus value)?
+        updateConnectivityStatus,
+    TResult? Function(_CheckConnectivityStatus value)? checkConnectivityStatus,
   }) {
     return checkConnectivityStatus?.call(this);
   }
@@ -1819,36 +1766,6 @@ abstract class _CheckConnectivityStatus implements AuthEvent {
 }
 
 /// @nodoc
-class _$AuthStateTearOff {
-  const _$AuthStateTearOff();
-
-  _AuthState call(
-      {required bool isLoading,
-      required bool isUserSignedin,
-      required Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption,
-      required Option<Either<AuthFailure, Unit>>
-          deleteAccountFailureOrSuccessOption,
-      required Option<Either<AuthFailure, Unit>>
-          emailSendFailureOrSuccessOption,
-      required Option<Either<AuthFailure, Unit>>
-          updateEmailFailureOrSuccessOption,
-      required bool isNetworkAvailable}) {
-    return _AuthState(
-      isLoading: isLoading,
-      isUserSignedin: isUserSignedin,
-      authFailureOrSuccessOption: authFailureOrSuccessOption,
-      deleteAccountFailureOrSuccessOption: deleteAccountFailureOrSuccessOption,
-      emailSendFailureOrSuccessOption: emailSendFailureOrSuccessOption,
-      updateEmailFailureOrSuccessOption: updateEmailFailureOrSuccessOption,
-      isNetworkAvailable: isNetworkAvailable,
-    );
-  }
-}
-
-/// @nodoc
-const $AuthState = _$AuthStateTearOff();
-
-/// @nodoc
 mixin _$AuthState {
   bool get isLoading => throw _privateConstructorUsedError;
   bool get isUserSignedin => throw _privateConstructorUsedError;
@@ -1870,7 +1787,8 @@ mixin _$AuthState {
 /// @nodoc
 abstract class $AuthStateCopyWith<$Res> {
   factory $AuthStateCopyWith(AuthState value, $Res Function(AuthState) then) =
-      _$AuthStateCopyWithImpl<$Res>;
+      _$AuthStateCopyWithImpl<$Res, AuthState>;
+  @useResult
   $Res call(
       {bool isLoading,
       bool isUserSignedin,
@@ -1882,65 +1800,68 @@ abstract class $AuthStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$AuthStateCopyWithImpl<$Res> implements $AuthStateCopyWith<$Res> {
+class _$AuthStateCopyWithImpl<$Res, $Val extends AuthState>
+    implements $AuthStateCopyWith<$Res> {
   _$AuthStateCopyWithImpl(this._value, this._then);
 
-  final AuthState _value;
   // ignore: unused_field
-  final $Res Function(AuthState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? isLoading = freezed,
-    Object? isUserSignedin = freezed,
-    Object? authFailureOrSuccessOption = freezed,
-    Object? deleteAccountFailureOrSuccessOption = freezed,
-    Object? emailSendFailureOrSuccessOption = freezed,
-    Object? updateEmailFailureOrSuccessOption = freezed,
-    Object? isNetworkAvailable = freezed,
+    Object? isLoading = null,
+    Object? isUserSignedin = null,
+    Object? authFailureOrSuccessOption = null,
+    Object? deleteAccountFailureOrSuccessOption = null,
+    Object? emailSendFailureOrSuccessOption = null,
+    Object? updateEmailFailureOrSuccessOption = null,
+    Object? isNetworkAvailable = null,
   }) {
     return _then(_value.copyWith(
-      isLoading: isLoading == freezed
+      isLoading: null == isLoading
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
               as bool,
-      isUserSignedin: isUserSignedin == freezed
+      isUserSignedin: null == isUserSignedin
           ? _value.isUserSignedin
           : isUserSignedin // ignore: cast_nullable_to_non_nullable
               as bool,
-      authFailureOrSuccessOption: authFailureOrSuccessOption == freezed
+      authFailureOrSuccessOption: null == authFailureOrSuccessOption
           ? _value.authFailureOrSuccessOption
           : authFailureOrSuccessOption // ignore: cast_nullable_to_non_nullable
               as Option<Either<AuthFailure, Unit>>,
-      deleteAccountFailureOrSuccessOption: deleteAccountFailureOrSuccessOption ==
-              freezed
+      deleteAccountFailureOrSuccessOption: null ==
+              deleteAccountFailureOrSuccessOption
           ? _value.deleteAccountFailureOrSuccessOption
           : deleteAccountFailureOrSuccessOption // ignore: cast_nullable_to_non_nullable
               as Option<Either<AuthFailure, Unit>>,
-      emailSendFailureOrSuccessOption: emailSendFailureOrSuccessOption ==
-              freezed
+      emailSendFailureOrSuccessOption: null == emailSendFailureOrSuccessOption
           ? _value.emailSendFailureOrSuccessOption
           : emailSendFailureOrSuccessOption // ignore: cast_nullable_to_non_nullable
               as Option<Either<AuthFailure, Unit>>,
-      updateEmailFailureOrSuccessOption: updateEmailFailureOrSuccessOption ==
-              freezed
+      updateEmailFailureOrSuccessOption: null ==
+              updateEmailFailureOrSuccessOption
           ? _value.updateEmailFailureOrSuccessOption
           : updateEmailFailureOrSuccessOption // ignore: cast_nullable_to_non_nullable
               as Option<Either<AuthFailure, Unit>>,
-      isNetworkAvailable: isNetworkAvailable == freezed
+      isNetworkAvailable: null == isNetworkAvailable
           ? _value.isNetworkAvailable
           : isNetworkAvailable // ignore: cast_nullable_to_non_nullable
               as bool,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$AuthStateCopyWith<$Res> implements $AuthStateCopyWith<$Res> {
-  factory _$AuthStateCopyWith(
-          _AuthState value, $Res Function(_AuthState) then) =
-      __$AuthStateCopyWithImpl<$Res>;
+abstract class _$$_AuthStateCopyWith<$Res> implements $AuthStateCopyWith<$Res> {
+  factory _$$_AuthStateCopyWith(
+          _$_AuthState value, $Res Function(_$_AuthState) then) =
+      __$$_AuthStateCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {bool isLoading,
       bool isUserSignedin,
@@ -1952,53 +1873,52 @@ abstract class _$AuthStateCopyWith<$Res> implements $AuthStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$AuthStateCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
-    implements _$AuthStateCopyWith<$Res> {
-  __$AuthStateCopyWithImpl(_AuthState _value, $Res Function(_AuthState) _then)
-      : super(_value, (v) => _then(v as _AuthState));
+class __$$_AuthStateCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$_AuthState>
+    implements _$$_AuthStateCopyWith<$Res> {
+  __$$_AuthStateCopyWithImpl(
+      _$_AuthState _value, $Res Function(_$_AuthState) _then)
+      : super(_value, _then);
 
-  @override
-  _AuthState get _value => super._value as _AuthState;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? isLoading = freezed,
-    Object? isUserSignedin = freezed,
-    Object? authFailureOrSuccessOption = freezed,
-    Object? deleteAccountFailureOrSuccessOption = freezed,
-    Object? emailSendFailureOrSuccessOption = freezed,
-    Object? updateEmailFailureOrSuccessOption = freezed,
-    Object? isNetworkAvailable = freezed,
+    Object? isLoading = null,
+    Object? isUserSignedin = null,
+    Object? authFailureOrSuccessOption = null,
+    Object? deleteAccountFailureOrSuccessOption = null,
+    Object? emailSendFailureOrSuccessOption = null,
+    Object? updateEmailFailureOrSuccessOption = null,
+    Object? isNetworkAvailable = null,
   }) {
-    return _then(_AuthState(
-      isLoading: isLoading == freezed
+    return _then(_$_AuthState(
+      isLoading: null == isLoading
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
               as bool,
-      isUserSignedin: isUserSignedin == freezed
+      isUserSignedin: null == isUserSignedin
           ? _value.isUserSignedin
           : isUserSignedin // ignore: cast_nullable_to_non_nullable
               as bool,
-      authFailureOrSuccessOption: authFailureOrSuccessOption == freezed
+      authFailureOrSuccessOption: null == authFailureOrSuccessOption
           ? _value.authFailureOrSuccessOption
           : authFailureOrSuccessOption // ignore: cast_nullable_to_non_nullable
               as Option<Either<AuthFailure, Unit>>,
-      deleteAccountFailureOrSuccessOption: deleteAccountFailureOrSuccessOption ==
-              freezed
+      deleteAccountFailureOrSuccessOption: null ==
+              deleteAccountFailureOrSuccessOption
           ? _value.deleteAccountFailureOrSuccessOption
           : deleteAccountFailureOrSuccessOption // ignore: cast_nullable_to_non_nullable
               as Option<Either<AuthFailure, Unit>>,
-      emailSendFailureOrSuccessOption: emailSendFailureOrSuccessOption ==
-              freezed
+      emailSendFailureOrSuccessOption: null == emailSendFailureOrSuccessOption
           ? _value.emailSendFailureOrSuccessOption
           : emailSendFailureOrSuccessOption // ignore: cast_nullable_to_non_nullable
               as Option<Either<AuthFailure, Unit>>,
-      updateEmailFailureOrSuccessOption: updateEmailFailureOrSuccessOption ==
-              freezed
+      updateEmailFailureOrSuccessOption: null ==
+              updateEmailFailureOrSuccessOption
           ? _value.updateEmailFailureOrSuccessOption
           : updateEmailFailureOrSuccessOption // ignore: cast_nullable_to_non_nullable
               as Option<Either<AuthFailure, Unit>>,
-      isNetworkAvailable: isNetworkAvailable == freezed
+      isNetworkAvailable: null == isNetworkAvailable
           ? _value.isNetworkAvailable
           : isNetworkAvailable // ignore: cast_nullable_to_non_nullable
               as bool,
@@ -2042,54 +1962,62 @@ class _$_AuthState implements _AuthState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _AuthState &&
-            const DeepCollectionEquality().equals(other.isLoading, isLoading) &&
-            const DeepCollectionEquality()
-                .equals(other.isUserSignedin, isUserSignedin) &&
-            const DeepCollectionEquality().equals(
-                other.authFailureOrSuccessOption, authFailureOrSuccessOption) &&
-            const DeepCollectionEquality().equals(
-                other.deleteAccountFailureOrSuccessOption,
-                deleteAccountFailureOrSuccessOption) &&
-            const DeepCollectionEquality().equals(
-                other.emailSendFailureOrSuccessOption,
-                emailSendFailureOrSuccessOption) &&
-            const DeepCollectionEquality().equals(
-                other.updateEmailFailureOrSuccessOption,
-                updateEmailFailureOrSuccessOption) &&
-            const DeepCollectionEquality()
-                .equals(other.isNetworkAvailable, isNetworkAvailable));
+            other is _$_AuthState &&
+            (identical(other.isLoading, isLoading) ||
+                other.isLoading == isLoading) &&
+            (identical(other.isUserSignedin, isUserSignedin) ||
+                other.isUserSignedin == isUserSignedin) &&
+            (identical(other.authFailureOrSuccessOption,
+                    authFailureOrSuccessOption) ||
+                other.authFailureOrSuccessOption ==
+                    authFailureOrSuccessOption) &&
+            (identical(other.deleteAccountFailureOrSuccessOption,
+                    deleteAccountFailureOrSuccessOption) ||
+                other.deleteAccountFailureOrSuccessOption ==
+                    deleteAccountFailureOrSuccessOption) &&
+            (identical(other.emailSendFailureOrSuccessOption,
+                    emailSendFailureOrSuccessOption) ||
+                other.emailSendFailureOrSuccessOption ==
+                    emailSendFailureOrSuccessOption) &&
+            (identical(other.updateEmailFailureOrSuccessOption,
+                    updateEmailFailureOrSuccessOption) ||
+                other.updateEmailFailureOrSuccessOption ==
+                    updateEmailFailureOrSuccessOption) &&
+            (identical(other.isNetworkAvailable, isNetworkAvailable) ||
+                other.isNetworkAvailable == isNetworkAvailable));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(isLoading),
-      const DeepCollectionEquality().hash(isUserSignedin),
-      const DeepCollectionEquality().hash(authFailureOrSuccessOption),
-      const DeepCollectionEquality().hash(deleteAccountFailureOrSuccessOption),
-      const DeepCollectionEquality().hash(emailSendFailureOrSuccessOption),
-      const DeepCollectionEquality().hash(updateEmailFailureOrSuccessOption),
-      const DeepCollectionEquality().hash(isNetworkAvailable));
+      isLoading,
+      isUserSignedin,
+      authFailureOrSuccessOption,
+      deleteAccountFailureOrSuccessOption,
+      emailSendFailureOrSuccessOption,
+      updateEmailFailureOrSuccessOption,
+      isNetworkAvailable);
 
   @JsonKey(ignore: true)
   @override
-  _$AuthStateCopyWith<_AuthState> get copyWith =>
-      __$AuthStateCopyWithImpl<_AuthState>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_AuthStateCopyWith<_$_AuthState> get copyWith =>
+      __$$_AuthStateCopyWithImpl<_$_AuthState>(this, _$identity);
 }
 
 abstract class _AuthState implements AuthState {
   const factory _AuthState(
-      {required bool isLoading,
-      required bool isUserSignedin,
-      required Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption,
-      required Option<Either<AuthFailure, Unit>>
+      {required final bool isLoading,
+      required final bool isUserSignedin,
+      required final Option<Either<AuthFailure, Unit>>
+          authFailureOrSuccessOption,
+      required final Option<Either<AuthFailure, Unit>>
           deleteAccountFailureOrSuccessOption,
-      required Option<Either<AuthFailure, Unit>>
+      required final Option<Either<AuthFailure, Unit>>
           emailSendFailureOrSuccessOption,
-      required Option<Either<AuthFailure, Unit>>
+      required final Option<Either<AuthFailure, Unit>>
           updateEmailFailureOrSuccessOption,
-      required bool isNetworkAvailable}) = _$_AuthState;
+      required final bool isNetworkAvailable}) = _$_AuthState;
 
   @override
   bool get isLoading;
@@ -2107,6 +2035,6 @@ abstract class _AuthState implements AuthState {
   bool get isNetworkAvailable;
   @override
   @JsonKey(ignore: true)
-  _$AuthStateCopyWith<_AuthState> get copyWith =>
+  _$$_AuthStateCopyWith<_$_AuthState> get copyWith =>
       throw _privateConstructorUsedError;
 }
