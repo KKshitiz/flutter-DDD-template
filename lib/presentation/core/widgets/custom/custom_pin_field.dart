@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template/presentation/core/styles/app_colors.dart';
-import 'package:flutter_template/presentation/core/styles/app_theme.dart';
 import 'package:pin_code_text_field/pin_code_text_field.dart';
 
 class CustomPinField extends StatelessWidget {
@@ -45,14 +44,6 @@ class CustomPinField extends StatelessWidget {
           pinBoxRadius: 10.0,
           pinBoxBorderWidth: 1.0,
           wrapAlignment: WrapAlignment.spaceAround,
-          pinBoxDecoration: (
-            color,
-            color2, {
-            double? borderWidth,
-            double? radius,
-          }) {
-            return AppTheme.pinBoxDecoration;
-          },
           pinTextStyle: const TextStyle(
             fontSize: 20.0,
             color: AppColors.green,
