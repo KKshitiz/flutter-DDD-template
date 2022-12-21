@@ -13,7 +13,7 @@ import 'package:flutter_template/application/settings/settings_bloc.dart'
     as _i8;
 import 'package:flutter_template/domain/auth/i_auth_facade.dart' as _i6;
 import 'package:flutter_template/infrastructure/auth/auth_facade.dart' as _i7;
-import 'package:flutter_template/infrastructure/core/firebase_injectable_modules.dart'
+import 'package:flutter_template/infrastructure/core/network/firebase/firebase_injectable_modules.dart'
     as _i10;
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;

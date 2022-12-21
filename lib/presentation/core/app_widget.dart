@@ -40,9 +40,11 @@ class AppWidget extends StatelessWidget {
               theme: AppTheme.light,
               darkTheme: AppTheme.dark,
               locale: AppConstants.supportedLocales[0],
+              supportedLocales: AppConstants.supportedLocales,
               localizationsDelegates: const [
                 AppLocalizations.delegate,
                 GlobalMaterialLocalizations.delegate,
+                GlobalCupertinoLocalizations.delegate,
                 GlobalWidgetsLocalizations.delegate,
               ],
               localeResolutionCallback: (locale, supportedLocales) {
