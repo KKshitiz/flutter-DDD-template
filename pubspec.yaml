@@ -89,5 +89,4 @@ flutter:
 
   assets:
     - .env
-    - lang/
     - assets/

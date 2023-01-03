@@ -1,3 +1,6 @@
 {
-    "appTitle": "Heroes of Computer Science"
+    "helloWorld": "Hello World!",
+    "@helloWorld": {
+        "description": "The greeting"
+    }
 }
