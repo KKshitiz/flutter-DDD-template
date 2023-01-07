@@ -6,7 +6,7 @@ publish_to: "none"
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+  sdk: ">=2.17.0 <3.0.0"
 
 dependencies:
   auto_route: ^5.0.3
@@ -44,6 +44,7 @@ dependencies:
   image_picker: ^0.8.6
   injectable: ^2.0.1
   intl: ^0.17.0
+  logging: ^1.1.0
   pin_code_text_field: ^1.8.0
   shared_preferences: ^2.0.15
   shimmer: ^2.0.0
@@ -55,6 +56,7 @@ dev_dependencies:
   auto_route_generator: ^5.0.3
   dart_code_metrics: ^5.2.1
   flutter_gen_runner: ^5.1.0+1
+  flutter_launcher_icons: ^0.11.0
   flutter_lints: ^2.0.1
   flutter_native_splash: ^2.2.15
   flutter_test:

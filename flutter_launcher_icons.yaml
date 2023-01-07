@@ -1,0 +1,10 @@
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icons/core/logo.png"
+  web:
+    generate: true
+  windows:
+    generate: true
+  macos:
+    generate: true
