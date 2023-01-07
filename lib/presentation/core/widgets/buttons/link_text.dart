@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template/presentation/core/styles/app_theme.dart';
 
-class ClickableText extends StatelessWidget {
-  const ClickableText({
+class LinkText extends StatelessWidget {
+  const LinkText({
     Key? key,
     required this.text,
     required this.onTap,
+    this.hasUnderline = false,
   }) : super(key: key);
-  final String? text;
+  final String text;
+  final bool hasUnderline;
   final VoidCallback onTap;
 
   @override
@@ -15,8 +17,8 @@ class ClickableText extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Text(
-        text!,
-        style: AppTheme.linkStyle,
+        text,
+        style: hasUnderline ? AppTheme.linkStyle : null,
       ),
     );
   }
