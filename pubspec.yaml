@@ -90,3 +90,18 @@ flutter:
   assets:
     - .env
     - assets/
+
+
+flutter_gen:
+  output: lib/domain/core/generated
+  line_length: 80
+  integrations:
+    flutter_svg: false
+    flare_flutter: false
+    rive: false
+    lottie: false
+  assets:
+    enabled: true
+    outputs:
+      style: dot-delimiter
+      class_name: Assets

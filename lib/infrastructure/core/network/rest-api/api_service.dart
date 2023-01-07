@@ -1,12 +1,10 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:flutter_template/domain/core/constants/api_constants.dart';
 import 'package:flutter_template/infrastructure/core/network/rest-api/api_error_interceptors.dart';
 
 class ApiServiceV2 {
-  static String apiBaseUrl = dotenv.env['API_BASE_URL']!;
-
   static final BaseOptions options = BaseOptions(
-    baseUrl: apiBaseUrl,
+    baseUrl: ApiConstants.baseUrl,
     connectTimeout: 5000, //5s
     receiveTimeout: 15000, //15s
     contentType: Headers.jsonContentType,

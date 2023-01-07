@@ -1,6 +1,6 @@
 import 'dart:developer';
 
-import 'package:flutter_template/domain/core/constants.dart';
+import 'package:flutter_template/domain/core/constants/app_constants.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 // ignore: avoid_classes_with_only_static_members

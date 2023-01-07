@@ -1,15 +1,16 @@
 import 'dart:developer';
 
+import 'package:flutter_template/domain/core/constants/storage_constants.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class SharedPreferencesService {
+class StorageService {
   static SharedPreferences? _service;
   static late String _userToken;
   static late String _userId;
   static late String _userNickName;
   static Future<void> init() async {
     _service = await SharedPreferences.getInstance();
-    _userToken = _service!.getString("user_token") ?? "";
+    _userToken = _service!.getString(StorageConstants.userToken) ?? "";
     if (_userToken.isNotEmpty) {
       try {
         // Map<String, dynamic> userTokenJWT = Jwt.parseJwt(_userToken);
@@ -36,7 +37,7 @@ class SharedPreferencesService {
 
   static Future<void> refreshToken(String newToken) async {
     _userToken = newToken;
-    await _service!.setString("user_token", _userToken);
+    await _service!.setString(StorageConstants.userToken, _userToken);
     // Map<String, dynamic> userTokenJWT = Jwt.parseJwt(_userToken);
     // _userId = userTokenJWT["user_id"];
     // _userNickName = userTokenJWT["nick_name"] ?? "";

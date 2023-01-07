@@ -9,20 +9,8 @@
 
 import 'package:flutter/widgets.dart';
 
-class $LangGen {
-  const $LangGen();
-
-  /// File path: lang/en.json
-  String get en => 'lang/en.json';
-
-  /// List of all assets
-  List<String> get values => [en];
-}
-
 class Assets {
   Assets._();
-
-  static const $LangGen lang = $LangGen();
 }
 
 class AssetGenImage {
