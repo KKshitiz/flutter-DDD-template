@@ -1,0 +1,199 @@
+{
+	// Place your DDD-template workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"Part statement": {
+		"prefix": "pts",
+		"body": [
+			"part '${TM_FILENAME_BASE}.g.dart';",
+		],
+		"description": "Creates a filled-in part statement"
+	},
+	"Part 'Freezed' statement": {
+		"prefix": "ptf",
+		"body": [
+			"part '${TM_FILENAME_BASE}.freezed.dart';",
+		],
+		"description": "Creates a filled-in freezed part statement"
+	},
+	"Freezed Data Class": {
+		"prefix": "fdataclass",
+		"body": [
+			"@freezed",
+			"class ${1:DataClass} with _$${1:DataClass}{",
+			"  const factory ${1:DataClass}(${2}) = _${1:DataClass};",
+			"}"
+		],
+		"description": "Freezed Data Class"
+	},
+	"Freezed Union": {
+		"prefix": "funion",
+		"body": [
+			"@freezed",
+			"class ${1:Union} with _$${1:Union}{",
+			"  const factory ${1:Union}.${2}(${4}) = ${3};",
+			"}"
+		],
+		"description": "Freezed Union"
+	},
+	"Freezed Union Case": {
+		"prefix": "funioncase",
+		"body": [
+			"const factory ${1:Union}.${2}(${4}) = ${3};"
+		],
+		"description": "Freezed Union Case"
+	},
+	"New Page with scaffold": {
+		"prefix": "page",
+		"body": [
+			"import 'package:flutter/material.dart';",
+			"class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g} extends StatelessWidget {",
+			"const ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}({super.key});",
+			"  @override",
+			"  Widget build(BuildContext context) {",
+			"    return AppScaffold(",
+			"      body: ${2:Container}(),",
+			"    );",
+			"   }",
+			" }",
+		],
+		"description": "Creates a new stateless widget with scaffold"
+	},
+	"Text theme": {
+		"prefix": "text",
+		"body": [
+			"style: Theme.of(context).textTheme.${0},"
+		]
+	},
+	"Pop route": {
+		"prefix": "pop",
+		"body": [
+			"AutoRouter.of(context).pop();"
+		]
+	},
+	"Push Route": {
+		"prefix": "push",
+		"body": [
+			"AutoRouter.of(context).push(${0});"
+		]
+	},
+	"Replace Route": {
+		"prefix": "replace",
+		"body": [
+			"AutoRouter.of(context).replace(${0});"
+		]
+	},
+	"Material Push Route": {
+		"prefix": "mpush",
+		"body": [
+			"Navigator.of(context).push(MaterialPageRoute(",
+			"builder: (context) => ${0}(),",
+			"));"
+		]
+	},
+	"Fold a union": {
+		"prefix": "fold",
+		"body": [
+			"state.${1}.fold(",
+			"   () {},",
+			"   (some) {",
+			"     some.fold(",
+			"       (failure) {},",
+			"       (${2:success}) {},",
+			"     );",
+			"    },",
+			");",
+		]
+	},
+	"Unexpected error": {
+		"prefix": "error",
+		"body": [
+			"\"An unexpected error occurred. Please try again later.\""
+		]
+	},
+	"Sizedbox with height": {
+		"prefix": "sh",
+		"body": [
+			"const SizedBox(height: ${0}),"
+		]
+	},
+	"Sizedbox with width": {
+		"prefix": "sw",
+		"body": [
+			"const SizedBox(width: ${0}),"
+		]
+	},
+	"App localization": {
+		"prefix": "al",
+		"body": [
+			"AppLocalizations.of(context).getTranslation(\"${0}\")"
+		]
+	},
+	"Enum serialization": {
+		"prefix": "enums",
+		"description": "Creates an enum with toJSON and fromJSON methods support",
+		"body": [
+			"enum ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g} {",
+			"${0};",
+			"String toJson() => name;",
+			"static ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g} fromJson(String json) => values.byName(json);",
+			"}"
+		],
+	},
+	//Testing related
+	"Main Test Suite Setup": {
+		"prefix": "testm",
+		"body": [
+			"import 'package:flutter_test/flutter_test.dart';",
+			"",
+			"void main() {",
+			" group('${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}} -', (){",
+			"",
+			" });",
+			"}"
+		],
+		"description": "Main Test Suite Setup"
+	},
+	"Test Group Setup With Test": {
+		"prefix": "testgt",
+		"description": "Creates a Test group with a single test",
+		"body": [
+			"group('${1} -', () {",
+			" test('${2}', () {",
+			"",
+			" });",
+			"});",
+		]
+	},
+	"Test Group Setup": {
+		"prefix": "testg",
+		"description": "Creates a Test group",
+		"body": [
+			"group('${1} -', () {",
+			"",
+			"});",
+		]
+	},
+	"Single Test Setup": {
+		"prefix": "test",
+		"description": "Creates a single test",
+		"body": [
+			" test('${1}', () {",
+			"",
+			" });",
+		]
+	},
+}
