@@ -1,13 +1,22 @@
 // ignore_for_file: avoid_classes_with_only_static_members
-
-import 'package:flutter/foundation.dart';
+import 'package:flutter/widgets.dart';
+import 'package:validators/validators.dart';
 
 class Validators {
-  static final _emailRegex = RegExp(
-    r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+",
-  );
   static final _nameRegex = RegExp(r"[a-zA-Z][a-zA-Z ]+[a-zA-Z]$");
-  static final phoneRegex = RegExp(r"^[6-7]{1}\d{8}$");
+
+  static FormFieldValidator<String> multiple(
+    List<FormFieldValidator<String>> validators,
+  ) {
+    return (value) {
+      for (final validator in validators) {
+        final String? result = validator(value);
+        if (result != null) return result;
+      }
+
+      return null;
+    };
+  }
 
   static String? fieldRequired(
     String? value, {
@@ -24,8 +33,7 @@ class Validators {
     final String emailString = valueString!.trim();
     if (emailString.isEmpty) {
       return 'Please enter an email address';
-    } else if (emailString.isNotEmpty &&
-        !Validators._emailRegex.hasMatch(emailString)) {
+    } else if (isEmail(emailString)) {
       return 'Please enter a valid email address';
     } else if (emailString.length > 100) {
       return 'This field cannot exceed 100 characters';
@@ -71,12 +79,12 @@ class Validators {
     return null;
   }
 
-  static String? expense(String? valueString) {
-    final String expenseString = valueString!.trim();
-    if (expenseString.isEmpty) {
+  static String? money(String? valueString) {
+    final String moneyString = valueString!.trim();
+    if (moneyString.isEmpty) {
       return 'Please enter an amount';
     }
-    final double expense = double.parse(expenseString);
+    final double expense = double.parse(moneyString);
     if (expense > 100000) {
       return 'Maximum amount cannot exceed 100,000';
     }
