@@ -26,17 +26,14 @@ class AuthFacade implements IAuthFacade {
         email: emailAddress,
         password: password,
       );
+
       return right(unit);
     } on FirebaseAuthException catch (e) {
-      if (e.code == 'email-already-in-use') {
-        return left(const AuthFailure.emailAlreadyInUse());
-      } else {
-        return left(
-          const AuthFailure.serverError(
-            "An unexpected error occurred while signing in. Please try again",
-          ),
-        );
-      }
+      return e.code == 'email-already-in-use'
+          ? left(const AuthFailure.emailAlreadyInUse())
+          : left(const AuthFailure.serverError(
+              "An unexpected error occurred while signing in. Please try again",
+            ));
     }
   }
 
@@ -50,6 +47,7 @@ class AuthFacade implements IAuthFacade {
         email: emailAddress,
         password: password,
       );
+
       return right(unit);
     } on FirebaseAuthException catch (e) {
       if (e.code == 'wrong-password' || e.code == 'user-not-found') {
@@ -75,6 +73,7 @@ class AuthFacade implements IAuthFacade {
   }) async {
     try {
       await _firebaseAuth.sendPasswordResetEmail(email: emailAddress);
+
       return right(unit);
     } on FirebaseAuthException catch (e) {
       debugPrint(e.code);
@@ -93,11 +92,8 @@ class AuthFacade implements IAuthFacade {
   @override
   Future<bool> checkAuthState() async {
     final User? currentUser = _firebaseAuth.currentUser;
-    if (currentUser != null) {
-      return true;
-    } else {
-      return false;
-    }
+
+    return currentUser != null;
   }
 
   @override
@@ -114,15 +110,18 @@ class AuthFacade implements IAuthFacade {
       if (e.code == "requires-recent-login") {
         return left(AuthFailure.serverError(e.message.toString()));
       }
+
       return left(const AuthFailure.deleteAccountFailure());
     }
   }
 
   @override
-  Future<Either<AuthFailure, Unit>> updateEmailAddress(
-      {required String updatedEmail}) async {
+  Future<Either<AuthFailure, Unit>> updateEmailAddress({
+    required String updatedEmail,
+  }) async {
     try {
       await _firebaseAuth.currentUser!.updateEmail(updatedEmail);
+
       return right(unit);
     } on FirebaseAuthException catch (e) {
       debugPrint(e.toString());

@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_template/presentation/core/shimmer/shimmer_list_tile.dart';
 

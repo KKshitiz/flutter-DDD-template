@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_template/app_localizations.dart';
 import 'package:flutter_template/application/auth/auth_bloc.dart';
 import 'package:flutter_template/application/settings/settings_bloc.dart';
-import 'package:flutter_template/domain/core/constants.dart';
+import 'package:flutter_template/domain/core/constants/app_constants.dart';
+import 'package:flutter_template/domain/core/l10n/app_localizations.dart';
 import 'package:flutter_template/injection.dart';
 import 'package:flutter_template/presentation/core/styles/app_theme.dart';
 import 'package:flutter_template/presentation/core/widgets/utility/life_cycle_watcher.dart';
@@ -19,7 +18,8 @@ class AppWidget extends StatelessWidget {
       providers: [
         BlocProvider<AuthBloc>(
           create: (context) {
-            return getIt<AuthBloc>()..add(const AuthEvent.checkAuthState());
+            return getIt<AuthBloc>();
+            // ..add(const AuthEvent.checkAuthState());
           },
         ),
         BlocProvider(
@@ -39,12 +39,8 @@ class AppWidget extends StatelessWidget {
               themeMode: state.appThemeMode,
               theme: AppTheme.light,
               darkTheme: AppTheme.dark,
-              locale: AppConstants.supportedLocales[0],
-              localizationsDelegates: const [
-                AppLocalizations.delegate,
-                GlobalMaterialLocalizations.delegate,
-                GlobalWidgetsLocalizations.delegate,
-              ],
+              supportedLocales: AppLocalizations.supportedLocales,
+              localizationsDelegates: AppLocalizations.localizationsDelegates,
               localeResolutionCallback: (locale, supportedLocales) {
                 for (final supportedLocale in supportedLocales) {
                   if (supportedLocale.languageCode == locale!.languageCode &&
@@ -52,6 +48,7 @@ class AppWidget extends StatelessWidget {
                     return supportedLocale;
                   }
                 }
+
                 return supportedLocales.first;
               },
             );

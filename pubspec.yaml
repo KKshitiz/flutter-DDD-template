@@ -6,52 +6,71 @@ publish_to: "none"
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+  sdk: ">=2.17.0 <3.0.0"
 
 dependencies:
-  auto_route: ^5.0.1
-  build_runner: ^2.1.7
-  cached_network_image: ^3.2.0
-  cloud_firestore: ^3.1.10
-  cloud_functions: ^3.2.9
-  connectivity_plus: ^2.2.1
-  cupertino_icons: ^1.0.4
+  auto_route: ^5.0.3
+  build_runner: ^2.3.2
+  cached_network_image: ^3.2.3
+  cloud_firestore: ^4.1.0
+  cloud_functions: ^4.0.5
+  connectivity_plus: ^3.0.2
+  cupertino_icons: ^1.0.5
   dartz: ^0.10.0-nullsafety.2
-  firebase_auth: ^3.3.9
-  firebase_core: ^1.13.1
-  firebase_crashlytics: ^2.5.3
-  firebase_messaging: ^13.1.0
-  firebase_performance: ^0.8.0+7
-  firebase_storage: ^10.2.9
+  dio: ^4.0.6
+  dio_smart_retry: ^1.4.0
+  equatable: ^2.0.5
+  faker: ^2.1.0
+  file_picker: ^5.2.4
+  firebase_auth: ^4.1.4
+  firebase_core: ^2.3.0
+  firebase_crashlytics: ^3.0.6
+  firebase_messaging: ^14.1.2
+  firebase_performance: ^0.9.0+6
+  firebase_storage: ^11.0.6
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.1
+  flutter_dotenv: ^5.0.2
   flutter_localizations:
     sdk: flutter
-  flutter_secure_storage: ^6.0.0
-  flutter_svg: ^1.0.3
-  fluttertoast: ^8.0.9
-  freezed_annotation: ^2.1.0
+  flutter_secure_storage: ^7.0.1
+  flutter_svg: ^1.1.6
+  fluttertoast: ^8.1.2
+  freezed_annotation: ^2.2.0
   get_it: ^7.2.0
   google_fonts: ^3.0.1
-  injectable: ^1.5.3
+  graphql_flutter: ^5.1.0
+  image_picker: ^0.8.6
+  injectable: ^2.1.0
+  intl: ^0.17.0
+  logging: ^1.1.0
   pin_code_text_field: ^1.8.0
+  shared_preferences: ^2.0.15
   shimmer: ^2.0.0
-  url_launcher: ^6.0.20
+  url_launcher: ^6.1.7
+  uuid: ^3.0.7
+  validators: ^3.0.0
 
 dev_dependencies:
-  auto_route_generator: ^5.0.2
-  flutter_native_splash: ^2.0.5
+  auto_route_generator: ^5.0.3
+  change_app_package_name: ^1.1.0
+  dart_code_metrics: ^5.2.1
+  flutter_gen_runner: ^5.1.0+1
+  flutter_launcher_icons: ^0.11.0
+  flutter_lints: ^2.0.1
+  flutter_native_splash: ^2.2.15
   flutter_test:
     sdk: flutter
-  freezed: ^2.1.0+1
-  injectable_generator: ^1.5.3
+  freezed: ^2.2.1
+  injectable_generator: ^2.0.1
   integration_test:
     sdk: flutter
-  json_serializable: ^6.1.4
-  lint: ^1.8.2
+  json_serializable: ^6.5.4
+  lint: ^2.0.1
 
 flutter:
+  generate: true
   uses-material-design: true
   fonts:
     - family: Roboto
@@ -72,5 +91,19 @@ flutter:
           style: italic
 
   assets:
-    - lang/
+    - .env
     - assets/
+
+flutter_gen:
+  output: lib/domain/core/generated
+  line_length: 80
+  integrations:
+    flutter_svg: false
+    flare_flutter: false
+    rive: false
+    lottie: false
+  assets:
+    enabled: true
+    outputs:
+      style: dot-delimiter
+      class_name: Assets

@@ -12,47 +12,7 @@ part of 'auth_failure.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$AuthFailureTearOff {
-  const _$AuthFailureTearOff();
-
-  CancelledByUser cancelledByUser() {
-    return const CancelledByUser();
-  }
-
-  ServerError serverError(String error) {
-    return ServerError(
-      error,
-    );
-  }
-
-  EmailAlreadyInUse emailAlreadyInUse() {
-    return const EmailAlreadyInUse();
-  }
-
-  UserNotFound userNotFound() {
-    return const UserNotFound();
-  }
-
-  RequiredRecentLogin requiresRecentLogin(String message) {
-    return RequiredRecentLogin(
-      message,
-    );
-  }
-
-  DeleteAccountFailure deleteAccountFailure() {
-    return const DeleteAccountFailure();
-  }
-
-  InvalidEmailAndPasswordCombination invalidEmailAndPasswordCombination() {
-    return const InvalidEmailAndPasswordCombination();
-  }
-}
-
-/// @nodoc
-const $AuthFailure = _$AuthFailureTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$AuthFailure {
@@ -69,13 +29,13 @@ mixin _$AuthFailure {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? cancelledByUser,
-    TResult Function(String error)? serverError,
-    TResult Function()? emailAlreadyInUse,
-    TResult Function()? userNotFound,
-    TResult Function(String message)? requiresRecentLogin,
-    TResult Function()? deleteAccountFailure,
-    TResult Function()? invalidEmailAndPasswordCombination,
+    TResult? Function()? cancelledByUser,
+    TResult? Function(String error)? serverError,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? userNotFound,
+    TResult? Function(String message)? requiresRecentLogin,
+    TResult? Function()? deleteAccountFailure,
+    TResult? Function()? invalidEmailAndPasswordCombination,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -104,13 +64,13 @@ mixin _$AuthFailure {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(CancelledByUser value)? cancelledByUser,
-    TResult Function(ServerError value)? serverError,
-    TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
-    TResult Function(UserNotFound value)? userNotFound,
-    TResult Function(RequiredRecentLogin value)? requiresRecentLogin,
-    TResult Function(DeleteAccountFailure value)? deleteAccountFailure,
-    TResult Function(InvalidEmailAndPasswordCombination value)?
+    TResult? Function(CancelledByUser value)? cancelledByUser,
+    TResult? Function(ServerError value)? serverError,
+    TResult? Function(EmailAlreadyInUse value)? emailAlreadyInUse,
+    TResult? Function(UserNotFound value)? userNotFound,
+    TResult? Function(RequiredRecentLogin value)? requiresRecentLogin,
+    TResult? Function(DeleteAccountFailure value)? deleteAccountFailure,
+    TResult? Function(InvalidEmailAndPasswordCombination value)?
         invalidEmailAndPasswordCombination,
   }) =>
       throw _privateConstructorUsedError;
@@ -133,35 +93,34 @@ mixin _$AuthFailure {
 abstract class $AuthFailureCopyWith<$Res> {
   factory $AuthFailureCopyWith(
           AuthFailure value, $Res Function(AuthFailure) then) =
-      _$AuthFailureCopyWithImpl<$Res>;
+      _$AuthFailureCopyWithImpl<$Res, AuthFailure>;
 }
 
 /// @nodoc
-class _$AuthFailureCopyWithImpl<$Res> implements $AuthFailureCopyWith<$Res> {
+class _$AuthFailureCopyWithImpl<$Res, $Val extends AuthFailure>
+    implements $AuthFailureCopyWith<$Res> {
   _$AuthFailureCopyWithImpl(this._value, this._then);
 
-  final AuthFailure _value;
   // ignore: unused_field
-  final $Res Function(AuthFailure) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class $CancelledByUserCopyWith<$Res> {
-  factory $CancelledByUserCopyWith(
-          CancelledByUser value, $Res Function(CancelledByUser) then) =
-      _$CancelledByUserCopyWithImpl<$Res>;
+abstract class _$$CancelledByUserCopyWith<$Res> {
+  factory _$$CancelledByUserCopyWith(
+          _$CancelledByUser value, $Res Function(_$CancelledByUser) then) =
+      __$$CancelledByUserCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$CancelledByUserCopyWithImpl<$Res>
-    extends _$AuthFailureCopyWithImpl<$Res>
-    implements $CancelledByUserCopyWith<$Res> {
-  _$CancelledByUserCopyWithImpl(
-      CancelledByUser _value, $Res Function(CancelledByUser) _then)
-      : super(_value, (v) => _then(v as CancelledByUser));
-
-  @override
-  CancelledByUser get _value => super._value as CancelledByUser;
+class __$$CancelledByUserCopyWithImpl<$Res>
+    extends _$AuthFailureCopyWithImpl<$Res, _$CancelledByUser>
+    implements _$$CancelledByUserCopyWith<$Res> {
+  __$$CancelledByUserCopyWithImpl(
+      _$CancelledByUser _value, $Res Function(_$CancelledByUser) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -177,7 +136,7 @@ class _$CancelledByUser implements CancelledByUser {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is CancelledByUser);
+        (other.runtimeType == runtimeType && other is _$CancelledByUser);
   }
 
   @override
@@ -200,13 +159,13 @@ class _$CancelledByUser implements CancelledByUser {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? cancelledByUser,
-    TResult Function(String error)? serverError,
-    TResult Function()? emailAlreadyInUse,
-    TResult Function()? userNotFound,
-    TResult Function(String message)? requiresRecentLogin,
-    TResult Function()? deleteAccountFailure,
-    TResult Function()? invalidEmailAndPasswordCombination,
+    TResult? Function()? cancelledByUser,
+    TResult? Function(String error)? serverError,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? userNotFound,
+    TResult? Function(String message)? requiresRecentLogin,
+    TResult? Function()? deleteAccountFailure,
+    TResult? Function()? invalidEmailAndPasswordCombination,
   }) {
     return cancelledByUser?.call();
   }
@@ -247,13 +206,13 @@ class _$CancelledByUser implements CancelledByUser {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(CancelledByUser value)? cancelledByUser,
-    TResult Function(ServerError value)? serverError,
-    TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
-    TResult Function(UserNotFound value)? userNotFound,
-    TResult Function(RequiredRecentLogin value)? requiresRecentLogin,
-    TResult Function(DeleteAccountFailure value)? deleteAccountFailure,
-    TResult Function(InvalidEmailAndPasswordCombination value)?
+    TResult? Function(CancelledByUser value)? cancelledByUser,
+    TResult? Function(ServerError value)? serverError,
+    TResult? Function(EmailAlreadyInUse value)? emailAlreadyInUse,
+    TResult? Function(UserNotFound value)? userNotFound,
+    TResult? Function(RequiredRecentLogin value)? requiresRecentLogin,
+    TResult? Function(DeleteAccountFailure value)? deleteAccountFailure,
+    TResult? Function(InvalidEmailAndPasswordCombination value)?
         invalidEmailAndPasswordCombination,
   }) {
     return cancelledByUser?.call(this);
@@ -284,29 +243,29 @@ abstract class CancelledByUser implements AuthFailure {
 }
 
 /// @nodoc
-abstract class $ServerErrorCopyWith<$Res> {
-  factory $ServerErrorCopyWith(
-          ServerError value, $Res Function(ServerError) then) =
-      _$ServerErrorCopyWithImpl<$Res>;
+abstract class _$$ServerErrorCopyWith<$Res> {
+  factory _$$ServerErrorCopyWith(
+          _$ServerError value, $Res Function(_$ServerError) then) =
+      __$$ServerErrorCopyWithImpl<$Res>;
+  @useResult
   $Res call({String error});
 }
 
 /// @nodoc
-class _$ServerErrorCopyWithImpl<$Res> extends _$AuthFailureCopyWithImpl<$Res>
-    implements $ServerErrorCopyWith<$Res> {
-  _$ServerErrorCopyWithImpl(
-      ServerError _value, $Res Function(ServerError) _then)
-      : super(_value, (v) => _then(v as ServerError));
+class __$$ServerErrorCopyWithImpl<$Res>
+    extends _$AuthFailureCopyWithImpl<$Res, _$ServerError>
+    implements _$$ServerErrorCopyWith<$Res> {
+  __$$ServerErrorCopyWithImpl(
+      _$ServerError _value, $Res Function(_$ServerError) _then)
+      : super(_value, _then);
 
-  @override
-  ServerError get _value => super._value as ServerError;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? error = freezed,
+    Object? error = null,
   }) {
-    return _then(ServerError(
-      error == freezed
+    return _then(_$ServerError(
+      null == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as String,
@@ -331,18 +290,18 @@ class _$ServerError implements ServerError {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is ServerError &&
-            const DeepCollectionEquality().equals(other.error, error));
+            other is _$ServerError &&
+            (identical(other.error, error) || other.error == error));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(error));
+  int get hashCode => Object.hash(runtimeType, error);
 
   @JsonKey(ignore: true)
   @override
-  $ServerErrorCopyWith<ServerError> get copyWith =>
-      _$ServerErrorCopyWithImpl<ServerError>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$ServerErrorCopyWith<_$ServerError> get copyWith =>
+      __$$ServerErrorCopyWithImpl<_$ServerError>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -361,13 +320,13 @@ class _$ServerError implements ServerError {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? cancelledByUser,
-    TResult Function(String error)? serverError,
-    TResult Function()? emailAlreadyInUse,
-    TResult Function()? userNotFound,
-    TResult Function(String message)? requiresRecentLogin,
-    TResult Function()? deleteAccountFailure,
-    TResult Function()? invalidEmailAndPasswordCombination,
+    TResult? Function()? cancelledByUser,
+    TResult? Function(String error)? serverError,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? userNotFound,
+    TResult? Function(String message)? requiresRecentLogin,
+    TResult? Function()? deleteAccountFailure,
+    TResult? Function()? invalidEmailAndPasswordCombination,
   }) {
     return serverError?.call(error);
   }
@@ -408,13 +367,13 @@ class _$ServerError implements ServerError {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(CancelledByUser value)? cancelledByUser,
-    TResult Function(ServerError value)? serverError,
-    TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
-    TResult Function(UserNotFound value)? userNotFound,
-    TResult Function(RequiredRecentLogin value)? requiresRecentLogin,
-    TResult Function(DeleteAccountFailure value)? deleteAccountFailure,
-    TResult Function(InvalidEmailAndPasswordCombination value)?
+    TResult? Function(CancelledByUser value)? cancelledByUser,
+    TResult? Function(ServerError value)? serverError,
+    TResult? Function(EmailAlreadyInUse value)? emailAlreadyInUse,
+    TResult? Function(UserNotFound value)? userNotFound,
+    TResult? Function(RequiredRecentLogin value)? requiresRecentLogin,
+    TResult? Function(DeleteAccountFailure value)? deleteAccountFailure,
+    TResult? Function(InvalidEmailAndPasswordCombination value)?
         invalidEmailAndPasswordCombination,
   }) {
     return serverError?.call(this);
@@ -441,31 +400,28 @@ class _$ServerError implements ServerError {
 }
 
 abstract class ServerError implements AuthFailure {
-  const factory ServerError(String error) = _$ServerError;
+  const factory ServerError(final String error) = _$ServerError;
 
   String get error;
   @JsonKey(ignore: true)
-  $ServerErrorCopyWith<ServerError> get copyWith =>
+  _$$ServerErrorCopyWith<_$ServerError> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $EmailAlreadyInUseCopyWith<$Res> {
-  factory $EmailAlreadyInUseCopyWith(
-          EmailAlreadyInUse value, $Res Function(EmailAlreadyInUse) then) =
-      _$EmailAlreadyInUseCopyWithImpl<$Res>;
+abstract class _$$EmailAlreadyInUseCopyWith<$Res> {
+  factory _$$EmailAlreadyInUseCopyWith(
+          _$EmailAlreadyInUse value, $Res Function(_$EmailAlreadyInUse) then) =
+      __$$EmailAlreadyInUseCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$EmailAlreadyInUseCopyWithImpl<$Res>
-    extends _$AuthFailureCopyWithImpl<$Res>
-    implements $EmailAlreadyInUseCopyWith<$Res> {
-  _$EmailAlreadyInUseCopyWithImpl(
-      EmailAlreadyInUse _value, $Res Function(EmailAlreadyInUse) _then)
-      : super(_value, (v) => _then(v as EmailAlreadyInUse));
-
-  @override
-  EmailAlreadyInUse get _value => super._value as EmailAlreadyInUse;
+class __$$EmailAlreadyInUseCopyWithImpl<$Res>
+    extends _$AuthFailureCopyWithImpl<$Res, _$EmailAlreadyInUse>
+    implements _$$EmailAlreadyInUseCopyWith<$Res> {
+  __$$EmailAlreadyInUseCopyWithImpl(
+      _$EmailAlreadyInUse _value, $Res Function(_$EmailAlreadyInUse) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -481,7 +437,7 @@ class _$EmailAlreadyInUse implements EmailAlreadyInUse {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is EmailAlreadyInUse);
+        (other.runtimeType == runtimeType && other is _$EmailAlreadyInUse);
   }
 
   @override
@@ -504,13 +460,13 @@ class _$EmailAlreadyInUse implements EmailAlreadyInUse {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? cancelledByUser,
-    TResult Function(String error)? serverError,
-    TResult Function()? emailAlreadyInUse,
-    TResult Function()? userNotFound,
-    TResult Function(String message)? requiresRecentLogin,
-    TResult Function()? deleteAccountFailure,
-    TResult Function()? invalidEmailAndPasswordCombination,
+    TResult? Function()? cancelledByUser,
+    TResult? Function(String error)? serverError,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? userNotFound,
+    TResult? Function(String message)? requiresRecentLogin,
+    TResult? Function()? deleteAccountFailure,
+    TResult? Function()? invalidEmailAndPasswordCombination,
   }) {
     return emailAlreadyInUse?.call();
   }
@@ -551,13 +507,13 @@ class _$EmailAlreadyInUse implements EmailAlreadyInUse {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(CancelledByUser value)? cancelledByUser,
-    TResult Function(ServerError value)? serverError,
-    TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
-    TResult Function(UserNotFound value)? userNotFound,
-    TResult Function(RequiredRecentLogin value)? requiresRecentLogin,
-    TResult Function(DeleteAccountFailure value)? deleteAccountFailure,
-    TResult Function(InvalidEmailAndPasswordCombination value)?
+    TResult? Function(CancelledByUser value)? cancelledByUser,
+    TResult? Function(ServerError value)? serverError,
+    TResult? Function(EmailAlreadyInUse value)? emailAlreadyInUse,
+    TResult? Function(UserNotFound value)? userNotFound,
+    TResult? Function(RequiredRecentLogin value)? requiresRecentLogin,
+    TResult? Function(DeleteAccountFailure value)? deleteAccountFailure,
+    TResult? Function(InvalidEmailAndPasswordCombination value)?
         invalidEmailAndPasswordCombination,
   }) {
     return emailAlreadyInUse?.call(this);
@@ -588,21 +544,19 @@ abstract class EmailAlreadyInUse implements AuthFailure {
 }
 
 /// @nodoc
-abstract class $UserNotFoundCopyWith<$Res> {
-  factory $UserNotFoundCopyWith(
-          UserNotFound value, $Res Function(UserNotFound) then) =
-      _$UserNotFoundCopyWithImpl<$Res>;
+abstract class _$$UserNotFoundCopyWith<$Res> {
+  factory _$$UserNotFoundCopyWith(
+          _$UserNotFound value, $Res Function(_$UserNotFound) then) =
+      __$$UserNotFoundCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$UserNotFoundCopyWithImpl<$Res> extends _$AuthFailureCopyWithImpl<$Res>
-    implements $UserNotFoundCopyWith<$Res> {
-  _$UserNotFoundCopyWithImpl(
-      UserNotFound _value, $Res Function(UserNotFound) _then)
-      : super(_value, (v) => _then(v as UserNotFound));
-
-  @override
-  UserNotFound get _value => super._value as UserNotFound;
+class __$$UserNotFoundCopyWithImpl<$Res>
+    extends _$AuthFailureCopyWithImpl<$Res, _$UserNotFound>
+    implements _$$UserNotFoundCopyWith<$Res> {
+  __$$UserNotFoundCopyWithImpl(
+      _$UserNotFound _value, $Res Function(_$UserNotFound) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -618,7 +572,7 @@ class _$UserNotFound implements UserNotFound {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is UserNotFound);
+        (other.runtimeType == runtimeType && other is _$UserNotFound);
   }
 
   @override
@@ -641,13 +595,13 @@ class _$UserNotFound implements UserNotFound {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? cancelledByUser,
-    TResult Function(String error)? serverError,
-    TResult Function()? emailAlreadyInUse,
-    TResult Function()? userNotFound,
-    TResult Function(String message)? requiresRecentLogin,
-    TResult Function()? deleteAccountFailure,
-    TResult Function()? invalidEmailAndPasswordCombination,
+    TResult? Function()? cancelledByUser,
+    TResult? Function(String error)? serverError,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? userNotFound,
+    TResult? Function(String message)? requiresRecentLogin,
+    TResult? Function()? deleteAccountFailure,
+    TResult? Function()? invalidEmailAndPasswordCombination,
   }) {
     return userNotFound?.call();
   }
@@ -688,13 +642,13 @@ class _$UserNotFound implements UserNotFound {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(CancelledByUser value)? cancelledByUser,
-    TResult Function(ServerError value)? serverError,
-    TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
-    TResult Function(UserNotFound value)? userNotFound,
-    TResult Function(RequiredRecentLogin value)? requiresRecentLogin,
-    TResult Function(DeleteAccountFailure value)? deleteAccountFailure,
-    TResult Function(InvalidEmailAndPasswordCombination value)?
+    TResult? Function(CancelledByUser value)? cancelledByUser,
+    TResult? Function(ServerError value)? serverError,
+    TResult? Function(EmailAlreadyInUse value)? emailAlreadyInUse,
+    TResult? Function(UserNotFound value)? userNotFound,
+    TResult? Function(RequiredRecentLogin value)? requiresRecentLogin,
+    TResult? Function(DeleteAccountFailure value)? deleteAccountFailure,
+    TResult? Function(InvalidEmailAndPasswordCombination value)?
         invalidEmailAndPasswordCombination,
   }) {
     return userNotFound?.call(this);
@@ -725,30 +679,29 @@ abstract class UserNotFound implements AuthFailure {
 }
 
 /// @nodoc
-abstract class $RequiredRecentLoginCopyWith<$Res> {
-  factory $RequiredRecentLoginCopyWith(
-          RequiredRecentLogin value, $Res Function(RequiredRecentLogin) then) =
-      _$RequiredRecentLoginCopyWithImpl<$Res>;
+abstract class _$$RequiredRecentLoginCopyWith<$Res> {
+  factory _$$RequiredRecentLoginCopyWith(_$RequiredRecentLogin value,
+          $Res Function(_$RequiredRecentLogin) then) =
+      __$$RequiredRecentLoginCopyWithImpl<$Res>;
+  @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class _$RequiredRecentLoginCopyWithImpl<$Res>
-    extends _$AuthFailureCopyWithImpl<$Res>
-    implements $RequiredRecentLoginCopyWith<$Res> {
-  _$RequiredRecentLoginCopyWithImpl(
-      RequiredRecentLogin _value, $Res Function(RequiredRecentLogin) _then)
-      : super(_value, (v) => _then(v as RequiredRecentLogin));
+class __$$RequiredRecentLoginCopyWithImpl<$Res>
+    extends _$AuthFailureCopyWithImpl<$Res, _$RequiredRecentLogin>
+    implements _$$RequiredRecentLoginCopyWith<$Res> {
+  __$$RequiredRecentLoginCopyWithImpl(
+      _$RequiredRecentLogin _value, $Res Function(_$RequiredRecentLogin) _then)
+      : super(_value, _then);
 
-  @override
-  RequiredRecentLogin get _value => super._value as RequiredRecentLogin;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? message = freezed,
+    Object? message = null,
   }) {
-    return _then(RequiredRecentLogin(
-      message == freezed
+    return _then(_$RequiredRecentLogin(
+      null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
@@ -773,18 +726,19 @@ class _$RequiredRecentLogin implements RequiredRecentLogin {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is RequiredRecentLogin &&
-            const DeepCollectionEquality().equals(other.message, message));
+            other is _$RequiredRecentLogin &&
+            (identical(other.message, message) || other.message == message));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(message));
+  int get hashCode => Object.hash(runtimeType, message);
 
   @JsonKey(ignore: true)
   @override
-  $RequiredRecentLoginCopyWith<RequiredRecentLogin> get copyWith =>
-      _$RequiredRecentLoginCopyWithImpl<RequiredRecentLogin>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$RequiredRecentLoginCopyWith<_$RequiredRecentLogin> get copyWith =>
+      __$$RequiredRecentLoginCopyWithImpl<_$RequiredRecentLogin>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -803,13 +757,13 @@ class _$RequiredRecentLogin implements RequiredRecentLogin {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? cancelledByUser,
-    TResult Function(String error)? serverError,
-    TResult Function()? emailAlreadyInUse,
-    TResult Function()? userNotFound,
-    TResult Function(String message)? requiresRecentLogin,
-    TResult Function()? deleteAccountFailure,
-    TResult Function()? invalidEmailAndPasswordCombination,
+    TResult? Function()? cancelledByUser,
+    TResult? Function(String error)? serverError,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? userNotFound,
+    TResult? Function(String message)? requiresRecentLogin,
+    TResult? Function()? deleteAccountFailure,
+    TResult? Function()? invalidEmailAndPasswordCombination,
   }) {
     return requiresRecentLogin?.call(message);
   }
@@ -850,13 +804,13 @@ class _$RequiredRecentLogin implements RequiredRecentLogin {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(CancelledByUser value)? cancelledByUser,
-    TResult Function(ServerError value)? serverError,
-    TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
-    TResult Function(UserNotFound value)? userNotFound,
-    TResult Function(RequiredRecentLogin value)? requiresRecentLogin,
-    TResult Function(DeleteAccountFailure value)? deleteAccountFailure,
-    TResult Function(InvalidEmailAndPasswordCombination value)?
+    TResult? Function(CancelledByUser value)? cancelledByUser,
+    TResult? Function(ServerError value)? serverError,
+    TResult? Function(EmailAlreadyInUse value)? emailAlreadyInUse,
+    TResult? Function(UserNotFound value)? userNotFound,
+    TResult? Function(RequiredRecentLogin value)? requiresRecentLogin,
+    TResult? Function(DeleteAccountFailure value)? deleteAccountFailure,
+    TResult? Function(InvalidEmailAndPasswordCombination value)?
         invalidEmailAndPasswordCombination,
   }) {
     return requiresRecentLogin?.call(this);
@@ -883,31 +837,29 @@ class _$RequiredRecentLogin implements RequiredRecentLogin {
 }
 
 abstract class RequiredRecentLogin implements AuthFailure {
-  const factory RequiredRecentLogin(String message) = _$RequiredRecentLogin;
+  const factory RequiredRecentLogin(final String message) =
+      _$RequiredRecentLogin;
 
   String get message;
   @JsonKey(ignore: true)
-  $RequiredRecentLoginCopyWith<RequiredRecentLogin> get copyWith =>
+  _$$RequiredRecentLoginCopyWith<_$RequiredRecentLogin> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $DeleteAccountFailureCopyWith<$Res> {
-  factory $DeleteAccountFailureCopyWith(DeleteAccountFailure value,
-          $Res Function(DeleteAccountFailure) then) =
-      _$DeleteAccountFailureCopyWithImpl<$Res>;
+abstract class _$$DeleteAccountFailureCopyWith<$Res> {
+  factory _$$DeleteAccountFailureCopyWith(_$DeleteAccountFailure value,
+          $Res Function(_$DeleteAccountFailure) then) =
+      __$$DeleteAccountFailureCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$DeleteAccountFailureCopyWithImpl<$Res>
-    extends _$AuthFailureCopyWithImpl<$Res>
-    implements $DeleteAccountFailureCopyWith<$Res> {
-  _$DeleteAccountFailureCopyWithImpl(
-      DeleteAccountFailure _value, $Res Function(DeleteAccountFailure) _then)
-      : super(_value, (v) => _then(v as DeleteAccountFailure));
-
-  @override
-  DeleteAccountFailure get _value => super._value as DeleteAccountFailure;
+class __$$DeleteAccountFailureCopyWithImpl<$Res>
+    extends _$AuthFailureCopyWithImpl<$Res, _$DeleteAccountFailure>
+    implements _$$DeleteAccountFailureCopyWith<$Res> {
+  __$$DeleteAccountFailureCopyWithImpl(_$DeleteAccountFailure _value,
+      $Res Function(_$DeleteAccountFailure) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -923,7 +875,7 @@ class _$DeleteAccountFailure implements DeleteAccountFailure {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is DeleteAccountFailure);
+        (other.runtimeType == runtimeType && other is _$DeleteAccountFailure);
   }
 
   @override
@@ -946,13 +898,13 @@ class _$DeleteAccountFailure implements DeleteAccountFailure {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? cancelledByUser,
-    TResult Function(String error)? serverError,
-    TResult Function()? emailAlreadyInUse,
-    TResult Function()? userNotFound,
-    TResult Function(String message)? requiresRecentLogin,
-    TResult Function()? deleteAccountFailure,
-    TResult Function()? invalidEmailAndPasswordCombination,
+    TResult? Function()? cancelledByUser,
+    TResult? Function(String error)? serverError,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? userNotFound,
+    TResult? Function(String message)? requiresRecentLogin,
+    TResult? Function()? deleteAccountFailure,
+    TResult? Function()? invalidEmailAndPasswordCombination,
   }) {
     return deleteAccountFailure?.call();
   }
@@ -993,13 +945,13 @@ class _$DeleteAccountFailure implements DeleteAccountFailure {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(CancelledByUser value)? cancelledByUser,
-    TResult Function(ServerError value)? serverError,
-    TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
-    TResult Function(UserNotFound value)? userNotFound,
-    TResult Function(RequiredRecentLogin value)? requiresRecentLogin,
-    TResult Function(DeleteAccountFailure value)? deleteAccountFailure,
-    TResult Function(InvalidEmailAndPasswordCombination value)?
+    TResult? Function(CancelledByUser value)? cancelledByUser,
+    TResult? Function(ServerError value)? serverError,
+    TResult? Function(EmailAlreadyInUse value)? emailAlreadyInUse,
+    TResult? Function(UserNotFound value)? userNotFound,
+    TResult? Function(RequiredRecentLogin value)? requiresRecentLogin,
+    TResult? Function(DeleteAccountFailure value)? deleteAccountFailure,
+    TResult? Function(InvalidEmailAndPasswordCombination value)?
         invalidEmailAndPasswordCombination,
   }) {
     return deleteAccountFailure?.call(this);
@@ -1030,25 +982,22 @@ abstract class DeleteAccountFailure implements AuthFailure {
 }
 
 /// @nodoc
-abstract class $InvalidEmailAndPasswordCombinationCopyWith<$Res> {
-  factory $InvalidEmailAndPasswordCombinationCopyWith(
-          InvalidEmailAndPasswordCombination value,
-          $Res Function(InvalidEmailAndPasswordCombination) then) =
-      _$InvalidEmailAndPasswordCombinationCopyWithImpl<$Res>;
+abstract class _$$InvalidEmailAndPasswordCombinationCopyWith<$Res> {
+  factory _$$InvalidEmailAndPasswordCombinationCopyWith(
+          _$InvalidEmailAndPasswordCombination value,
+          $Res Function(_$InvalidEmailAndPasswordCombination) then) =
+      __$$InvalidEmailAndPasswordCombinationCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$InvalidEmailAndPasswordCombinationCopyWithImpl<$Res>
-    extends _$AuthFailureCopyWithImpl<$Res>
-    implements $InvalidEmailAndPasswordCombinationCopyWith<$Res> {
-  _$InvalidEmailAndPasswordCombinationCopyWithImpl(
-      InvalidEmailAndPasswordCombination _value,
-      $Res Function(InvalidEmailAndPasswordCombination) _then)
-      : super(_value, (v) => _then(v as InvalidEmailAndPasswordCombination));
-
-  @override
-  InvalidEmailAndPasswordCombination get _value =>
-      super._value as InvalidEmailAndPasswordCombination;
+class __$$InvalidEmailAndPasswordCombinationCopyWithImpl<$Res>
+    extends _$AuthFailureCopyWithImpl<$Res,
+        _$InvalidEmailAndPasswordCombination>
+    implements _$$InvalidEmailAndPasswordCombinationCopyWith<$Res> {
+  __$$InvalidEmailAndPasswordCombinationCopyWithImpl(
+      _$InvalidEmailAndPasswordCombination _value,
+      $Res Function(_$InvalidEmailAndPasswordCombination) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -1066,7 +1015,7 @@ class _$InvalidEmailAndPasswordCombination
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is InvalidEmailAndPasswordCombination);
+            other is _$InvalidEmailAndPasswordCombination);
   }
 
   @override
@@ -1089,13 +1038,13 @@ class _$InvalidEmailAndPasswordCombination
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? cancelledByUser,
-    TResult Function(String error)? serverError,
-    TResult Function()? emailAlreadyInUse,
-    TResult Function()? userNotFound,
-    TResult Function(String message)? requiresRecentLogin,
-    TResult Function()? deleteAccountFailure,
-    TResult Function()? invalidEmailAndPasswordCombination,
+    TResult? Function()? cancelledByUser,
+    TResult? Function(String error)? serverError,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? userNotFound,
+    TResult? Function(String message)? requiresRecentLogin,
+    TResult? Function()? deleteAccountFailure,
+    TResult? Function()? invalidEmailAndPasswordCombination,
   }) {
     return invalidEmailAndPasswordCombination?.call();
   }
@@ -1136,13 +1085,13 @@ class _$InvalidEmailAndPasswordCombination
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(CancelledByUser value)? cancelledByUser,
-    TResult Function(ServerError value)? serverError,
-    TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
-    TResult Function(UserNotFound value)? userNotFound,
-    TResult Function(RequiredRecentLogin value)? requiresRecentLogin,
-    TResult Function(DeleteAccountFailure value)? deleteAccountFailure,
-    TResult Function(InvalidEmailAndPasswordCombination value)?
+    TResult? Function(CancelledByUser value)? cancelledByUser,
+    TResult? Function(ServerError value)? serverError,
+    TResult? Function(EmailAlreadyInUse value)? emailAlreadyInUse,
+    TResult? Function(UserNotFound value)? userNotFound,
+    TResult? Function(RequiredRecentLogin value)? requiresRecentLogin,
+    TResult? Function(DeleteAccountFailure value)? deleteAccountFailure,
+    TResult? Function(InvalidEmailAndPasswordCombination value)?
         invalidEmailAndPasswordCombination,
   }) {
     return invalidEmailAndPasswordCombination?.call(this);

@@ -9,10 +9,10 @@ class OnboardingPage extends StatefulWidget {
   const OnboardingPage({Key? key}) : super(key: key);
 
   @override
-  _OnboardingPageState createState() => _OnboardingPageState();
+  OnboardingPageState createState() => OnboardingPageState();
 }
 
-class _OnboardingPageState extends State<OnboardingPage> {
+class OnboardingPageState extends State<OnboardingPage> {
   final Duration _kDuration = const Duration(milliseconds: 100);
   final _kCurve = Curves.easeIn;
   late PageController _pageController;
@@ -30,7 +30,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
 
   @override
   Widget build(BuildContext context) {
-    const List<Widget> _pages = [
+    const List<Widget> pages = [
       PageViewPages(
         text: "Onboarding text 1",
         img: 'assets/onboarding4.svg',
@@ -44,13 +44,14 @@ class _OnboardingPageState extends State<OnboardingPage> {
         img: 'assets/onboarding6.svg',
       ),
     ];
+
     return AppScaffold(
       body: Column(
         children: [
           Expanded(
             child: PageView(
               controller: _pageController,
-              children: _pages,
+              children: pages,
             ),
           ),
           Row(
@@ -75,7 +76,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
               ),
               DotsIndicator(
                 controller: _pageController,
-                itemCount: _pages.length,
+                itemCount: pages.length,
                 onPageSelected: (int page) {
                   _pageController.animateToPage(
                     page,

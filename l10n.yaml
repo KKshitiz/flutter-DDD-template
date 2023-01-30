@@ -1,0 +1,15 @@
+arb-dir: assets/translations
+
+template-arb-file: app_en.arb
+
+output-localization-file: app_localizations.dart
+
+output-class: AppLocalizations
+
+nullable-getter: false
+
+synthetic-package: false
+
+output-dir: lib/domain/core/l10n
+
+untranslated-messages-file: lib/domain/core/l10n/untranslated_strings.arb

@@ -1,13 +1,22 @@
-// ignore: avoid_classes_with_only_static_members
 // ignore_for_file: avoid_classes_with_only_static_members
-
-import 'package:flutter/foundation.dart';
+import 'package:flutter/widgets.dart';
+import 'package:validators/validators.dart';
 
 class Validators {
-  static final emailRegex = RegExp(
-      r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
   static final _nameRegex = RegExp(r"[a-zA-Z][a-zA-Z ]+[a-zA-Z]$");
-  static final phoneRegex = RegExp(r"^[6-7]{1}\d{8}$");
+
+  static FormFieldValidator<String> multiple(
+    List<FormFieldValidator<String>> validators,
+  ) {
+    return (value) {
+      for (final validator in validators) {
+        final String? result = validator(value);
+        if (result != null) return result;
+      }
+
+      return null;
+    };
+  }
 
   static String? fieldRequired(
     String? value, {
@@ -16,28 +25,31 @@ class Validators {
     if (value == null || value.isEmpty) {
       return message ?? 'This field is required';
     }
+
     return null;
   }
 
-  static String? email(String? value) {
-    value = value!.trim();
-    if (value.isEmpty) {
+  static String? email(String? valueString) {
+    final String emailString = valueString!.trim();
+    if (emailString.isEmpty) {
       return 'Please enter an email address';
-    } else if (value.isNotEmpty && !Validators.emailRegex.hasMatch(value)) {
+    } else if (isEmail(emailString)) {
       return 'Please enter a valid email address';
-    } else if (value.length > 100) {
+    } else if (emailString.length > 100) {
       return 'This field cannot exceed 100 characters';
     }
+
     return null;
   }
 
-  static String? phone(String? value) {
-    value = value!.trim();
-    if (value.isEmpty) {
+  static String? phone(String? valueString) {
+    final String phoneString = valueString!.trim();
+    if (phoneString.isEmpty) {
       return 'Please enter a phone number';
-    } else if (value.length < 3) {
+    } else if (phoneString.length < 3) {
       return 'Please enter a valid phone number';
     }
+
     return null;
   }
 
@@ -50,40 +62,33 @@ class Validators {
     } else if (value.length > 100) {
       return 'This field cannot exceed 100 characters';
     }
+
     return null;
   }
 
-  static String? name(String? value) {
-    value = value!.trim();
-    if (value.isEmpty) {
-      return 'Don\'t forget your name!';
-    } else if (!Validators._nameRegex.hasMatch(value)) {
+  static String? name(String? valueString) {
+    final String name = valueString!.trim();
+    if (name.isEmpty) {
+      return "Don't forget your name!";
+    } else if (!Validators._nameRegex.hasMatch(name)) {
       return 'Invalid Name. Only alphabets allowed.';
-    } else if (value.length > 100) {
+    } else if (name.length > 100) {
       return 'This field cannot exceed 100 characters';
     }
+
     return null;
   }
 
-  static String? expense(String? value) {
-    value = value!.trim();
-    if (value.isEmpty) {
+  static String? money(String? valueString) {
+    final String moneyString = valueString!.trim();
+    if (moneyString.isEmpty) {
       return 'Please enter an amount';
     }
-    final double expense = double.parse(value);
+    final double expense = double.parse(moneyString);
     if (expense > 100000) {
       return 'Maximum amount cannot exceed 100,000';
     }
-    return null;
-  }
 
-  static String? money(String? value) {
-    value = value!.trim();
-    if (value.isEmpty) {
-      return 'Please enter an amount';
-    } else if (value.isNotEmpty) {
-      return 'Please enter a valid email address';
-    }
     return null;
   }
 }

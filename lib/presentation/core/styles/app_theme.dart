@@ -1,72 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template/presentation/core/styles/app_colors.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_template/presentation/core/styles/app_text_theme.dart';
 
-mixin AppTheme {
-  static ThemeData get dark => ThemeData.dark().copyWith();
+class AppTheme {
+  static ThemeData get dark => ThemeData.dark().copyWith(
+        textTheme: AppTextTheme.dark,
+      );
+  // ignore: long-method
   static ThemeData get light => ThemeData.light().copyWith(
         primaryColor: const Color(0xFF2A59C3),
         brightness: Brightness.dark,
-        textTheme: GoogleFonts.poppinsTextTheme(),
         backgroundColor: Colors.white,
         scaffoldBackgroundColor: Colors.white,
-        primaryTextTheme: const TextTheme(
-          headline1: TextStyle(
-            color: Colors.black,
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-          ),
-          headline2: TextStyle(
-            color: Colors.white,
-            fontSize: 26,
-            fontWeight: FontWeight.bold,
-          ),
-          headline3: TextStyle(
-            color: Colors.black,
-            fontSize: 24,
-            fontWeight: FontWeight.w500,
-          ),
-          headline4: TextStyle(
-            color: Colors.black,
-            fontSize: 22,
-            fontWeight: FontWeight.w500,
-          ),
-          headline5: TextStyle(
-            color: Colors.black,
-            fontSize: 20,
-            fontWeight: FontWeight.w500,
-          ),
-          headline6: TextStyle(
-            color: Colors.black,
-            fontSize: 18,
-            fontWeight: FontWeight.w500,
-          ),
-          bodyText1: TextStyle(
-            color: Colors.black,
-            fontWeight: FontWeight.w700,
-            // fontSize: 35,
-          ),
-          bodyText2: TextStyle(
-            color: Colors.black,
-          ),
-          caption: TextStyle(
-            color: Colors.black,
-          ),
-          button: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.w700,
-            fontSize: 14,
-          ),
-        ),
-        primaryIconTheme: const IconThemeData(
-          color: Colors.white,
-        ),
-        appBarTheme: const AppBarTheme(
-          color: AppColors.primary,
-          elevation: 0,
-          // brightness: Brightness.light,
-          centerTitle: true,
-        ),
+        primaryTextTheme: AppTextTheme.light,
+        primaryIconTheme: const IconThemeData(),
+        appBarTheme: const AppBarTheme(),
         materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
         visualDensity: VisualDensity.adaptivePlatformDensity,
         inputDecorationTheme: InputDecorationTheme(
@@ -102,19 +50,6 @@ mixin AppTheme {
     decorationColor: AppColors.secondary,
     decorationThickness: 2,
   );
-  static BoxDecoration pinBoxDecoration = BoxDecoration(
-    color: AppColors.white,
-    borderRadius: BorderRadius.circular(10),
-    border: Border.all(color: AppColors.extraLightGrey),
-    // boxShadow: [
-    //   BoxShadow(
-    //     offset: const Offset(0, 2),
-    //     color: Colors.black.withAlpha(20),
-    //     blurRadius: 5,
-    //     spreadRadius: 2,
-    //   )
-    // ]
-  );
 }
 
 const kGradientColors = [
@@ -122,7 +57,7 @@ const kGradientColors = [
   Color(0xFF5786F9),
   Color(0xFF5CA9FC),
   Color(0xFF5EB7FE),
-  Color(0xFF60C2FF)
+  Color(0xFF60C2FF),
 ];
 
 const kGradientBackgroundDecoration = BoxDecoration(
@@ -134,5 +69,5 @@ const kGradientBackgroundDecoration = BoxDecoration(
 );
 
 List<BoxShadow> kBoxShadow = [
-  const BoxShadow(blurRadius: 6, color: Colors.grey, spreadRadius: 6.0)
+  const BoxShadow(blurRadius: 6, color: Colors.grey, spreadRadius: 6.0),
 ];
