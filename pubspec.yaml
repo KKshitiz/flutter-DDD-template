@@ -92,7 +92,9 @@ flutter:
 
   assets:
     - .env
-    - assets/
+    - assets/files/
+    - assets/icons/
+    - assets/images/
 
 
 flutter_gen:
