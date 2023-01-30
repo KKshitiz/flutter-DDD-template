@@ -10,7 +10,6 @@ class AppTheme {
   static ThemeData get light => ThemeData.light().copyWith(
         primaryColor: const Color(0xFF2A59C3),
         brightness: Brightness.dark,
-        backgroundColor: Colors.white,
         scaffoldBackgroundColor: Colors.white,
         primaryTextTheme: AppTextTheme.light,
         primaryIconTheme: const IconThemeData(),
@@ -38,8 +37,9 @@ class AppTheme {
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
         ),
+        // colorScheme: ColorScheme(background: Colors.white),
       );
-  static TextStyle linkStyle = dark.textTheme.bodyText2!.copyWith(
+  static TextStyle linkStyle = dark.textTheme.bodyMedium!.copyWith(
     shadows: const [
       Shadow(
         offset: Offset(0, -3),

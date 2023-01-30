@@ -4,10 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_template/application/auth/auth_bloc.dart';
-import 'package:flutter_template/domain/core/validators.dart';
+import 'package:flutter_template/domain/core/helpers/validators.dart';
 import 'package:flutter_template/presentation/core/widgets/buttons/rounded_filled_button.dart';
-import 'package:flutter_template/presentation/core/widgets/custom/custom_app_bar.dart';
+import 'package:flutter_template/presentation/core/widgets/inputs/inputs.dart';
 import 'package:flutter_template/presentation/core/widgets/layout/app_scaffold.dart';
+import 'package:flutter_template/presentation/core/widgets/layout/custom_app_bar.dart';
 import 'package:flutter_template/presentation/core/widgets/layout/logo_widget.dart';
 import 'package:flutter_template/presentation/routes/router.gr.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -69,11 +70,9 @@ class _SigninPageState extends State<SigninPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: <Widget>[
-                    TextFormField(
+                    CustomTextField(
                       controller: _emailTEC,
                       keyboardType: TextInputType.emailAddress,
-                      textAlign: TextAlign.center,
-                      style: const TextStyle(color: Color(0xFFF4F1DE)),
                       onTap: () {
                         HapticFeedback.selectionClick();
                       },
@@ -85,17 +84,12 @@ class _SigninPageState extends State<SigninPage> {
                         labelText: "Email Address",
                         labelStyle: const TextStyle(color: Color(0xFFF4F1DE)),
                       ),
-                      enableSuggestions: false,
                       validator: Validators.email,
-                      autocorrect: false,
                     ),
                     const SizedBox(height: 15),
-                    TextFormField(
+                    CustomTextField(
                       controller: _passwordTEC,
-                      obscureText: true,
                       keyboardType: TextInputType.visiblePassword,
-                      textAlign: TextAlign.center,
-                      style: const TextStyle(color: Color(0xFFF4F1DE)),
                       onTap: () {
                         HapticFeedback.selectionClick();
                       },
@@ -107,9 +101,7 @@ class _SigninPageState extends State<SigninPage> {
                         labelText: "Password",
                         labelStyle: const TextStyle(color: Color(0xFFF4F1DE)),
                       ),
-                      enableSuggestions: false,
                       validator: Validators.password,
-                      autocorrect: false,
                     ),
                     const SizedBox(
                       height: 40.0,
