@@ -1,6 +1,22 @@
 {
-    "helloWorld": "Hello World!",
-    "@helloWorld": {
-        "description": "The greeting"
-    }
+    "@____VALIDATION_MESSAGES____": {},
+    "thisFieldIsRequired": "This field is required",
+    "pleaseEnterAnEmailAddress": "Please enter an email address",
+    "pleaseEnterAValidEmailAddress": "Please enter a valid email address",
+    "thisFieldCannotExceed100characters": "This field cannot exceed 100 characters",
+    "pleaseEnterAPhoneNumber": "Please enter a phone number",
+    "pleaseEnterAValidPhoneNumber": "Please enter a valid phone number",
+    "pleaseEnterAPassword": "Please enter a password",
+    "passwordTooShort": "Password too short. Please enter a password of atleast 6 length",
+    "dontForgetYourName": "Don’t forget your name!",
+    "invalidName": "Invalid Name. Only alphabets allowed.",
+    "pleaseEnterAnAmount": "Please enter an amount",
+    "pleaseEnterValidAmount": "Please enter a valid amount",
+    "pleaseEnterValidDecimal": "Please enter a valid decimal value",
+    "maximumAmountCannotExceed": "Maximum amount cannot exceed 100,000",
+    "validIntegerValue": "Please enter a valid integer value",
+    "validTaxRate": "Please enter a valid rate",
+    "rateShouldBeInRange": "The rate should be in range 0-100",
+    "enterAValidPostalCode": "Please enter a valid postal code",
+    "@____END_VALIDATION_MESSAGES____": {}
 }
