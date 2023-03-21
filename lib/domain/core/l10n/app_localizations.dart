@@ -5,8 +5,8 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/intl.dart' as intl;
 
-import 'app_localizations_ar.dart';
 import 'app_localizations_en.dart';
+import 'app_localizations_es.dart';
 
 /// Callers can lookup localized strings with an instance of AppLocalizations
 /// returned by `AppLocalizations.of(context)`.
@@ -89,15 +89,117 @@ abstract class AppLocalizations {
 
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
-    Locale('ar'),
-    Locale('en')
+    Locale('en'),
+    Locale('es')
   ];
 
-  /// The greeting
+  /// No description provided for @thisFieldIsRequired.
   ///
   /// In en, this message translates to:
-  /// **'Hello World!'**
-  String get helloWorld;
+  /// **'This field is required'**
+  String get thisFieldIsRequired;
+
+  /// No description provided for @pleaseEnterAnEmailAddress.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter an email address'**
+  String get pleaseEnterAnEmailAddress;
+
+  /// No description provided for @pleaseEnterAValidEmailAddress.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter a valid email address'**
+  String get pleaseEnterAValidEmailAddress;
+
+  /// No description provided for @thisFieldCannotExceed100characters.
+  ///
+  /// In en, this message translates to:
+  /// **'This field cannot exceed 100 characters'**
+  String get thisFieldCannotExceed100characters;
+
+  /// No description provided for @pleaseEnterAPhoneNumber.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter a phone number'**
+  String get pleaseEnterAPhoneNumber;
+
+  /// No description provided for @pleaseEnterAValidPhoneNumber.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter a valid phone number'**
+  String get pleaseEnterAValidPhoneNumber;
+
+  /// No description provided for @pleaseEnterAPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter a password'**
+  String get pleaseEnterAPassword;
+
+  /// No description provided for @passwordTooShort.
+  ///
+  /// In en, this message translates to:
+  /// **'Password too short. Please enter a password of atleast 6 length'**
+  String get passwordTooShort;
+
+  /// No description provided for @dontForgetYourName.
+  ///
+  /// In en, this message translates to:
+  /// **'Don’t forget your name!'**
+  String get dontForgetYourName;
+
+  /// No description provided for @invalidName.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid Name. Only alphabets allowed.'**
+  String get invalidName;
+
+  /// No description provided for @pleaseEnterAnAmount.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter an amount'**
+  String get pleaseEnterAnAmount;
+
+  /// No description provided for @pleaseEnterValidAmount.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter a valid amount'**
+  String get pleaseEnterValidAmount;
+
+  /// No description provided for @pleaseEnterValidDecimal.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter a valid decimal value'**
+  String get pleaseEnterValidDecimal;
+
+  /// No description provided for @maximumAmountCannotExceed.
+  ///
+  /// In en, this message translates to:
+  /// **'Maximum amount cannot exceed 100,000'**
+  String get maximumAmountCannotExceed;
+
+  /// No description provided for @validIntegerValue.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter a valid integer value'**
+  String get validIntegerValue;
+
+  /// No description provided for @validTaxRate.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter a valid rate'**
+  String get validTaxRate;
+
+  /// No description provided for @rateShouldBeInRange.
+  ///
+  /// In en, this message translates to:
+  /// **'The rate should be in range 0-100'**
+  String get rateShouldBeInRange;
+
+  /// No description provided for @enterAValidPostalCode.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter a valid postal code'**
+  String get enterAValidPostalCode;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
@@ -109,7 +211,7 @@ class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> 
   }
 
   @override
-  bool isSupported(Locale locale) => <String>['ar', 'en'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>['en', 'es'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_AppLocalizationsDelegate old) => false;
@@ -120,8 +222,8 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
 
   // Lookup logic when only language code is specified.
   switch (locale.languageCode) {
-    case 'ar': return AppLocalizationsAr();
     case 'en': return AppLocalizationsEn();
+    case 'es': return AppLocalizationsEs();
   }
 
   throw FlutterError(

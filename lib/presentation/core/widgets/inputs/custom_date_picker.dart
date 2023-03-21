@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_template/domain/core/validators.dart';
+import 'package:flutter_template/domain/core/helpers/validators.dart';
 import 'package:flutter_template/presentation/core/styles/app_colors.dart';
 import 'package:flutter_template/presentation/core/widgets/buttons/rounded_filled_button.dart';
 import 'package:flutter_template/presentation/core/widgets/inputs/custom_text_field.dart';
@@ -46,10 +46,7 @@ class _CustomDatePickerState extends State<CustomDatePicker> {
         await _selectDate(context);
       },
       controller: widget.dateController,
-      validator: (val) => Validators.fieldRequired(
-        val,
-        message: "Select date",
-      ),
+      validator: Validators.fieldRequired,
     );
   }
 

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class TextStyles {
+  const TextStyles._();
+
   static const double _scale = 1.0;
 
   static TextStyle get headline1 => const TextStyle(fontSize: 20 * _scale);

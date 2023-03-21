@@ -1,12 +1,12 @@
 import 'dart:developer';
 
-import 'package:flutter_template/domain/core/constants/app_constants.dart';
+import 'package:flutter_template/domain/core/constants/constants.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
-// ignore: avoid_classes_with_only_static_members
 class Utility {
-  static Future<void> launchURL(String url) async {
+  static launchURL(String url) async {
     if (await canLaunchUrlString(url)) {
+      log("Launching url: $url");
       await launchUrlString(url);
     } else {
       log('Could not launch $url');

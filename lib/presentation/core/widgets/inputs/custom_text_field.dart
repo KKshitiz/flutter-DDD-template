@@ -31,7 +31,7 @@ class CustomTextField extends StatelessWidget {
   final bool readOnly;
   final bool autofocus;
   final int maxLines;
-  final String? Function(String?)? validator;
+  final String? Function(String?, BuildContext)? validator;
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +56,7 @@ class CustomTextField extends StatelessWidget {
           if (labelText != null) ...[
             Text(
               labelText!,
-              style: Theme.of(context).textTheme.bodyText2!.copyWith(
+              style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                     color: Colors.black54,
                   ),
             ),
@@ -64,7 +64,9 @@ class CustomTextField extends StatelessWidget {
           ],
           SizedBox(
             child: TextFormField(
-              validator: validator,
+              validator: (inputString) {
+                return validator?.call(inputString, context);
+              },
               autofocus: autofocus,
               readOnly: readOnly,
               inputFormatters: inputFormatters,
@@ -101,9 +103,9 @@ class CustomTextField extends StatelessWidget {
               style: readOnly
                   ? Theme.of(context)
                       .textTheme
-                      .bodyText2!
+                      .bodyMedium!
                       .copyWith(color: AppColors.lightGrey)
-                  : Theme.of(context).textTheme.bodyText2,
+                  : Theme.of(context).textTheme.bodyMedium,
             ),
           ),
         ],

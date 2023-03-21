@@ -58,20 +58,28 @@ This layer contains all the screen i.e. UI/UX part will be there and will remain
 ## todo
 
 - Add dark mode support
-- add CI/CD (maybe appcenter) support
+- Add crash logging support
+  - sentry
+  - firebase crashlytics
+  - datadog
+- add CI/CD support:
+  - appcircle
+  - codemagic
+  - bitrise
+  - VS appcenter
 - add vscode launch configuration for all environments flutter run --dart-define=ENVIRONMENT=STAGING
-- Add localization suport
+- [Y] Add localization suport
 - Add validator support
-- Add testing
+- [WIP] Add testing
 - Add dio client
 - Add local notification support (awsome notifications package)
 - Add local auth support (biometrics support)
 - Add feature flags
 - In app review support
 - app version upgrader support
-- Assets class generator support - flutter gen
-- Class value equality using Equatable
-- Add dart docs
+- [Y] Assets class generator support - flutter gen
+- [Y] Class value equality using Equatable
+- [WIP] Add dart docs
 - Add commit lint - git_hooks package
 
 ## Git related guidelines
@@ -90,6 +98,7 @@ This layer contains all the screen i.e. UI/UX part will be there and will remain
   - test: Adding new test or making changes to existing test
   - ci – continuous integration related
   - revert – reverts a previous commit
+  - localize: translations related changes
 
 - <scope> must be noun and it represents the section of the section of the codebase where changes are made. The <scope> can be empty (e.g. if the change is a global or difficult to assign to a single component), in which case the parentheses are omitted.
 - <subject> is the message title

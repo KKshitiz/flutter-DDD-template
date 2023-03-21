@@ -1,0 +1,22 @@
+{
+    "@____VALIDATION_MESSAGES____": {},
+    "thisFieldIsRequired": "Este espacio es requerido",
+    "pleaseEnterAnEmailAddress": "Por favor, ingresa tu correo electrónico",
+    "pleaseEnterAValidEmailAddress": "Por favor, ingresa un correo electrónico valido",
+    "thisFieldCannotExceed100characters": "Este espacio no puede exceder los 100 carácteres",
+    "pleaseEnterAPhoneNumber": "Por favor, ingresa tu número de teléfono",
+    "pleaseEnterAValidPhoneNumber": "Por favor, ingresa un número de teléfono valido",
+    "pleaseEnterAPassword": "Por favor, ingresa una contraseña",
+    "passwordTooShort": "Contraseña muy corta. Por favor, ingresa una contraseña con al menos 6 carácteres",
+    "dontForgetYourName": "¡No te olvides de tu nombre!",
+    "invalidName": "Nombre invalido. Solo se permiten letras.",
+    "pleaseEnterAnAmount": "Por favor, ingresa un monto",
+    "pleaseEnterValidAmount": "Por favor, ingresa un monto valido",
+    "pleaseEnterValidDecimal": "Introduce un número decimal valido",
+    "maximumAmountCannotExceed": "El monto máximo no puede ser mayor a 100,000",
+    "validIntegerValue": "Introduce un valor entero valido",
+    "validTaxRate": "Por favor, ingresa una tarifa valida",
+    "rateShouldBeInRange": "La tarifa debe estar en un rango de 0-100",
+    "enterAValidPostalCode": "Introduce un código postal valido",
+    "@____END_VALIDATION_MESSAGES____": {}
+}

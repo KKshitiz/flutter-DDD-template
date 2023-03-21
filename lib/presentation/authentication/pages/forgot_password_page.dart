@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_template/application/auth/auth_bloc.dart';
+import 'package:flutter_template/presentation/core/widgets/layout/custom_app_bar.dart';
 import 'package:flutter_template/presentation/core/widgets/inputs/custom_text_field.dart';
 import 'package:flutter_template/presentation/core/widgets/layout/app_scaffold.dart';
 import 'package:flutter_template/presentation/core/widgets/layout/custom_app_bar.dart';

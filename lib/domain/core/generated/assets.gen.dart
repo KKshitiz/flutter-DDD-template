@@ -9,8 +9,23 @@
 
 import 'package:flutter/widgets.dart';
 
+class $AssetsFilesGen {
+  const $AssetsFilesGen();
+
+  /// File path: assets/files/countries.json
+  String get countries => 'assets/files/countries.json';
+
+  /// File path: assets/files/currencies.json
+  String get currencies => 'assets/files/currencies.json';
+
+  /// List of all assets
+  List<String> get values => [countries, currencies];
+}
+
 class Assets {
   Assets._();
+
+  static const $AssetsFilesGen files = $AssetsFilesGen();
 }
 
 class AssetGenImage {

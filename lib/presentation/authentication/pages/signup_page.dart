@@ -3,11 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_template/application/auth/auth_bloc.dart';
-import 'package:flutter_template/domain/core/validators.dart';
+import 'package:flutter_template/domain/core/helpers/validators.dart';
 import 'package:flutter_template/presentation/core/widgets/buttons/rounded_filled_button.dart';
-import 'package:flutter_template/presentation/core/widgets/layout/app_scaffold.dart';
-import 'package:flutter_template/presentation/core/widgets/layout/custom_app_bar.dart';
-import 'package:flutter_template/presentation/core/widgets/layout/logo_widget.dart';
+import 'package:flutter_template/presentation/core/widgets/inputs/inputs.dart';
+import 'package:flutter_template/presentation/core/widgets/layout/layout.dart';
 import 'package:flutter_template/presentation/routes/router.gr.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
@@ -63,9 +62,8 @@ class _SignupPageState extends State<SignupPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: <Widget>[
-                    TextFormField(
+                    CustomTextField(
                       controller: _emailTEC,
-                      style: const TextStyle(color: Colors.white),
                       onTap: () {
                         HapticFeedback.selectionClick();
                       },
@@ -78,15 +76,11 @@ class _SignupPageState extends State<SignupPage> {
                         labelStyle: const TextStyle(color: Colors.white),
                       ),
                       keyboardType: TextInputType.emailAddress,
-                      textAlign: TextAlign.center,
-                      enableSuggestions: false,
                       validator: Validators.email,
-                      autocorrect: false,
                     ),
                     const SizedBox(height: 15),
-                    TextFormField(
+                    CustomTextField(
                       controller: _passwordTEC,
-                      style: const TextStyle(color: Colors.white),
                       onTap: () {
                         HapticFeedback.selectionClick();
                       },
@@ -98,10 +92,7 @@ class _SignupPageState extends State<SignupPage> {
                         labelText: "Password",
                         labelStyle: const TextStyle(color: Colors.white),
                       ),
-                      obscureText: true,
                       keyboardType: TextInputType.visiblePassword,
-                      textAlign: TextAlign.center,
-                      enableSuggestions: false,
                       validator: Validators.password,
                     ),
                     const SizedBox(height: 20.0),
