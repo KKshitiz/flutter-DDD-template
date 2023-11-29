@@ -20,7 +20,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   AuthBloc(
     this._authFacade,
   ) : super(AuthState.initial()) {
-    on<_$CheckAuthState>(
+    on<CheckAuthState>(
       (event, emit) async {
         emit.call(
           state.copyWith(
@@ -35,7 +35,6 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         );
       },
     );
-
     on<_SignInWithEmailAndPassword>((event, emit) async {
       emit.call(
         state.copyWith(

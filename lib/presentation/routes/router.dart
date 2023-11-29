@@ -1,4 +1,5 @@
-import 'package:auto_route/annotations.dart';
+import 'package:flutter/material.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter_template/presentation/authentication/pages/forgot_password_page.dart';
 import 'package:flutter_template/presentation/authentication/pages/signin_page.dart';
 import 'package:flutter_template/presentation/authentication/pages/signup_page.dart';
@@ -8,22 +9,26 @@ import 'package:flutter_template/presentation/core/pages/onboarding_page.dart';
 import 'package:flutter_template/presentation/core/pages/splash_page.dart';
 import 'package:flutter_template/presentation/core/pages/update_app_page.dart';
 
-@MaterialAutoRouter(
+part 'router.gr.dart';
+
+@AutoRouterConfig(
   replaceInRouteName: "Page,Route",
-  routes: <AutoRoute>[
-    ///[Core]
-    AutoRoute(page: SplashPage, initial: true),
-    AutoRoute(page: OnboardingPage),
-    AutoRoute(page: UpdateAppPage),
-    AutoRoute(page: LandingPage),
-
-    ///[Authentication]
-    AutoRoute(page: SigninPage),
-    AutoRoute(page: SignupPage),
-    AutoRoute(page: ForgotPasswordPage),
-
-    ///[Base]
-    AutoRoute(page: BasePage),
-  ],
 )
-class $AppRouter {}
+class AppRouter extends _$AppRouter {
+  @override
+  List<AutoRoute> get routes => [
+        ///[Core]
+        AutoRoute(page: SplashRoute.page, initial: true),
+        AutoRoute(page: OnboardingRoute.page),
+        AutoRoute(page: UpdateAppRoute.page),
+        AutoRoute(page: LandingRoute.page),
+
+        ///[Authentication]
+        AutoRoute(page: SigninRoute.page),
+        AutoRoute(page: SignupRoute.page),
+        AutoRoute(page: ForgotPasswordRoute.page),
+
+        ///[Base]
+        AutoRoute(page: BaseRoute.page),
+      ];
+}

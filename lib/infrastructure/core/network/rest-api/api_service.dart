@@ -5,8 +5,8 @@ import 'package:flutter_template/infrastructure/core/network/rest-api/api_error_
 class ApiServiceV2 {
   static final BaseOptions options = BaseOptions(
     baseUrl: ApiConstants.baseUrl,
-    connectTimeout: 5000, //5s
-    receiveTimeout: 15000, //15s
+    connectTimeout: const Duration(milliseconds: 5000), //5s
+    receiveTimeout: const Duration(milliseconds: 15000), //15s
     contentType: Headers.jsonContentType,
   );
 

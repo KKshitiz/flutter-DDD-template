@@ -10,6 +10,7 @@ import 'package:flutter_template/presentation/core/widgets/layout/custom_app_bar
 import 'package:flutter_template/presentation/core/widgets/layout/logo_widget.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
+@RoutePage()
 class ForgotPasswordPage extends StatelessWidget {
   ForgotPasswordPage({Key? key}) : super(key: key);
   final TextEditingController _emailTEC = TextEditingController();

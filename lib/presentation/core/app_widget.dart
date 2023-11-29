@@ -7,7 +7,7 @@ import 'package:flutter_template/domain/core/l10n/app_localizations.dart';
 import 'package:flutter_template/injection.dart';
 import 'package:flutter_template/presentation/core/styles/app_theme.dart';
 import 'package:flutter_template/presentation/core/widgets/utility/life_cycle_watcher.dart';
-import 'package:flutter_template/presentation/routes/router.gr.dart';
+import 'package:flutter_template/presentation/routes/router.dart';
 
 class AppWidget extends StatelessWidget {
   AppWidget({Key? key}) : super(key: key);
