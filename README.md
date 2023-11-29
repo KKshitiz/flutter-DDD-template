@@ -31,6 +31,10 @@ This layer contains all the screen i.e. UI/UX part will be there and will remain
 
 - [For more info on DDD](https://www.youtube.com/watch?v=RMiN59x3uH0&list=PLB6lc7nQ1n4iS5p-IezFFgqP6YvAJy84U)
 
+## Visualization of this repo
+
+![Visualization of this repo](./diagram.svg)
+
 ## _File Strcucture_
 
 ### Outer Structure
