@@ -2,13 +2,13 @@ import 'package:dio/dio.dart';
 
 class AppInterceptors extends Interceptor {
   @override
-  void onError(DioError err, ErrorInterceptorHandler handler) {
+  void onError(DioException err, ErrorInterceptorHandler handler) {
     switch (err.type) {
-      case DioErrorType.connectTimeout:
-      case DioErrorType.sendTimeout:
-      case DioErrorType.receiveTimeout:
+      case DioExceptionType.connectionTimeout:
+      case DioExceptionType.sendTimeout:
+      case DioExceptionType.receiveTimeout:
         throw DeadlineExceededException(err.requestOptions);
-      case DioErrorType.response:
+      case DioExceptionType.badResponse:
         switch (err.response?.statusCode) {
           case 400:
             throw BadRequestException(err.requestOptions);
@@ -25,8 +25,14 @@ class AppInterceptors extends Interceptor {
         break;
       case DioErrorType.cancel:
         break;
-      case DioErrorType.other:
+      case DioErrorType.unknown:
         throw NoInternetConnectionException(err.requestOptions);
+      case DioExceptionType.badCertificate:
+        // TODO: Handle this case.
+        break;
+      case DioExceptionType.connectionError:
+        // TODO: Handle this case.
+        break;
     }
 
     return handler.next(err);

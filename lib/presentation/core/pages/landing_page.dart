@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_template/presentation/core/widgets/buttons/rounded_filled_button.dart';
 import 'package:flutter_template/presentation/core/widgets/layout/app_scaffold.dart';
 import 'package:flutter_template/presentation/core/widgets/layout/logo_widget.dart';
-import 'package:flutter_template/presentation/routes/router.gr.dart';
+import 'package:flutter_template/presentation/routes/router.dart';
 
+
+@RoutePage()
 class LandingPage extends StatelessWidget {
   const LandingPage({Key? key}) : super(key: key);
 
@@ -21,7 +23,7 @@ class LandingPage extends StatelessWidget {
             RoundedFilledButton(
               text: "Sign up",
               onTap: () {
-                AutoRouter.of(context).push(const SignupRoute());
+                  AutoRouter.of(context).push(const SignupRoute());
               },
             ),
             const SizedBox(height: 24.0),

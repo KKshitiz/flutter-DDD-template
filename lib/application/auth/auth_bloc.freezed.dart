@@ -132,22 +132,22 @@ class _$AuthEventCopyWithImpl<$Res, $Val extends AuthEvent>
 }
 
 /// @nodoc
-abstract class _$$_RegisterWithEmailAndPasswordCopyWith<$Res> {
-  factory _$$_RegisterWithEmailAndPasswordCopyWith(
-          _$_RegisterWithEmailAndPassword value,
-          $Res Function(_$_RegisterWithEmailAndPassword) then) =
-      __$$_RegisterWithEmailAndPasswordCopyWithImpl<$Res>;
+abstract class _$$RegisterWithEmailAndPasswordImplCopyWith<$Res> {
+  factory _$$RegisterWithEmailAndPasswordImplCopyWith(
+          _$RegisterWithEmailAndPasswordImpl value,
+          $Res Function(_$RegisterWithEmailAndPasswordImpl) then) =
+      __$$RegisterWithEmailAndPasswordImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String email, String password});
 }
 
 /// @nodoc
-class __$$_RegisterWithEmailAndPasswordCopyWithImpl<$Res>
-    extends _$AuthEventCopyWithImpl<$Res, _$_RegisterWithEmailAndPassword>
-    implements _$$_RegisterWithEmailAndPasswordCopyWith<$Res> {
-  __$$_RegisterWithEmailAndPasswordCopyWithImpl(
-      _$_RegisterWithEmailAndPassword _value,
-      $Res Function(_$_RegisterWithEmailAndPassword) _then)
+class __$$RegisterWithEmailAndPasswordImplCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$RegisterWithEmailAndPasswordImpl>
+    implements _$$RegisterWithEmailAndPasswordImplCopyWith<$Res> {
+  __$$RegisterWithEmailAndPasswordImplCopyWithImpl(
+      _$RegisterWithEmailAndPasswordImpl _value,
+      $Res Function(_$RegisterWithEmailAndPasswordImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -156,7 +156,7 @@ class __$$_RegisterWithEmailAndPasswordCopyWithImpl<$Res>
     Object? email = null,
     Object? password = null,
   }) {
-    return _then(_$_RegisterWithEmailAndPassword(
+    return _then(_$RegisterWithEmailAndPasswordImpl(
       email: null == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
@@ -171,8 +171,9 @@ class __$$_RegisterWithEmailAndPasswordCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_RegisterWithEmailAndPassword implements _RegisterWithEmailAndPassword {
-  const _$_RegisterWithEmailAndPassword(
+class _$RegisterWithEmailAndPasswordImpl
+    implements _RegisterWithEmailAndPassword {
+  const _$RegisterWithEmailAndPasswordImpl(
       {required this.email, required this.password});
 
   @override
@@ -189,7 +190,7 @@ class _$_RegisterWithEmailAndPassword implements _RegisterWithEmailAndPassword {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_RegisterWithEmailAndPassword &&
+            other is _$RegisterWithEmailAndPasswordImpl &&
             (identical(other.email, email) || other.email == email) &&
             (identical(other.password, password) ||
                 other.password == password));
@@ -201,9 +202,10 @@ class _$_RegisterWithEmailAndPassword implements _RegisterWithEmailAndPassword {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_RegisterWithEmailAndPasswordCopyWith<_$_RegisterWithEmailAndPassword>
-      get copyWith => __$$_RegisterWithEmailAndPasswordCopyWithImpl<
-          _$_RegisterWithEmailAndPassword>(this, _$identity);
+  _$$RegisterWithEmailAndPasswordImplCopyWith<
+          _$RegisterWithEmailAndPasswordImpl>
+      get copyWith => __$$RegisterWithEmailAndPasswordImplCopyWithImpl<
+          _$RegisterWithEmailAndPasswordImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -329,32 +331,33 @@ class _$_RegisterWithEmailAndPassword implements _RegisterWithEmailAndPassword {
 abstract class _RegisterWithEmailAndPassword implements AuthEvent {
   const factory _RegisterWithEmailAndPassword(
       {required final String email,
-      required final String password}) = _$_RegisterWithEmailAndPassword;
+      required final String password}) = _$RegisterWithEmailAndPasswordImpl;
 
   String get email;
   String get password;
   @JsonKey(ignore: true)
-  _$$_RegisterWithEmailAndPasswordCopyWith<_$_RegisterWithEmailAndPassword>
+  _$$RegisterWithEmailAndPasswordImplCopyWith<
+          _$RegisterWithEmailAndPasswordImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_SignInWithEmailAndPasswordCopyWith<$Res> {
-  factory _$$_SignInWithEmailAndPasswordCopyWith(
-          _$_SignInWithEmailAndPassword value,
-          $Res Function(_$_SignInWithEmailAndPassword) then) =
-      __$$_SignInWithEmailAndPasswordCopyWithImpl<$Res>;
+abstract class _$$SignInWithEmailAndPasswordImplCopyWith<$Res> {
+  factory _$$SignInWithEmailAndPasswordImplCopyWith(
+          _$SignInWithEmailAndPasswordImpl value,
+          $Res Function(_$SignInWithEmailAndPasswordImpl) then) =
+      __$$SignInWithEmailAndPasswordImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String email, String password});
 }
 
 /// @nodoc
-class __$$_SignInWithEmailAndPasswordCopyWithImpl<$Res>
-    extends _$AuthEventCopyWithImpl<$Res, _$_SignInWithEmailAndPassword>
-    implements _$$_SignInWithEmailAndPasswordCopyWith<$Res> {
-  __$$_SignInWithEmailAndPasswordCopyWithImpl(
-      _$_SignInWithEmailAndPassword _value,
-      $Res Function(_$_SignInWithEmailAndPassword) _then)
+class __$$SignInWithEmailAndPasswordImplCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$SignInWithEmailAndPasswordImpl>
+    implements _$$SignInWithEmailAndPasswordImplCopyWith<$Res> {
+  __$$SignInWithEmailAndPasswordImplCopyWithImpl(
+      _$SignInWithEmailAndPasswordImpl _value,
+      $Res Function(_$SignInWithEmailAndPasswordImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -363,7 +366,7 @@ class __$$_SignInWithEmailAndPasswordCopyWithImpl<$Res>
     Object? email = null,
     Object? password = null,
   }) {
-    return _then(_$_SignInWithEmailAndPassword(
+    return _then(_$SignInWithEmailAndPasswordImpl(
       email: null == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
@@ -378,8 +381,8 @@ class __$$_SignInWithEmailAndPasswordCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_SignInWithEmailAndPassword implements _SignInWithEmailAndPassword {
-  const _$_SignInWithEmailAndPassword(
+class _$SignInWithEmailAndPasswordImpl implements _SignInWithEmailAndPassword {
+  const _$SignInWithEmailAndPasswordImpl(
       {required this.email, required this.password});
 
   @override
@@ -396,7 +399,7 @@ class _$_SignInWithEmailAndPassword implements _SignInWithEmailAndPassword {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SignInWithEmailAndPassword &&
+            other is _$SignInWithEmailAndPasswordImpl &&
             (identical(other.email, email) || other.email == email) &&
             (identical(other.password, password) ||
                 other.password == password));
@@ -408,9 +411,9 @@ class _$_SignInWithEmailAndPassword implements _SignInWithEmailAndPassword {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SignInWithEmailAndPasswordCopyWith<_$_SignInWithEmailAndPassword>
-      get copyWith => __$$_SignInWithEmailAndPasswordCopyWithImpl<
-          _$_SignInWithEmailAndPassword>(this, _$identity);
+  _$$SignInWithEmailAndPasswordImplCopyWith<_$SignInWithEmailAndPasswordImpl>
+      get copyWith => __$$SignInWithEmailAndPasswordImplCopyWithImpl<
+          _$SignInWithEmailAndPasswordImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -536,33 +539,35 @@ class _$_SignInWithEmailAndPassword implements _SignInWithEmailAndPassword {
 abstract class _SignInWithEmailAndPassword implements AuthEvent {
   const factory _SignInWithEmailAndPassword(
       {required final String email,
-      required final String password}) = _$_SignInWithEmailAndPassword;
+      required final String password}) = _$SignInWithEmailAndPasswordImpl;
 
   String get email;
   String get password;
   @JsonKey(ignore: true)
-  _$$_SignInWithEmailAndPasswordCopyWith<_$_SignInWithEmailAndPassword>
+  _$$SignInWithEmailAndPasswordImplCopyWith<_$SignInWithEmailAndPasswordImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$SignOutCopyWith<$Res> {
-  factory _$$SignOutCopyWith(_$SignOut value, $Res Function(_$SignOut) then) =
-      __$$SignOutCopyWithImpl<$Res>;
+abstract class _$$SignOutImplCopyWith<$Res> {
+  factory _$$SignOutImplCopyWith(
+          _$SignOutImpl value, $Res Function(_$SignOutImpl) then) =
+      __$$SignOutImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$SignOutCopyWithImpl<$Res>
-    extends _$AuthEventCopyWithImpl<$Res, _$SignOut>
-    implements _$$SignOutCopyWith<$Res> {
-  __$$SignOutCopyWithImpl(_$SignOut _value, $Res Function(_$SignOut) _then)
+class __$$SignOutImplCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$SignOutImpl>
+    implements _$$SignOutImplCopyWith<$Res> {
+  __$$SignOutImplCopyWithImpl(
+      _$SignOutImpl _value, $Res Function(_$SignOutImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$SignOut implements SignOut {
-  const _$SignOut();
+class _$SignOutImpl implements SignOut {
+  const _$SignOutImpl();
 
   @override
   String toString() {
@@ -572,7 +577,7 @@ class _$SignOut implements SignOut {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$SignOut);
+        (other.runtimeType == runtimeType && other is _$SignOutImpl);
   }
 
   @override
@@ -700,29 +705,29 @@ class _$SignOut implements SignOut {
 }
 
 abstract class SignOut implements AuthEvent {
-  const factory SignOut() = _$SignOut;
+  const factory SignOut() = _$SignOutImpl;
 }
 
 /// @nodoc
-abstract class _$$CheckAuthStateCopyWith<$Res> {
-  factory _$$CheckAuthStateCopyWith(
-          _$CheckAuthState value, $Res Function(_$CheckAuthState) then) =
-      __$$CheckAuthStateCopyWithImpl<$Res>;
+abstract class _$$CheckAuthStateImplCopyWith<$Res> {
+  factory _$$CheckAuthStateImplCopyWith(_$CheckAuthStateImpl value,
+          $Res Function(_$CheckAuthStateImpl) then) =
+      __$$CheckAuthStateImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$CheckAuthStateCopyWithImpl<$Res>
-    extends _$AuthEventCopyWithImpl<$Res, _$CheckAuthState>
-    implements _$$CheckAuthStateCopyWith<$Res> {
-  __$$CheckAuthStateCopyWithImpl(
-      _$CheckAuthState _value, $Res Function(_$CheckAuthState) _then)
+class __$$CheckAuthStateImplCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$CheckAuthStateImpl>
+    implements _$$CheckAuthStateImplCopyWith<$Res> {
+  __$$CheckAuthStateImplCopyWithImpl(
+      _$CheckAuthStateImpl _value, $Res Function(_$CheckAuthStateImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$CheckAuthState implements CheckAuthState {
-  const _$CheckAuthState();
+class _$CheckAuthStateImpl implements CheckAuthState {
+  const _$CheckAuthStateImpl();
 
   @override
   String toString() {
@@ -732,7 +737,7 @@ class _$CheckAuthState implements CheckAuthState {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$CheckAuthState);
+        (other.runtimeType == runtimeType && other is _$CheckAuthStateImpl);
   }
 
   @override
@@ -860,24 +865,25 @@ class _$CheckAuthState implements CheckAuthState {
 }
 
 abstract class CheckAuthState implements AuthEvent {
-  const factory CheckAuthState() = _$CheckAuthState;
+  const factory CheckAuthState() = _$CheckAuthStateImpl;
 }
 
 /// @nodoc
-abstract class _$$_SendEmailConfirmationCopyWith<$Res> {
-  factory _$$_SendEmailConfirmationCopyWith(_$_SendEmailConfirmation value,
-          $Res Function(_$_SendEmailConfirmation) then) =
-      __$$_SendEmailConfirmationCopyWithImpl<$Res>;
+abstract class _$$SendEmailConfirmationImplCopyWith<$Res> {
+  factory _$$SendEmailConfirmationImplCopyWith(
+          _$SendEmailConfirmationImpl value,
+          $Res Function(_$SendEmailConfirmationImpl) then) =
+      __$$SendEmailConfirmationImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String email});
 }
 
 /// @nodoc
-class __$$_SendEmailConfirmationCopyWithImpl<$Res>
-    extends _$AuthEventCopyWithImpl<$Res, _$_SendEmailConfirmation>
-    implements _$$_SendEmailConfirmationCopyWith<$Res> {
-  __$$_SendEmailConfirmationCopyWithImpl(_$_SendEmailConfirmation _value,
-      $Res Function(_$_SendEmailConfirmation) _then)
+class __$$SendEmailConfirmationImplCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$SendEmailConfirmationImpl>
+    implements _$$SendEmailConfirmationImplCopyWith<$Res> {
+  __$$SendEmailConfirmationImplCopyWithImpl(_$SendEmailConfirmationImpl _value,
+      $Res Function(_$SendEmailConfirmationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -885,7 +891,7 @@ class __$$_SendEmailConfirmationCopyWithImpl<$Res>
   $Res call({
     Object? email = null,
   }) {
-    return _then(_$_SendEmailConfirmation(
+    return _then(_$SendEmailConfirmationImpl(
       email: null == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
@@ -896,8 +902,8 @@ class __$$_SendEmailConfirmationCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_SendEmailConfirmation implements _SendEmailConfirmation {
-  const _$_SendEmailConfirmation({required this.email});
+class _$SendEmailConfirmationImpl implements _SendEmailConfirmation {
+  const _$SendEmailConfirmationImpl({required this.email});
 
   @override
   final String email;
@@ -911,7 +917,7 @@ class _$_SendEmailConfirmation implements _SendEmailConfirmation {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SendEmailConfirmation &&
+            other is _$SendEmailConfirmationImpl &&
             (identical(other.email, email) || other.email == email));
   }
 
@@ -921,9 +927,9 @@ class _$_SendEmailConfirmation implements _SendEmailConfirmation {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SendEmailConfirmationCopyWith<_$_SendEmailConfirmation> get copyWith =>
-      __$$_SendEmailConfirmationCopyWithImpl<_$_SendEmailConfirmation>(
-          this, _$identity);
+  _$$SendEmailConfirmationImplCopyWith<_$SendEmailConfirmationImpl>
+      get copyWith => __$$SendEmailConfirmationImplCopyWithImpl<
+          _$SendEmailConfirmationImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1048,34 +1054,34 @@ class _$_SendEmailConfirmation implements _SendEmailConfirmation {
 
 abstract class _SendEmailConfirmation implements AuthEvent {
   const factory _SendEmailConfirmation({required final String email}) =
-      _$_SendEmailConfirmation;
+      _$SendEmailConfirmationImpl;
 
   String get email;
   @JsonKey(ignore: true)
-  _$$_SendEmailConfirmationCopyWith<_$_SendEmailConfirmation> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$SendEmailConfirmationImplCopyWith<_$SendEmailConfirmationImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_DeleteAccountCopyWith<$Res> {
-  factory _$$_DeleteAccountCopyWith(
-          _$_DeleteAccount value, $Res Function(_$_DeleteAccount) then) =
-      __$$_DeleteAccountCopyWithImpl<$Res>;
+abstract class _$$DeleteAccountImplCopyWith<$Res> {
+  factory _$$DeleteAccountImplCopyWith(
+          _$DeleteAccountImpl value, $Res Function(_$DeleteAccountImpl) then) =
+      __$$DeleteAccountImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_DeleteAccountCopyWithImpl<$Res>
-    extends _$AuthEventCopyWithImpl<$Res, _$_DeleteAccount>
-    implements _$$_DeleteAccountCopyWith<$Res> {
-  __$$_DeleteAccountCopyWithImpl(
-      _$_DeleteAccount _value, $Res Function(_$_DeleteAccount) _then)
+class __$$DeleteAccountImplCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$DeleteAccountImpl>
+    implements _$$DeleteAccountImplCopyWith<$Res> {
+  __$$DeleteAccountImplCopyWithImpl(
+      _$DeleteAccountImpl _value, $Res Function(_$DeleteAccountImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_DeleteAccount implements _DeleteAccount {
-  const _$_DeleteAccount();
+class _$DeleteAccountImpl implements _DeleteAccount {
+  const _$DeleteAccountImpl();
 
   @override
   String toString() {
@@ -1085,7 +1091,7 @@ class _$_DeleteAccount implements _DeleteAccount {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_DeleteAccount);
+        (other.runtimeType == runtimeType && other is _$DeleteAccountImpl);
   }
 
   @override
@@ -1213,24 +1219,24 @@ class _$_DeleteAccount implements _DeleteAccount {
 }
 
 abstract class _DeleteAccount implements AuthEvent {
-  const factory _DeleteAccount() = _$_DeleteAccount;
+  const factory _DeleteAccount() = _$DeleteAccountImpl;
 }
 
 /// @nodoc
-abstract class _$$_UpdateEmailAddressCopyWith<$Res> {
-  factory _$$_UpdateEmailAddressCopyWith(_$_UpdateEmailAddress value,
-          $Res Function(_$_UpdateEmailAddress) then) =
-      __$$_UpdateEmailAddressCopyWithImpl<$Res>;
+abstract class _$$UpdateEmailAddressImplCopyWith<$Res> {
+  factory _$$UpdateEmailAddressImplCopyWith(_$UpdateEmailAddressImpl value,
+          $Res Function(_$UpdateEmailAddressImpl) then) =
+      __$$UpdateEmailAddressImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String updatedEmail});
 }
 
 /// @nodoc
-class __$$_UpdateEmailAddressCopyWithImpl<$Res>
-    extends _$AuthEventCopyWithImpl<$Res, _$_UpdateEmailAddress>
-    implements _$$_UpdateEmailAddressCopyWith<$Res> {
-  __$$_UpdateEmailAddressCopyWithImpl(
-      _$_UpdateEmailAddress _value, $Res Function(_$_UpdateEmailAddress) _then)
+class __$$UpdateEmailAddressImplCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$UpdateEmailAddressImpl>
+    implements _$$UpdateEmailAddressImplCopyWith<$Res> {
+  __$$UpdateEmailAddressImplCopyWithImpl(_$UpdateEmailAddressImpl _value,
+      $Res Function(_$UpdateEmailAddressImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1238,7 +1244,7 @@ class __$$_UpdateEmailAddressCopyWithImpl<$Res>
   $Res call({
     Object? updatedEmail = null,
   }) {
-    return _then(_$_UpdateEmailAddress(
+    return _then(_$UpdateEmailAddressImpl(
       null == updatedEmail
           ? _value.updatedEmail
           : updatedEmail // ignore: cast_nullable_to_non_nullable
@@ -1249,8 +1255,8 @@ class __$$_UpdateEmailAddressCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateEmailAddress implements _UpdateEmailAddress {
-  const _$_UpdateEmailAddress(this.updatedEmail);
+class _$UpdateEmailAddressImpl implements _UpdateEmailAddress {
+  const _$UpdateEmailAddressImpl(this.updatedEmail);
 
   @override
   final String updatedEmail;
@@ -1264,7 +1270,7 @@ class _$_UpdateEmailAddress implements _UpdateEmailAddress {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_UpdateEmailAddress &&
+            other is _$UpdateEmailAddressImpl &&
             (identical(other.updatedEmail, updatedEmail) ||
                 other.updatedEmail == updatedEmail));
   }
@@ -1275,8 +1281,8 @@ class _$_UpdateEmailAddress implements _UpdateEmailAddress {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_UpdateEmailAddressCopyWith<_$_UpdateEmailAddress> get copyWith =>
-      __$$_UpdateEmailAddressCopyWithImpl<_$_UpdateEmailAddress>(
+  _$$UpdateEmailAddressImplCopyWith<_$UpdateEmailAddressImpl> get copyWith =>
+      __$$UpdateEmailAddressImplCopyWithImpl<_$UpdateEmailAddressImpl>(
           this, _$identity);
 
   @override
@@ -1402,30 +1408,31 @@ class _$_UpdateEmailAddress implements _UpdateEmailAddress {
 
 abstract class _UpdateEmailAddress implements AuthEvent {
   const factory _UpdateEmailAddress(final String updatedEmail) =
-      _$_UpdateEmailAddress;
+      _$UpdateEmailAddressImpl;
 
   String get updatedEmail;
   @JsonKey(ignore: true)
-  _$$_UpdateEmailAddressCopyWith<_$_UpdateEmailAddress> get copyWith =>
+  _$$UpdateEmailAddressImplCopyWith<_$UpdateEmailAddressImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_UpdateConnectivityStatusCopyWith<$Res> {
-  factory _$$_UpdateConnectivityStatusCopyWith(
-          _$_UpdateConnectivityStatus value,
-          $Res Function(_$_UpdateConnectivityStatus) then) =
-      __$$_UpdateConnectivityStatusCopyWithImpl<$Res>;
+abstract class _$$UpdateConnectivityStatusImplCopyWith<$Res> {
+  factory _$$UpdateConnectivityStatusImplCopyWith(
+          _$UpdateConnectivityStatusImpl value,
+          $Res Function(_$UpdateConnectivityStatusImpl) then) =
+      __$$UpdateConnectivityStatusImplCopyWithImpl<$Res>;
   @useResult
   $Res call({ConnectivityResult status});
 }
 
 /// @nodoc
-class __$$_UpdateConnectivityStatusCopyWithImpl<$Res>
-    extends _$AuthEventCopyWithImpl<$Res, _$_UpdateConnectivityStatus>
-    implements _$$_UpdateConnectivityStatusCopyWith<$Res> {
-  __$$_UpdateConnectivityStatusCopyWithImpl(_$_UpdateConnectivityStatus _value,
-      $Res Function(_$_UpdateConnectivityStatus) _then)
+class __$$UpdateConnectivityStatusImplCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$UpdateConnectivityStatusImpl>
+    implements _$$UpdateConnectivityStatusImplCopyWith<$Res> {
+  __$$UpdateConnectivityStatusImplCopyWithImpl(
+      _$UpdateConnectivityStatusImpl _value,
+      $Res Function(_$UpdateConnectivityStatusImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1433,7 +1440,7 @@ class __$$_UpdateConnectivityStatusCopyWithImpl<$Res>
   $Res call({
     Object? status = null,
   }) {
-    return _then(_$_UpdateConnectivityStatus(
+    return _then(_$UpdateConnectivityStatusImpl(
       null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -1444,8 +1451,8 @@ class __$$_UpdateConnectivityStatusCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateConnectivityStatus implements _UpdateConnectivityStatus {
-  const _$_UpdateConnectivityStatus(this.status);
+class _$UpdateConnectivityStatusImpl implements _UpdateConnectivityStatus {
+  const _$UpdateConnectivityStatusImpl(this.status);
 
   @override
   final ConnectivityResult status;
@@ -1459,7 +1466,7 @@ class _$_UpdateConnectivityStatus implements _UpdateConnectivityStatus {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_UpdateConnectivityStatus &&
+            other is _$UpdateConnectivityStatusImpl &&
             (identical(other.status, status) || other.status == status));
   }
 
@@ -1469,9 +1476,9 @@ class _$_UpdateConnectivityStatus implements _UpdateConnectivityStatus {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_UpdateConnectivityStatusCopyWith<_$_UpdateConnectivityStatus>
-      get copyWith => __$$_UpdateConnectivityStatusCopyWithImpl<
-          _$_UpdateConnectivityStatus>(this, _$identity);
+  _$$UpdateConnectivityStatusImplCopyWith<_$UpdateConnectivityStatusImpl>
+      get copyWith => __$$UpdateConnectivityStatusImplCopyWithImpl<
+          _$UpdateConnectivityStatusImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1596,34 +1603,36 @@ class _$_UpdateConnectivityStatus implements _UpdateConnectivityStatus {
 
 abstract class _UpdateConnectivityStatus implements AuthEvent {
   const factory _UpdateConnectivityStatus(final ConnectivityResult status) =
-      _$_UpdateConnectivityStatus;
+      _$UpdateConnectivityStatusImpl;
 
   ConnectivityResult get status;
   @JsonKey(ignore: true)
-  _$$_UpdateConnectivityStatusCopyWith<_$_UpdateConnectivityStatus>
+  _$$UpdateConnectivityStatusImplCopyWith<_$UpdateConnectivityStatusImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_CheckConnectivityStatusCopyWith<$Res> {
-  factory _$$_CheckConnectivityStatusCopyWith(_$_CheckConnectivityStatus value,
-          $Res Function(_$_CheckConnectivityStatus) then) =
-      __$$_CheckConnectivityStatusCopyWithImpl<$Res>;
+abstract class _$$CheckConnectivityStatusImplCopyWith<$Res> {
+  factory _$$CheckConnectivityStatusImplCopyWith(
+          _$CheckConnectivityStatusImpl value,
+          $Res Function(_$CheckConnectivityStatusImpl) then) =
+      __$$CheckConnectivityStatusImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_CheckConnectivityStatusCopyWithImpl<$Res>
-    extends _$AuthEventCopyWithImpl<$Res, _$_CheckConnectivityStatus>
-    implements _$$_CheckConnectivityStatusCopyWith<$Res> {
-  __$$_CheckConnectivityStatusCopyWithImpl(_$_CheckConnectivityStatus _value,
-      $Res Function(_$_CheckConnectivityStatus) _then)
+class __$$CheckConnectivityStatusImplCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$CheckConnectivityStatusImpl>
+    implements _$$CheckConnectivityStatusImplCopyWith<$Res> {
+  __$$CheckConnectivityStatusImplCopyWithImpl(
+      _$CheckConnectivityStatusImpl _value,
+      $Res Function(_$CheckConnectivityStatusImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_CheckConnectivityStatus implements _CheckConnectivityStatus {
-  const _$_CheckConnectivityStatus();
+class _$CheckConnectivityStatusImpl implements _CheckConnectivityStatus {
+  const _$CheckConnectivityStatusImpl();
 
   @override
   String toString() {
@@ -1634,7 +1643,7 @@ class _$_CheckConnectivityStatus implements _CheckConnectivityStatus {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CheckConnectivityStatus);
+            other is _$CheckConnectivityStatusImpl);
   }
 
   @override
@@ -1762,7 +1771,7 @@ class _$_CheckConnectivityStatus implements _CheckConnectivityStatus {
 }
 
 abstract class _CheckConnectivityStatus implements AuthEvent {
-  const factory _CheckConnectivityStatus() = _$_CheckConnectivityStatus;
+  const factory _CheckConnectivityStatus() = _$CheckConnectivityStatusImpl;
 }
 
 /// @nodoc
@@ -1856,10 +1865,11 @@ class _$AuthStateCopyWithImpl<$Res, $Val extends AuthState>
 }
 
 /// @nodoc
-abstract class _$$_AuthStateCopyWith<$Res> implements $AuthStateCopyWith<$Res> {
-  factory _$$_AuthStateCopyWith(
-          _$_AuthState value, $Res Function(_$_AuthState) then) =
-      __$$_AuthStateCopyWithImpl<$Res>;
+abstract class _$$AuthStateImplCopyWith<$Res>
+    implements $AuthStateCopyWith<$Res> {
+  factory _$$AuthStateImplCopyWith(
+          _$AuthStateImpl value, $Res Function(_$AuthStateImpl) then) =
+      __$$AuthStateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1873,11 +1883,11 @@ abstract class _$$_AuthStateCopyWith<$Res> implements $AuthStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_AuthStateCopyWithImpl<$Res>
-    extends _$AuthStateCopyWithImpl<$Res, _$_AuthState>
-    implements _$$_AuthStateCopyWith<$Res> {
-  __$$_AuthStateCopyWithImpl(
-      _$_AuthState _value, $Res Function(_$_AuthState) _then)
+class __$$AuthStateImplCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$AuthStateImpl>
+    implements _$$AuthStateImplCopyWith<$Res> {
+  __$$AuthStateImplCopyWithImpl(
+      _$AuthStateImpl _value, $Res Function(_$AuthStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1891,7 +1901,7 @@ class __$$_AuthStateCopyWithImpl<$Res>
     Object? updateEmailFailureOrSuccessOption = null,
     Object? isNetworkAvailable = null,
   }) {
-    return _then(_$_AuthState(
+    return _then(_$AuthStateImpl(
       isLoading: null == isLoading
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
@@ -1928,8 +1938,8 @@ class __$$_AuthStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_AuthState implements _AuthState {
-  const _$_AuthState(
+class _$AuthStateImpl implements _AuthState {
+  const _$AuthStateImpl(
       {required this.isLoading,
       required this.isUserSignedin,
       required this.authFailureOrSuccessOption,
@@ -1962,7 +1972,7 @@ class _$_AuthState implements _AuthState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AuthState &&
+            other is _$AuthStateImpl &&
             (identical(other.isLoading, isLoading) ||
                 other.isLoading == isLoading) &&
             (identical(other.isUserSignedin, isUserSignedin) ||
@@ -2001,8 +2011,8 @@ class _$_AuthState implements _AuthState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AuthStateCopyWith<_$_AuthState> get copyWith =>
-      __$$_AuthStateCopyWithImpl<_$_AuthState>(this, _$identity);
+  _$$AuthStateImplCopyWith<_$AuthStateImpl> get copyWith =>
+      __$$AuthStateImplCopyWithImpl<_$AuthStateImpl>(this, _$identity);
 }
 
 abstract class _AuthState implements AuthState {
@@ -2017,7 +2027,7 @@ abstract class _AuthState implements AuthState {
           emailSendFailureOrSuccessOption,
       required final Option<Either<AuthFailure, Unit>>
           updateEmailFailureOrSuccessOption,
-      required final bool isNetworkAvailable}) = _$_AuthState;
+      required final bool isNetworkAvailable}) = _$AuthStateImpl;
 
   @override
   bool get isLoading;
@@ -2035,6 +2045,6 @@ abstract class _AuthState implements AuthState {
   bool get isNetworkAvailable;
   @override
   @JsonKey(ignore: true)
-  _$$_AuthStateCopyWith<_$_AuthState> get copyWith =>
+  _$$AuthStateImplCopyWith<_$AuthStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

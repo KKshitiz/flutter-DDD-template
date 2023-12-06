@@ -6,9 +6,11 @@ import 'package:flutter_template/application/auth/auth_bloc.dart';
 import 'package:flutter_template/presentation/core/widgets/layout/custom_app_bar.dart';
 import 'package:flutter_template/presentation/core/widgets/inputs/custom_text_field.dart';
 import 'package:flutter_template/presentation/core/widgets/layout/app_scaffold.dart';
+import 'package:flutter_template/presentation/core/widgets/layout/custom_app_bar.dart';
 import 'package:flutter_template/presentation/core/widgets/layout/logo_widget.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
+@RoutePage()
 class ForgotPasswordPage extends StatelessWidget {
   ForgotPasswordPage({Key? key}) : super(key: key);
   final TextEditingController _emailTEC = TextEditingController();

@@ -7,9 +7,10 @@ import 'package:flutter_template/domain/core/helpers/validators.dart';
 import 'package:flutter_template/presentation/core/widgets/buttons/rounded_filled_button.dart';
 import 'package:flutter_template/presentation/core/widgets/inputs/inputs.dart';
 import 'package:flutter_template/presentation/core/widgets/layout/layout.dart';
-import 'package:flutter_template/presentation/routes/router.gr.dart';
+import 'package:flutter_template/presentation/routes/router.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
+@RoutePage()
 class SignupPage extends StatefulWidget {
   const SignupPage({Key? key}) : super(key: key);
   @override

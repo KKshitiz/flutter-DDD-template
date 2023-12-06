@@ -9,19 +9,19 @@ environment:
   sdk: ">=2.17.0 <3.0.0"
 
 dependencies:
-  auto_route: ^5.0.3
+  auto_route: ^7.8.4
   build_runner: ^2.3.2
   cached_network_image: ^3.2.3
   cloud_firestore: ^4.1.0
   cloud_functions: ^4.0.5
-  connectivity_plus: ^3.0.2
+  connectivity_plus: ^5.0.2
   cupertino_icons: ^1.0.5
   dartz: ^0.10.0-nullsafety.2
-  dio: ^4.0.6
-  dio_smart_retry: ^1.4.0
+  dio: ^5.3.4
+  dio_smart_retry: ^6.0.0
   equatable: ^2.0.5
   faker: ^2.1.0
-  file_picker: ^5.2.4
+  file_picker: ^6.1.1
   firebase_auth: ^4.1.4
   firebase_core: ^2.3.0
   firebase_crashlytics: ^3.0.6
@@ -34,33 +34,33 @@ dependencies:
   flutter_dotenv: ^5.0.2
   flutter_localizations:
     sdk: flutter
-  flutter_secure_storage: ^7.0.1
-  flutter_svg: ^1.1.6
+  flutter_secure_storage: ^9.0.0
+  flutter_svg: ^2.0.9
   fluttertoast: ^8.1.2
   freezed_annotation: ^2.2.0
   get_it: ^7.2.0
-  google_fonts: ^3.0.1
+  google_fonts: ^4.0.4
   graphql_flutter: ^5.1.0
-  image_picker: ^0.8.6
-  injectable: ^2.0.1
-  intl: ^0.17.0
-  logger: ^1.1.0
-  m_toast: ^0.1.8
+  image_picker: ^1.0.4
+  injectable: ^2.1.0
+  intl: ^0.18.1
+  logger: ^2.0.2+1
+  m_toast: ^0.2.4
   pin_code_text_field: ^1.8.0
   quickalert: ^1.0.1
   shared_preferences: ^2.0.15
-  shimmer: ^2.0.0
+  shimmer: ^3.0.0
   url_launcher: ^6.1.7
   uuid: ^3.0.7
   validators: ^3.0.0
 
 dev_dependencies:
-  auto_route_generator: ^5.0.3
+  auto_route_generator: ^7.3.2
   change_app_package_name: ^1.1.0
   dart_code_metrics: ^5.2.1
   flutter_gen_runner: ^5.1.0+1
-  flutter_launcher_icons: ^0.11.0
-  flutter_lints: ^2.0.1
+  flutter_launcher_icons: ^0.13.1
+  flutter_lints: ^3.0.1
   flutter_native_splash: ^2.2.15
   flutter_test:
     sdk: flutter
@@ -97,7 +97,6 @@ flutter:
     - assets/files/
     - assets/icons/
     - assets/images/
-
 
 flutter_gen:
   output: lib/domain/core/generated

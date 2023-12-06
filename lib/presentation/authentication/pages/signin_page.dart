@@ -10,10 +10,11 @@ import 'package:flutter_template/presentation/core/widgets/inputs/inputs.dart';
 import 'package:flutter_template/presentation/core/widgets/layout/app_scaffold.dart';
 import 'package:flutter_template/presentation/core/widgets/layout/custom_app_bar.dart';
 import 'package:flutter_template/presentation/core/widgets/layout/logo_widget.dart';
-import 'package:flutter_template/presentation/routes/router.gr.dart';
+import 'package:flutter_template/presentation/routes/router.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+@RoutePage()
 class SigninPage extends StatefulWidget {
   const SigninPage({Key? key}) : super(key: key);
 

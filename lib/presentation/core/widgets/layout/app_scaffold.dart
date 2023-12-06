@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_template/presentation/core/widgets/utility/responsive.dart';
 
 class AppScaffold extends StatelessWidget {
   final bool extendBody;
@@ -78,11 +79,40 @@ class AppScaffold extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Scaffold(
-        appBar: appBar,
-        backgroundColor: backgroundColor ?? Colors.white,
-        body: body,
+      child: Responsive(
+        mobile: scaffold(),
+        tablet: scaffold(),
+        desktop: scaffold(),
       ),
+    );
+  }
+
+  Scaffold scaffold() {
+    return Scaffold(
+      key: key,
+      extendBody: extendBody,
+      drawerScrimColor: drawerScrimColor,
+      drawerEdgeDragWidth: drawerEdgeDragWidth,
+      drawerEnableOpenDragGesture: drawerEnableOpenDragGesture,
+      endDrawerEnableOpenDragGesture: endDrawerEnableOpenDragGesture,
+      restorationId: restorationId,
+      extendBodyBehindAppBar: extendBodyBehindAppBar,
+      resizeToAvoidBottomInset: resizeToAvoidBottomInset,
+      appBar: appBar,
+      floatingActionButtonAnimator: floatingActionButtonAnimator,
+      backgroundColor: backgroundColor,
+      persistentFooterButtons: persistentFooterButtons,
+      floatingActionButton: floatingActionButton,
+      floatingActionButtonLocation: floatingActionButtonLocation,
+      body: body,
+      drawer: drawer,
+      onDrawerChanged: onDrawerChanged,
+      onEndDrawerChanged: onEndDrawerChanged,
+      endDrawer: endDrawer,
+      bottomNavigationBar: bottomNavigationBar,
+      bottomSheet: bottomSheet,
+      primary: primary,
+      drawerDragStartBehavior: drawerDragStartBehavior,
     );
   }
 }

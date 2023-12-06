@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_template/application/auth/auth_bloc.dart';
@@ -7,7 +8,8 @@ import 'package:flutter_template/domain/core/l10n/app_localizations.dart';
 import 'package:flutter_template/injection.dart';
 import 'package:flutter_template/presentation/core/styles/app_theme.dart';
 import 'package:flutter_template/presentation/core/widgets/utility/life_cycle_watcher.dart';
-import 'package:flutter_template/presentation/routes/router.gr.dart';
+import 'package:flutter_template/presentation/routes/observer/route_observer.dart';
+import 'package:flutter_template/presentation/routes/router.dart';
 
 class AppWidget extends StatelessWidget {
   AppWidget({Key? key}) : super(key: key);
@@ -18,8 +20,7 @@ class AppWidget extends StatelessWidget {
       providers: [
         BlocProvider<AuthBloc>(
           create: (context) {
-            return getIt<AuthBloc>();
-            // ..add(const AuthEvent.checkAuthState());
+            return getIt<AuthBloc>()..add(const AuthEvent.checkAuthState());
           },
         ),
         BlocProvider(
@@ -32,7 +33,10 @@ class AppWidget extends StatelessWidget {
         child: BlocBuilder<SettingsBloc, SettingsState>(
           builder: (context, state) {
             return MaterialApp.router(
-              routerDelegate: _appRouter.delegate(),
+              routerDelegate: AutoRouterDelegate(
+                _appRouter,
+                navigatorObservers: () => [FlutterRouteObserver()],
+              ),
               routeInformationParser: _appRouter.defaultRouteParser(),
               title: AppConstants.appName,
               debugShowCheckedModeBanner: false,

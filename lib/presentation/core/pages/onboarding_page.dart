@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_template/presentation/core/widgets/layout/app_scaffold.dart';
 import 'package:flutter_template/presentation/core/widgets/utility/dots_indicator.dart';
-import 'package:flutter_template/presentation/routes/router.gr.dart';
+import 'package:flutter_template/presentation/routes/router.dart';
 
+
+@RoutePage()
 class OnboardingPage extends StatefulWidget {
   const OnboardingPage({Key? key}) : super(key: key);
 
